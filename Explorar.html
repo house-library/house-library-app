@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Explorar</title>
+  </head>
+  <body>
+    <header>
+      <nav id="sidebar">
+        <div id="menu-burguer">
+          <button
+            id="menu-burguer"
+            aria-label="Abrir menu lateral"
+            aria-expanded="false"
+            aria-controls="siderbar"
+          >
+            <img src="assets/header-icons/menu.svg" alt="" aria-hidden="true" />
+          </button>
+        </div>
+
+        <ul id="side-items">
+          <li class="side-item">
+            <a href="/inicio.html">
+              <img src="assets/header-icons/Inicio.svg" alt="Inicio" />
+              <span class="menu-description">Inicio</span>
+            </a>
+          </li>
+          <li class="side-item">
+            <a href="/inicio.html">
+              <img src="assets/header-icons/Explorar.svg" alt="Explorar" />
+              <span class="menu-description">Explorar</span>
+            </a>
+          </li>
+          <li class="side-item">
+            <a href="/inicio.html">
+              <img
+                src="assets/header-icons/Historico.svg"
+                alt="Historico de compras"
+              />
+              <span class="menu-description">Historico de compras</span>
+            </a>
+          </li>
+          <li class="side-item">
+            <a href="/inicio.html">
+              <img src="assets/header-icons/Favoritos.svg" alt="Favoritos" />
+              <span class="menu-description">Favoritos</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <a href="inicio.html" class="logo">
+        <img src="assets/logo.svg" alt="House Library" />
+        <span class="logo-text">House Library</span>
+      </a>
+
+      <div class="icons-user">
+        <nav>
+          <ul>
+            <li class="nav-icon">
+              <a href="/carrinho" title="Carrinho de compras">
+                <img
+                  src="assets/header-icons/carrinho.svg"
+                  alt="Icone de carrinho de compras"
+                />
+              </a>
+            </li>
+            <li class="nav-icon">
+              <a href="/conta" title="Conta">
+                <img
+                  src="assets/header-icons/conta.svg"
+                  alt="Icone da conta do usuário"
+                />
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section id="campo-filtragem">
+      <form action="/buscar" method="GET" class="search-form" role="search">
+        <label for="search-input"></label>
+        <input
+          type="search"
+          id="search-input"
+          name="q"
+          class="search-input"
+          placeholder="Pesquisar"
+          required
+        />
+        <button type="submit" class="search-button">
+          <img src="assets/header-icons/lupa.svg" alt="Buscar" />
+        </button>
+        <button type="submit" class="filtrar-button">filtrar</button>
+      </form>
+    </section>
+
+    <form id="filtros-select">
+      <select name="formatos" id="formatos">
+        <label for="formatos"></label>
+        <option value="" selected disabled>Formatos</option>
+      </select>
+
+      <select name="categorias" id="categorias">
+        <label for="Categorias"></label>
+        <option value="" selected disabled>Categorias</option>
+      </select>
+
+      <select name="materia" id="materia">
+        <label for="Materia"></label>
+        <option value="" selected disabled>Materia</option>
+      </select>
+
+      <select name="etiqueta" id="etiqueta">
+        <label for="Etiqueta"></label>
+        <option value="" selected disabled>Etiqueta</option>
+      </select>
+
+      <select name="editorial" id="editorial">
+        <label for="Editorial"></label>
+        <option value="" selected disabled>Editorial</option>
+      </select>
+
+      <select name="Publicação" id="publicacao">
+        <label for="Ano de publicação"></label>
+        <option value="" selected disabled>Ano de publicação</option>
+      </select>
+
+      <select name="Idioma" id="idioma">
+        <label for="Idioma"></label>
+        <option value="" selected disabled>Idioma</option>
+      </select>
+    </form>
+  </body>
+</html>
