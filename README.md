@@ -17,29 +17,35 @@ Para guiar o desenvolvimento, elencamos os seguintes requisitos funcionais e nã
 
 *Funcionalidades que o usuário e administrador devem ser capazes de fazer no sistema.*
 
-- [ ] **Autenticação de Usuário:** O usuário deve conseguir criar conta, informando nome, e-mail, senha e outros dados pessoais. Sendo assim, capaz de fazer login e logout. Igualmente para o Administrador.
-- [ ] **Recuperação de Conta:** O sistema envia link para redefinição de senha via e-mail.
-- [ ] **Navegação do Usuário:** O usuário pode navegar por categorias, autores, títulos, palavras-chave etc.
-- [ ] **Detalhes dos eBooks:** O usuário deve ver ou ter acesso ao título, autor, preço e sinopse.
-- [ ] **Compra de eBook:** Deve ser implementado um sistema de carrinho de compra, onde os livros selecionados para compra são direcionados.
-- [ ] **Histórico de Compras:** O usuário pode visualizar todas as compras realizadas.
-- [ ] **Gerenciamento de eBooks:** O administrador deve cadastrar, editar e excluir eBooks.
-- [ ] **Gerenciamento de Categorias:** O administrador deve selecionar a categoria de cada eBook.
-- [ ] **Gerenciamento de Usuários:** O administrador deve visualizar, bloquear ou excluir contas de usuários.
-- [ ] **Visualização de Pedidos:** O administrador tem acesso ao painel de estatísticas com total de vendas, eBooks mais vendidos, etc.
+| **#** | **Requisito**               | **Descrição**                                                                                             |
+|-------|-----------------------------|---------------------------------------------------------------------------------------------------------|
+| 1     | Autenticação de Usuário     | Usuário e administrador podem criar conta, fazer login e logout, informando nome, e-mail, senha, etc.   |
+| 2     | Recuperação de Conta        | Sistema envia link para redefinição de senha via e-mail.                                                |
+| 3     | Navegação do Usuário        | Usuário pode navegar por categorias, autores, títulos, palavras-chave, etc.                             |
+| 4     | Detalhes dos eBooks         | Usuário visualiza título, autor, preço, sinopse dos ebooks.                                            |
+| 5     | Compra de eBook             | Sistema com carrinho de compras para selecionar e direcionar ebooks para compra.                        |
+| 6     | Histórico de Compras        | Usuário pode visualizar todas as compras realizadas.                                                   |
+| 7     | Gerenciamento de eBooks     | Administrador pode cadastrar, editar e excluir ebooks.                                                 |
+| 8     | Gerenciamento de Categorias | Administrador pode selecionar categoria para cada ebook.                                              |
+| 9     | Gerenciamento de Usuários   | Administrador pode visualizar, bloquear ou excluir contas de usuários.                                 |
+| 10    | Visualização de Pedidos     | Administrador acessa painel com estatísticas: total vendas, ebooks mais vendidos, etc.                  |
+
 
 ### Requisitos Não Funcionais (RNFs)
 
 *Os requisitos não funcionais descrevem como o sistema deve se comportar — desempenho, segurança, usabilidade etc.*
 
-- [ ] **Segurança:** A senha do usuário e administrador devem ser criptografadas.
-- [ ] **Desempenho:** O sistema deve permitir o crescimento da base de usuários e eBooks sem perda de desempenho.
-- [ ] **Disponibilidade:** O sistema deve estar disponível 99,9% do tempo.
-- [ ] **Performance:** Tempo de resposta inferior a 2 segundos para operações comuns.
-- [ ] **Compatibilidade:** Compatível com dispositivos móveis, tablets e desktops.
-- [ ] **Usabilidade:** Interface intuitiva e acessível para todos os públicos.
-- [ ] **Internacionalização:** Suporte para múltiplos idiomas (opcional, mas bom requisito).
-- [ ] **Formato dos Arquivos:** Os eBooks devem estar disponíveis em formatos populares como PDF, EPUB, MOBI.
+| **#** | **Requisito**         | **Descrição**                                                                                   |
+|-------|-----------------------|-----------------------------------------------------------------------------------------------|
+| 11    | Segurança             | Senhas de usuários e administradores devem ser criptografadas.                                |
+| 12    | Desempenho            | Sistema suporta crescimento da base de usuários e ebooks sem perda de desempenho.             |
+| 13    | Disponibilidade       | Sistema disponível 99,9% do tempo.                                                           |
+| 14    | Performance           | Tempo de resposta inferior a 2 segundos para operações comuns.                               |
+| 15    | Compatibilidade       | Compatível com dispositivos móveis, tablets e desktops.                                      |
+| 16    | Usabilidade           | Interface intuitiva e acessível para todos os públicos.                                      |
+| 17    | Internacionalização   | Suporte para múltiplos idiomas (opcional).                                                   |
+| 18    | Formato dos Arquivos  | eBooks disponíveis nos formatos PDF, EPUB e MOBI.                                            |
+
 
 ---
 
