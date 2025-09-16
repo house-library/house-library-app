@@ -49,6 +49,21 @@ Para guiar o desenvolvimento, elencamos os seguintes requisitos funcionais e nã
 
 ---
 
+# 📝 Padrão de Commits
+
+| Tipo | Descrição | Exemplo |
+| :--- | :--- | :--- |
+| `feat` | Adiciona uma nova funcionalidade ao projeto. | `feat: adiciona login com Google` |
+| `fix` | Corrige um bug no código. | `fix: corrige validação de e-mail` |
+| `docs` | Altera a documentação do projeto. | `docs: atualiza o README` |
+| `style` | Aplica formatação de código (espaços, etc.). | `style: remove espaços em branco` |
+| `refactor` | Refatora o código sem alterar a funcionalidade. | `refactor: melhora lógica de autenticação` |
+| `perf` | Melhora o desempenho da aplicação. | `perf: otimiza consulta ao banco` |
+| `test` | Adiciona ou modifica testes automatizados. | `test: adiciona testes unitários` |
+| `build` | Altera arquivos de build e dependências. | `build: atualiza versão do React` |
+| `ci` | Altera arquivos de integração contínua (CI). | `ci: corrige script de deploy` |
+| `chore` | Tarefas de rotina e manutenção. | `chore: adiciona a biblioteca prettier` |
+
 ## Tecnologias Utilizadas
 
 *Nesse projeto utilizaremos as linguagens aprendidas em sala de aula para uma maior consolidação desse aprendizado.*
