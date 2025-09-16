@@ -8,42 +8,46 @@
   <body>
     <header>
       <nav id="sidebar">
-        <div id="menu-burguer">
+        <div>
           <button
             id="menu-burguer"
             aria-label="Abrir menu lateral"
             aria-expanded="false"
-            aria-controls="siderbar"
+            aria-controls="sidebar"
           >
-            <img src="assets/header-icons/menu.svg" alt="" aria-hidden="true" />
+            <img
+              src="/assets/header-icons/menu.svg"
+              alt=""
+              aria-hidden="true"
+            />
           </button>
         </div>
 
         <ul id="side-items">
           <li class="side-item">
             <a href="/inicio.html">
-              <img src="assets/header-icons/Inicio.svg" alt="Inicio" />
+              <img src="/assets/header-icons/Inicio.svg" alt="Inicio" />
               <span class="menu-description">Inicio</span>
             </a>
           </li>
           <li class="side-item">
-            <a href="/inicio.html">
-              <img src="assets/header-icons/Explorar.svg" alt="Explorar" />
+            <a href="/explorar.html">
+              <img src="/assets/header-icons/Explorar.svg" alt="Explorar" />
               <span class="menu-description">Explorar</span>
             </a>
           </li>
           <li class="side-item">
-            <a href="/inicio.html">
+            <a href="/historico.html">
               <img
-                src="assets/header-icons/Historico.svg"
+                src="/assets/header-icons/Historico.svg"
                 alt="Historico de compras"
               />
               <span class="menu-description">Historico de compras</span>
             </a>
           </li>
           <li class="side-item">
-            <a href="/inicio.html">
-              <img src="assets/header-icons/Favoritos.svg" alt="Favoritos" />
+            <a href="/favoritos.html">
+              <img src="/assets/header-icons/Favoritos.svg" alt="Favoritos" />
               <span class="menu-description">Favoritos</span>
             </a>
           </li>
@@ -51,17 +55,16 @@
       </nav>
 
       <a href="inicio.html" class="logo">
-        <img src="assets/logo.svg" alt="House Library" />
-        <span class="logo-text">House Library</span>
+        <img src="/assets/logo.svg" alt="House Library" />
       </a>
 
       <div class="icons-user">
         <nav>
           <ul>
             <li class="nav-icon">
-              <a href="/carrinho" title="Carrinho de compras">
+              <a href="/carrinho.html" title="Carrinho de compras">
                 <img
-                  src="assets/header-icons/carrinho.svg"
+                  src="/assets/header-icons/carrinho.svg"
                   alt="Icone de carrinho de compras"
                 />
               </a>
@@ -69,7 +72,7 @@
             <li class="nav-icon">
               <a href="/conta" title="Conta">
                 <img
-                  src="assets/header-icons/conta.svg"
+                  src="/assets/header-icons/conta.svg"
                   alt="Icone da conta do usuário"
                 />
               </a>
@@ -79,96 +82,89 @@
       </div>
     </header>
 
-    <section id="campo-filtragem">
+    <div id="campo-filtragem">
       <form action="/buscar" method="GET" class="search-form" role="search">
-        <label for="search-input"></label>
-        <input
-          type="search"
-          id="search-input"
-          name="q"
-          class="search-input"
-          placeholder="Pesquisar"
-          required
-        />
-        <button type="submit" class="search-button">
-          <img src="assets/header-icons/lupa.svg" alt="Buscar" />
-        </button>
-        <button type="submit" class="filtrar-button">filtrar</button>
+        <select name="formatos" id="formatos" aria-label="Formatos">
+          <option value="" selected disabled>Formatos</option>
+        </select>
+
+        <select name="categorias" id="categorias" aria-label="Categorias">
+          <option value="" selected disabled>Categorias</option>
+        </select>
+
+        <select name="materia" id="materia" aria-label="Matéria">
+          <option value="" selected disabled>Matéria</option>
+        </select>
+
+        <select name="etiqueta" id="etiqueta" aria-label="Etiqueta">
+          <option value="" selected disabled>Etiqueta</option>
+        </select>
+
+        <select name="editorial" id="editorial" aria-label="Editorial">
+          <option value="" selected disabled>Editorial</option>
+        </select>
+
+        <select
+          name="Publicação"
+          id="publicacao"
+          aria-label="Ano de Publicação"
+        >
+          <option value="" selected disabled>Ano de publicação</option>
+        </select>
+
+        <select name="Idioma" id="idioma" aria-label="Idioma">
+          <option value="" selected disabled>Idioma</option>
+        </select>
+
+        <button type="submit" class="search-button">Filtrar</button>
       </form>
-    </section>
-
-    <form id="filtros-select">
-      <select name="formatos" id="formatos">
-        <label for="formatos"></label>
-        <option value="" selected disabled>Formatos</option>
-      </select>
-
-      <select name="categorias" id="categorias">
-        <label for="Categorias"></label>
-        <option value="" selected disabled>Categorias</option>
-      </select>
-
-      <select name="materia" id="materia">
-        <label for="Materia"></label>
-        <option value="" selected disabled>Materia</option>
-      </select>
-
-      <select name="etiqueta" id="etiqueta">
-        <label for="Etiqueta"></label>
-        <option value="" selected disabled>Etiqueta</option>
-      </select>
-
-      <select name="editorial" id="editorial">
-        <label for="Editorial"></label>
-        <option value="" selected disabled>Editorial</option>
-      </select>
-
-      <select name="Publicação" id="publicacao">
-        <label for="Ano de publicação"></label>
-        <option value="" selected disabled>Ano de publicação</option>
-      </select>
-
-      <select name="Idioma" id="idioma">
-        <label for="Idioma"></label>
-        <option value="" selected disabled>Idioma</option>
-      </select>
-    </form>
+    </div>
 
     <footer>
-        <div class="footer-logo"></div>
-            <img src="assets/logo.svg" alt="House Library">
-            <span class="logo-text">House Library</span>
-        </a>
-        
-        <ul class="links-footer">
-            <li class="links-f"><a href="/conta">Sua conta</a></li>
-             <li class="links-f"><a href="/Devoluções-e-Reembolsos">Devoluções e Reembolsos</a></li>
-             <li class="links-f"><a href="/Trabalhe-conosco">Trabalhe conosco</a></li>
-             <li class="links-f"><a href="/Entre-em-contato">Entre em contato</a></li>
-             <li class="links-f"><a href="/Sobre-nós">Sobre nós</a></li>
-             <li class="links-f"><a href="/Colaboradores">Colaboradores</a></li>
-        </ul>
+      <a href="#" class="footer-logo">
+        <img src="/assets/logo.svg" alt="House Library" />
+        <span class="logo-text">House Library</span>
+      </a>
 
-        <div class="footer-pagamentos">
-            <h3>Formas de Pagamento</h3>
-            <img src="assets/footer-icons/visa.svg" alt="Visa">
-            <img src="assets/footer-icons/mastercard.svg" alt="Mastercard">
-            <img src="assets/footer-icons/boleto.svg" alt="Boleto">
-            <img src="assets/footer-icons/pix.svg" alt="Pix">
-        </div>
+      <ul class="links-footer">
+        <li class="links-f"><a href="/conta">Sua conta</a></li>
+        <li class="links-f">
+          <a href="/devoluções-Reembolsos">Devoluções e Reembolsos</a>
+        </li>
+        <li class="links-f">
+          <a href="/trabalhe-conosco">Trabalhe conosco</a>
+        </li>
+        <li class="links-f">
+          <a href="/entre-em-contato">Entre em contato</a>
+        </li>
+        <li class="links-f"><a href="/sobre-nos">Sobre nós</a></li>
+        <li class="links-f"><a href="/colaboradores">Colaboradores</a></li>
+      </ul>
 
-        <div class="footer-redes">
-            <h3>Redes Sociais</h3>
-                <a href="https://whatsapp.com" target="_blank"><img src="assets/footer-icons/whatsapp.svg" alt="Whatsapp"></a>
-                <a href="https://facebook.com" target="_blank"><img src="assets/footer-icons/facebook.svg" alt="Facebook"></a>
-                <a href="https://instagram.com" target="_blank"><img src="assets/footer-icons/instagram.svg" alt="Instagram"></a>
-        </div>
+      <div class="footer-pagamentos">
+        <h3>Formas de Pagamento</h3>
+        <img src="/assets/footer-icons/visa.svg" alt="Visa" />
+        <img src="/assets/footer-icons/mastercard.svg" alt="Mastercard" />
+        <img src="/assets/footer-icons/boleto.svg" alt="Boleto" />
+        <img src="/assets/footer-icons/pix.svg" alt="Pix" />
+      </div>
 
-        <div id="footer-copy">
-            <p>© 2025 House Library. Todos os direitos reservados.</p>
-        </div>
+      <div class="footer-redes">
+        <h3>Redes Sociais</h3>
+        <a href="https://whatsapp.com" target="_blank"
+          ><img src="/assets/footer-icons/whatsapp.svg" alt="Whatsapp"
+        /></a>
+        <a href="https://facebook.com" target="_blank"
+          ><img src="/assets/footer-icons/facebook.svg" alt="Facebook"
+        /></a>
+        <a href="https://instagram.com" target="_blank"
+          ><img src="/assets/footer-icons/instagram.svg" alt="Instagram"
+        /></a>
+      </div>
+
+      <div id="footer-copy">
+        <p>© 2025 House Library. Todos os direitos reservados.</p>
+      </div>
     </footer>
-</body>
-</html>
   </body>
 </html>
