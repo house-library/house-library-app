@@ -1,0 +1,58 @@
+CREATE TABLE CLIENTES 
+( 
+ email_cliente VARCHAR(100) NOT NULL,  
+ nome_cliente VARCHAR(100) NOT NULL,  
+ cpf_cliente VARCHAR(14) NOT NULL,  
+ senha_cliente VARCHAR(255) NOT NULL,  
+ cliente_id INT PRIMARY KEY AUTO_INCREMENT,  
+ UNIQUE (email_cliente),
+ UNIQUE (cpf_cliente)
+); 
+
+CREATE TABLE LIVROS 
+( 
+ ano_lancamento INT NOT NULL,  
+ preco INT NOT NULL,  
+ idioma VARCHAR(50) NOT NULL,  
+ categoria VARCHAR(100) NOT NULL,  
+ nome_autor VARCHAR(100) NOT NULL,  
+ titulo VARCHAR(100) NOT NULL, 
+ sinopse VARCHAR(350) NOT NULL, 
+ descricao TEXT NOT NULL,  
+ livro_id INT PRIMARY KEY AUTO_INCREMENT,  
+); 
+
+CREATE TABLE DETALHES_PEDIDOS 
+( 
+ valor_pago INT NOT NULL,  
+ quantidade INT NOT NULL,  
+ detalhes_id INT PRIMARY KEY AUTO_INCREMENT,  
+ pedidos_id INT NOT NULL,  
+ livros_id INT NOT NULL,  
+); 
+
+CREATE TABLE PAGAMENTOS 
+( 
+ pagamento_id INT PRIMARY KEY AUTO_INCREMENT,  
+ metodo_pagamento ENUM('debito', 'credito', 'pix', 'boleto') NOT NULL,  
+ cvv VARCHAR(3),  
+ num_cartao VARCHAR (16),  
+ status_pagamento VARCHAR(50) NOT NULL,  
+ validade VARCHAR(7),  
+ codigo_promocional VARCHAR(30),  
+ pedidos_id INT NOT NULL
+); 
+
+CREATE TABLE PEDIDOS 
+( 
+ pedidos_id INT PRIMARY KEY AUTO_INCREMENT,  
+ status VARCHAR(50) NOT NULL,  
+ valor_total DECIMAL (20, 2),  
+ data_pedido DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP, 
+ cliente_id INT NOT NULL,  
+); 
+
+ALTER TABLE DETALHES_PEDIDOS ADD FOREIGN KEY(pedidos_id) REFERENCES PEDIDOS (pedidos_id)
+ALTER TABLE DETALHES_PEDIDOS ADD FOREIGN KEY(livros_id) REFERENCES LIVROS (livros_id)
+ALTER TABLE PAGAMENTOS ADD FOREIGN KEY(pedidos_id) REFERENCES PEDIDOS (pedidos_id)
+ALTER TABLE PEDIDOS ADD FOREIGN KEY(cliente_id) REFERENCES CLIENTES (cliente_id)
