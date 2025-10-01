@@ -1,10 +1,5 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <title>Recuperação de Senha</title>
-</head>
-<body>
+    <?php require('partials/head.php') ?>
+
   <div>
     <img src="/assets/logo.svg" alt="House Library Logo" width="60">
 

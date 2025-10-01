@@ -1,11 +1,5 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>House Library - Login</title>
-</head>
-<body>
+    <?php require('partials/head.php') ?>
+
     <div align=center>
     <img src="assets/header-icons/Inicio.svg" alt="Login">
     <h1>House Library</h1>
@@ -29,5 +23,4 @@
     </p>
 </div>
     
-</body>
-</html
+    <?php require('partials/footer.php') ?>

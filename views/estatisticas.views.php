@@ -1,21 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Estatísticas</title>
-</head>
-<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <?php require('partials/head.php') ?>
+    <?php require('partials/header.php') ?>
 
-<header>
-    <div>
-      <img src="/assets/logo.svg" alt="House Library Logo" width="40">
-      <span>House Library</span>
-    </div>
-    <nav>
-      <button><img src="/assets/header-icons/conta.svg"></button>
-    </nav>
-  </header>
 
 <body>
     <div id="myPlot" style="width:100%;max-width:700px"></div>
@@ -42,5 +27,4 @@ const layout = {
 Plotly.newPlot("myPlot", data, layout);
 </script>
 
-</body>
-</html>
+    <?php require('partials/footer.php') ?>

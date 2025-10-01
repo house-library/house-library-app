@@ -1,20 +1,7 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <title>Histórico de Compras</title>
-</head>
-<body>
-  <header>
-    <div>
-      <img src="logo.png" alt="House Library Logo" width="40">
-      <span>House Library</span>
-    </div>
-    <nav>
-      <button><img src="/assets/header-icons/carrinho.svg"></button>
-      <button><img src="/assets/header-icons/conta.svg" alt=""></button>
-    </nav>
-  </header>
+
+      <?php require('partials/head.php') ?>
+          <?php require('partials/header.php') ?>
+
 
   <main>
     <h2>Histórico de compras</h2>
@@ -46,5 +33,7 @@
       </div>
     </section>
   </main>
-</body>
-</html>
+
+      <?php require('partials/footer.php') ?>
+
+

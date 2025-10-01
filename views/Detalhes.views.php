@@ -1,19 +1,8 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <title>House Library</title>
-</head>
-<body>
 
-    <nav>
-        <ul>
-            <li><a href="#">Início</a></li>
-            <li><a href="#">Explorar</a></li>
-            <li><a href="#">Histórico de compras</a></li>
-            <li><a href="#">Favoritos</a></li>
-        </ul>
-    </nav>
+      <?php require('partials/head.php') ?>
+          <?php require('partials/header.php') ?>
+
+
 
     <main>
         <h1>House Library</h1>
@@ -61,6 +50,7 @@
             </ul>
         </section>
     </main>
+    
+        <?php require('partials/footer.php') ?>
 
-</body>
-</html>
+

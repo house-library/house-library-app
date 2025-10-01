@@ -1,10 +1,5 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <title>House Library - Cadastro</title>
-  </head>
-  <body>
+    <?php require('partials/head.php') ?>
+
     <section id="cadastro">
       <img src="/assets/logo.svg" alt="" />
       <h1>House Library</h1>
