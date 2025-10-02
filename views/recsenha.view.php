@@ -1,0 +1,15 @@
+    <?php require 'partials/head.php'; ?>
+
+  <div>
+    <img src="/assets/logo.svg" alt="House Library Logo" width="60">
+
+    <h2>House Library</h2>
+
+    <form>
+      <input type="password" placeholder="Escreva sua nova senha" required><br><br>
+      <input type="password" placeholder="Escreva sua senha novamente" required><br><br>
+      <button type="submit">Confirmar</button>
+    </form>
+  </div>
+</body>
+</html>
