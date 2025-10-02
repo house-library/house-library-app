@@ -1,6 +1,12 @@
-<header>
+<header class="header">
+
+        <a href="/controllers/inicio.php">
+            <img class="logo" src="/public/assets/imgs/logo.svg" alt="House Library">
+        </a>
+
 
         <nav id="sidebar">
+
         <div id="menu-burguer">
           <button
             id="menu-burguer"
@@ -40,10 +46,6 @@
                 </li>
             </ul>
         </nav>
-
-        <a href="/controllers/inicio.php" class="logo">
-            <img src="/public/assets/imgs/logo.svg" alt="House Library">
-        </a>
 
             <form action="/buscar" method="GET" class="search-form" role="search">
                 <label for="search-input"></label>
