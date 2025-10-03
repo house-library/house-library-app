@@ -5,47 +5,43 @@
         </a>
 
 
-        <nav id="sidebar">
+<nav class="sidebar-nav" id="sidebar">
+    <button
+        class="sidebar-nav__burguer"
+        aria-label="Abrir menu lateral"
+        aria-expanded="false"
+        aria-controls="sidebar-menu-list"
+    >
+        <img src="/public/assets/header-icons/menu.svg" alt="" aria-hidden="true" />
+    </button>
 
-        <div id="menu-burguer">
-          <button
-            id="menu-burguer"
-            aria-label="Abrir menu lateral"
-            aria-expanded="false"
-            aria-controls="siderbar"
-          >
-            <img src="/public/assets/header-icons/menu.svg" alt="" aria-hidden="true" />
-          </button>
-        </div>
-
-
-            <ul id="side-items">
-                <li class="side-item">
-                    <a href="/controllers/inicio.php">
-                        <img src="/public/assets/header-icons/Inicio.svg" alt="Inicio">
-                        <span class="menu-description">Inicio</span>
-                    </a>
-                </li>
-                <li class="side-item">
-                    <a href="/controllers/explorar.php">
-                        <img src="/public/assets/header-icons/Explorar.svg" alt="Explorar">
-                        <span class="menu-description">Explorar</span>
-                    </a>
-                </li>
-                <li class="side-item">
-                    <a href="/controllers/historico.php">
-                        <img src="/public/assets/header-icons/Historico.svg" alt="Historico de compras">
-                        <span class="menu-description">Historico de compras</span>
-                    </a>
-                </li>
-                <li class="side-item">
-                    <a href="/controllers/favoritos.php">
-                        <img src="/public/assets/header-icons/Favoritos.svg" alt="Favoritos">
-                        <span class="menu-description">Favoritos</span>
-                    </a>
-                </li>
-            </ul>
-        </nav>
+    <ul class="sidebar-nav__list" id="sidebar-menu-list">
+        <li class="sidebar-nav__item">
+            <a class="sidebar-nav__link" href="/controllers/inicio.php">
+                <img class="sidebar-nav__icon" src="/public/assets/header-icons/Inicio.svg" alt="Inicio">
+                <span class="sidebar-nav__text">Inicio</span>
+            </a>
+        </li>
+        <li class="sidebar-nav__item">
+            <a class="sidebar-nav__link" href="/controllers/explorar.php">
+                <img class="sidebar-nav__icon" src="/public/assets/header-icons/Explorar.svg" alt="Explorar">
+                <span class="sidebar-nav__text">Explorar</span>
+            </a>
+        </li>
+        <li class="sidebar-nav__item">
+            <a class="sidebar-nav__link" href="/controllers/historico.php">
+                <img class="sidebar-nav__icon" src="/public/assets/header-icons/Historico.svg" alt="Historico de compras">
+                <span class="sidebar-nav__text">Historico de compras</span>
+            </a>
+        </li>
+        <li class="sidebar-nav__item">
+            <a class="sidebar-nav__link" href="/controllers/favoritos.php">
+                <img class="sidebar-nav__icon" src="/public/assets/header-icons/favoritos.svg" alt="Favoritos">
+                <span class="sidebar-nav__text">Favoritos</span>
+            </a>
+        </li>
+    </ul>
+</nav>
 
             <form action="/buscar" method="GET" class="search-form" role="search">
                 <label for="search-input"></label>
@@ -53,19 +49,29 @@
                 <button type="submit" class="search-button"><img src="/public/assets/header-icons/lupa.svg" alt="Buscar"></button>
             </form>
 
-            <nav>
-                <ul>
-                    <li class="nav-icon">
-                        <a href="/controllers/carrinho.php" title="Carrinho de compras">
-                            <img src="/public/assets/header-icons/carrinho.svg" alt="Icone de carrinho de compras">
-                        </a>
-                    </li>
-                     <li class="nav-icon">
-                        <a href="/controllers/conta.php" title="Conta">
-                            <img src="/public/assets/header-icons/conta.svg" alt="Icone da conta do usuário">
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
+         <nav class="header-nav">
+    <ul class="header-nav__list">
+        <li class="header-nav__item">
+            <a class="header-nav__link" href="/controllers/favoritos.php" aria-label="Favoritos">
+                <p>Favoritos</p>
+            </a>
+        </li>
+        <li>
+            <a class="header-nav__link" href="/controllers/carrinho.php" aria-label="Carrinho de compras">
+                <p>Carrinho</p>
+            </a>
+        </li>
+        <li class="header-nav__item">
+            <a class="header-nav__link" href="/controllers/explorar.php" aria-label="Explorar">
+                <p>Explorar</p>
+            </a>
+        </li>
+        <li class="header-nav__item">
+            <a class="header-nav__link" href="/controllers/conta.php" aria-label="Minha conta">
+                <p>Conta</p>
+            </a>
+        </li>
+    </ul>
+</nav>
+        
     </header>

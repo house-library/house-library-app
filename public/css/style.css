@@ -13,5 +13,29 @@
     align-items: center;
     background-color: #fff;
     height: 9.25rem;
-    padding: 27px 52px;
+    padding: 1.7rem 3.25px;
+}
+
+.header-nav__list {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    list-style-type: none;
+    padding: 0;
+}
+
+.header-nav__link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-family: poppins;
+    color: #000;
+}
+
+.search-input {
+    width: 623px;
+    font-size: 1rem;
+    border: 1px solid #131d4f;
+    border-radius: 9999px;
+    padding: 1rem 2.5rem 1rem 2rem;
 }
