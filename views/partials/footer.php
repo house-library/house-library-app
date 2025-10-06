@@ -32,5 +32,6 @@
             <p>© 2025 House Library. Todos os direitos reservados.</p>
         </div>
     </footer>
+
       </body>
 </html>
