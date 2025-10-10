@@ -1,10 +1,20 @@
-
- <?php
- require 'partials/head.php';
+<?php
  require 'partials/header.php';
  ?>
 
-    <div id="campo-filtragem">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explorar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div id="campo-filtragem">
       <form action="/buscar" method="GET" class="search-form" role="search">
         <select name="formatos" id="formatos" aria-label="Formatos">
           <option value="" selected disabled>Formatos</option>
@@ -26,11 +36,7 @@
           <option value="" selected disabled>Editorial</option>
         </select>
 
-        <select
-          name="Publicação"
-          id="publicacao"
-          aria-label="Ano de Publicação"
-        >
+        <select name="Publicação" id="publicacao" aria-label="Ano de Publicação">
           <option value="" selected disabled>Ano de publicação</option>
         </select>
 
@@ -41,6 +47,10 @@
         <button type="submit" class="search-button">Filtrar</button>
       </form>
     </div>
+</body>
+</html>
+
+    
 
        <?php require 'partials/footer.php'; ?>
 

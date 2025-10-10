@@ -1,13 +1,22 @@
-
    <?php
-   require 'partials/head.php';
    require 'partials/header.php';
    ?>
     
-<main>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Início</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
 
+<body>
+    <main>
     <section id="banner">
-        <img src="/public/assets/imgs/House_Library_banner.png" alt="Uma estante com muitos livros vista de frente com a logo da House Library no meio">
+        <img src="/public/assets/imgs/House_Library_banner.png" alt="">
     </section>
     
     <section class="secao-categorias">
@@ -25,8 +34,9 @@
         <h2>Destaques</h2>
         <a href="/destaques.html" class="ver-mais-botao">Ver mais &rarr;</a>
     </section>
-
 </main>
+</body>
+</html>
 
-    <?php require 'partials/footer.php'; ?>
+<?php require 'partials/footer.php'; ?>
 

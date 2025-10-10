@@ -1,9 +1,20 @@
-     <?php
-     require 'partials/head.php';
-     require 'partials/header.php';
-     ?>
+<?php
+require 'partials/header.php';
+?>
 
-    <main>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pagamento</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <main>
       <section id="processo-pagamento">
         <form id="campo-pagamento" action="/finalizar-pagamento" method="POST">
           <div class="selecionar-pais">
@@ -125,6 +136,10 @@
         </form>
       </section>
     </main>
+</body>
+</html>
+
+    
 
         <?php require 'partials/footer.php'; ?>
 
