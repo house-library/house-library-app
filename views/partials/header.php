@@ -6,7 +6,7 @@
 
     <div class="logo">
         <a href="/controllers/inicio.php">
-            <img class="logo" src="/public/assets/header-icons/house_library_logo.svg" alt="House Library">
+            <img class="logo" src="/public/assets/imgs/logo.svg" alt="House Library">
         </a>
      </div>
      

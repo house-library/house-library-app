@@ -1,85 +1,17 @@
-/* RESET GLOBAL */
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-    margin: 0;
-}
-
-body {
-    line-height: 1.5;
-    font-family: 'poppins', sans-serif;
-    -webkit-font-smoothing: antialiased;
-    min-height: 100dvh;
-}
-ul,
-ol {
-    list-style: none;
-    padding: 0;
-}
-a:not([class]) {
-    text-decoration-skip-ink: auto;
-}
-img,
-picture,
-video,
-canvas,
-svg {
-    display: block;
-    max-width: 100%;
-}
-input,
-button,
-textarea,
-select {
-    font: inherit;
-}
-@media (prefers-reduced-motion: reduce) {
-    *,
-    *::before,
-    *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-        scroll-behavior: auto !important;
-    }
-}
-
-.grid--2-cols {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-}
-
-.grid--3-cols {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-}
-
-.grid--4-cols {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-}
-
-.grid--5-cols {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-}
-
 .footer {
-    padding: 3.5rem 0;
+    padding: 4rem 0; /*tamanho total do footer*/
     border-top: 1px solid #808080;
-    background-color: #eeefef;
+    background-color: #f8fafc;
 }
 .footer-logo {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center; /*alinha a logo no centro do seu container*/
     gap: 1rem;
     text-decoration: none;
 }
 
 .footer-logo img {
-    display: block;
     height: 6rem;
 }
 
@@ -90,14 +22,18 @@ select {
 
 .footer--grid {
     display: grid;
-    grid-template-columns: repeat(5, auto);
-    justify-content: space-around;
+    grid-template-columns: repeat(
+        5,
+        1fr
+    ); /*cria 5 colunas com uma distancia de 1fr entre cada*/
+    justify-content: space-around; /* distribui igualmente o espaço livre entre as*/
 }
 
 .footer-heading {
     font-size: 1.2rem;
     font-weight: 700;
-    padding-bottom: 0.75rem;
+    padding-bottom: 1rem;
+    color: #0f172a;
 }
 
 .footer-contact {
@@ -107,27 +43,27 @@ select {
     line-height: 1.6rem;
 }
 
-.footer-nav {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.footer ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    gap: 1rem;
-}
-
 .footer-nav ul {
+    display: flex;
     flex-direction: column;
-    gap: 0.75rem;
+    gap: 1.2rem; /* distancia entre cada link */
+    color: #94a3b8;
+}
+
+.footer-social {
+    margin-top: 1rem;
+    padding-bottom: 0.5rem;
+}
+
+.footer-pay {
+    padding-bottom: 0.5rem;
 }
 
 .social-links,
 .payment-icons {
+    display: flex;
     align-items: center;
+    gap: 1.5rem;
 }
 
 .footer-link:link,
