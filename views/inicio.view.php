@@ -33,6 +33,19 @@
         <h2>Destaques</h2>
         <a href="/destaques.html" class="ver-mais-botao">Ver mais &rarr;</a>
     </section>
+
+    <section id="banner-">
+        <img src="/public/assets/imgs/banner-2.png" alt="">
+    </section>
+
+    <section class="secao-romance">
+        <h2>Romance</h2>
+        <a href="/destaques.html" class="ver-mais-botao">Ver mais &rarr;</a>
+    </section>
+
+    <section id="banner">
+        <img src="/public/assets/imgs/banner-3.png" alt="">
+    </section>
 </main>
 </body>
 </html>
