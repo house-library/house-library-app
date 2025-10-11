@@ -1,0 +1,70 @@
+.main {
+    flex-grow: 1;
+}
+
+.ul-category {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem 3.6rem;
+    list-style: none;
+}
+
+.category-link {
+    display: inline-block;
+    background-color: #229799;
+    text-decoration: none;
+    padding: 1rem 0.75rem;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    color: #fff;
+    transition: all 0.3s;
+}
+
+.category-link:hover {
+    background-color: #1b797a;
+    transform: translateY(-2px);
+}
+
+.section-ebooks {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 4rem;
+    margin-bottom: 16rem;
+}
+
+.more-btn {
+    background-color: transparent;
+    border: none;
+    font-size: 1rem;
+    text-decoration: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border: 2px solid #131d4f;
+    border-radius: 8px;
+    color: #131d4f;
+    padding: 0.75rem 3.5rem 0.75rem 1rem;
+    position: relative;
+}
+
+.more-btn img {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.more-btn:hover {
+    transform: translateY(-2px);
+}
+
+#banner-1 img,
+#banner-2 img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    margin-bottom: 8rem;
+}

@@ -10,6 +10,8 @@ body {
     line-height: 1.5;
     font-family: 'poppins', sans-serif;
     -webkit-font-smoothing: antialiased;
+    display: flex;
+    flex-direction: column;
     min-height: 100dvh;
 }
 ul,

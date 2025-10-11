@@ -1,10 +1,5 @@
-<link rel="stylesheet" href="/views/partials/styles/footer.css"> 
-<link rel="stylesheet" href="/views/partials/styles/reset.css"> 
-
-
 <footer class="footer">
     <div class="footer--grid"> 
-
         <div class="footer-logo">
             <a href="/controllers/inicio.php" class="footer-logo">
                 <img src="/public/assets/imgs/logo.svg" alt="House Library">
@@ -12,20 +7,26 @@
             </a>
         </div>
 
-  <div class="footer-col">
-    <h3 class="footer-heading">Fale conosco</h3>
-    <address class="footer-contact">
-        <div class="footer-contact">
-            <strong>Atendimento:<br></strong>
-            <span>Seg a Sex, 9h às 18h</span>
-</div>
-        <p class="footer-contact">
-            <strong>Contato:<br></strong>
-            <a class="footer-link" href="mailto:houselibrary@outlook.com.br">houselibrary@gmail.com</a><br>
-            <a class="footer-link" href="tel:+5511999999999">11 99999-9999</a>
-        </p>
-    </address>
-</div>
+        <div class="footer-col">
+            <h3 class="footer-heading">Fale conosco</h3>
+            <address class="footer-contact">
+                <ul>
+                    <li>
+                        <strong>Atendimento:</strong>
+                        <span>Seg a Sex, 9h às 18h</span>
+                    </li>
+                    <li>
+                        <strong>Email:</strong>
+                        <a class="footer-link" href="mailto:houselibrary@gmail.com">houselibrary@gmail.com</a>
+                    </li>
+                    <li>
+                        <strong>Telefone:</strong>
+                        <a class="footer-link" href="tel:11999999999">11 99999-9999</a>
+                    </li>
+                </ul>
+            </address>
+        </div>
+
         <div class="footer-col">
             <h3 class="footer-heading">Conta</h3>
             <nav class="footer-nav">
@@ -58,22 +59,16 @@
                 <img src="/public/assets/footer-icons/pix.svg" alt="Pix">
             </ul>
             
-            
-                <h3 class="footer-social">Redes Sociais</h3>
-                <ul class="social-links">
+            <h3 class="footer-social">Redes Sociais</h3>
+            <ul class="social-links">
                 <li><a class="social-link" href="https://whatsapp.com" target="_blank"><img src="/public/assets/footer-icons/whatsapp.svg" alt="Whatsapp"></a></li>
                 <li><a class="social-link" href="https://facebook.com" target="_blank"><img src="/public/assets/footer-icons/facebook.svg" alt="Facebook"></a></li>
                 <li><a class="social-link" href="https://instagram.com" target="_blank"><img src="/public/assets/footer-icons/instagram.svg" alt="Instagram"></a></li>
             </ul>
-            </div>
         </div>
-
-        
-      
-    </footer>
-    
-    <div class="footer-copy">
-        <p>© 2025 House Library. Todos os direitos reservados.</p>
     </div>
-      </body>
-</html>
+</footer>
+
+<div class="footer-copy">
+    <p>© 2025 House Library. Todos os direitos reservados.</p>
+</div>

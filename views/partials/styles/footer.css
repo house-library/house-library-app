@@ -1,13 +1,13 @@
 .footer {
     padding: 4rem 0; /*tamanho total do footer*/
-    border-top: 1px solid #808080;
+    border-top: 1px solid #80808033;
     background-color: #f8fafc;
 }
 .footer-logo {
     display: flex;
     flex-direction: column;
     align-items: center; /*alinha a logo no centro do seu container*/
-    gap: 1rem;
+    gap: 1rem; /* distancia entre a logo e o texto House Library */
     text-decoration: none;
 }
 
@@ -18,6 +18,7 @@
 .logo-text {
     font-weight: 500;
     font-size: 1.5rem;
+    color: #0f172a;
 }
 
 .footer--grid {
@@ -32,27 +33,28 @@
 .footer-heading {
     font-size: 1.2rem;
     font-weight: 700;
-    padding-bottom: 1rem;
+    padding-bottom: 1.2rem; /* distancia entre os titulos de colunas e links */
     color: #0f172a;
-}
-
-.footer-contact {
-    font-style: normal;
-    font-size: 1rem;
-    padding-bottom: 1rem;
-    line-height: 1.6rem;
+    font-style: normal; /* reseta o padrão do address de ser italico */
 }
 
 .footer-nav ul {
     display: flex;
     flex-direction: column;
-    gap: 1.2rem; /* distancia entre cada link */
-    color: #94a3b8;
+    gap: 1.5rem;
+}
+
+.footer-contact li {
+    display: flex;
+    flex-direction: column;
+    font-style: normal;
+    padding-bottom: 1rem;
+    gap: 0.5rem;
 }
 
 .footer-social {
-    margin-top: 1rem;
-    padding-bottom: 0.5rem;
+    margin-top: 1rem; /* separação entre os blocos de icones */
+    padding-bottom: 0.5rem; /* distancia entre o titulo e os icones */
 }
 
 .footer-pay {
@@ -66,17 +68,20 @@
     gap: 1.5rem;
 }
 
-.footer-link:link,
-.footer-link:visited {
+.footer-link {
+    color: #000;
     text-decoration: none;
-    font-size: 1rem;
-    color: #808080;
+    padding-bottom: 0.25rem;
+    border-bottom: 2px solid transparent;
+    display: inline-block;
     transition: all 0.3s;
+    width: fit-content;
 }
 
 .footer-link:hover,
 .footer-link:active {
-    color: #555;
+    color: #131d4f;
+    border-bottom-color: #131d4f;
 }
 
 .footer-copy {

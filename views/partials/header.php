@@ -1,50 +1,43 @@
-<link rel="stylesheet" href="/views/partials/styles/header.css"> 
-
-
 <header class="header">
     <div class="container">
+        <div class="logo">
+            <a href="/controllers/inicio.php">
+                <img class="logo" src="/public/assets/imgs/logo.svg" alt="House Library">
+            </a>
+        </div>
+        
+        <div class="search-bar">
+            <form action="/buscar" method="GET" class="search-form" role="search">
+                <input type="search" class="search-input" name="search-input" placeholder="Pesquisar" required>
+                <button type="submit" class="search-submit" aria-label="Buscar"></button>
+            </form>
+        </div>
 
-    <div class="logo">
-        <a href="/controllers/inicio.php">
-            <img class="logo" src="/public/assets/imgs/logo.svg" alt="House Library">
-        </a>
-     </div>
-     
-     <div class="search-bar">
-        <form action="/buscar" method="GET" class="search-form" role="search">
-            <input type="search" class="search-input" name="search-input" placeholder="Pesquisar" required>
-            <button type="submit" class="search-submit" aria-label="Buscar"></button>
-        </form>
+        <div class="header-nav">
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li>
+                        <a href="/controllers/favoritos.php" class="nav-link" aria-label="Favoritos">
+                            <span>Favoritos</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/controllers/carrinho.php" class="nav-link" aria-label="Carrinho de compras">
+                            <span>Carrinho</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/controllers/explorar.php" class="nav-link" aria-label="Explorar">
+                            <span>Explorar</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/controllers/conta.php" class="nav-link" aria-label="Minha conta">
+                            <span>Conta</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </div>
-
-
-     <div class="header-nav">
-    <nav class="main-nav">
-        <ul class="nav-list">
-            <li>
-                <a href="/controllers/favoritos.php" class="nav-link" aria-label="Favoritos">
-                    <span>Favoritos</span>
-                </a>
-            </li>
-            <li>
-                <a href="/controllers/carrinho.php" class="nav-link" aria-label="Carrinho de compras">
-                    <span>Carrinho</span>
-                </a>
-            </li>
-            <li>
-                <a href="/controllers/explorar.php" class="nav-link" aria-label="Explorar">
-                    <span>Explorar</span>
-                </a>
-            </li>
-            <li>
-                <a href="/controllers/conta.php" class="nav-link" aria-label="Minha conta">
-                    <span>Conta</span>
-                </a>
-            </li>
-        </ul>
-    </nav>
-    </div>
-     </div>
-  </div>
 </header>
-

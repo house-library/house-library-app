@@ -1,41 +1,77 @@
-   <?php require 'partials/header.php'; ?>
-    
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Início</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
- <link rel="stylesheet" href="/views/partials/styles/footer.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/views/partials/styles/reset.css">
+    <link rel="stylesheet" href="/views/partials/styles/header.css">
+    <link rel="stylesheet" href="/views/partials/styles/footer.css">
+    <link rel="stylesheet" href="/views/partials/styles/inicio.css">
 </head>
-
 <body>
-    <main>
-    <section id="banner">
-        <img src="/public/assets/imgs/House_Library_banner.png" alt="">
-    </section>
+    <?php require 'partials/header.php'; ?>
     
-    <section class="secao-categorias">
-        <ul class="categorias-ebook">
-            <li class="categorias"><a href="/contos-infantis">Contos Infantis</a></li>
-            <li class="categorias"><a href="/aventuras-juvenis">Aventuras Juvenis</a></li>
-            <li class="categorias"><a href="/literatura-classica">Literatura Clássica</a></li>
-            <li class="categorias"><a href="/historia-e-biografias">História e Biografias</a></li>
-            <li class="categorias"><a href="/arte-cultura">Arte e Cultura</a></li>
-            <li class="categorias"><a href="/ciencia-tecnologia"> Ciência e Tecnologia</a></li>
-        </ul>
-    </section>
+    <main class="main">
+        <section id="banner">
+            <img src="/public/assets/imgs/House_Library_banner.png" alt="">
+        </section>
+        
+        <section class="section-category">
+            <ul class="ul-category">
+                <li class="li-category"><a class="category-link" href="/aventuras-juvenis">Aventuras Juvenis</a></li>
+                <li class="li-category"><a class="category-link" href="/contos-infantis">Contos Infantis</a></li>
+                <li class="li-category"><a class="category-link" href="/literatura-classica">Literatura Clássica</a></li>
+                <li class="li-category"><a class="category-link" href="/historia-e-biografias">História e Biografias</a></li>
+                <li class="li-category"><a class="category-link" href="/arte-cultura">Arte e Cultura</a></li>
+                <li class="li-category"><a class="category-link" href="/ciencia-tecnologia">Ciência e Tecnologia</a></li>
+            </ul>
+        </section>
 
-    <section class="secao-destaques">
-        <h2>Destaques</h2>
-        <a href="/destaques.html" class="ver-mais-botao">Ver mais &rarr;</a>
-    </section>
-</main>
+        <section class="section-ebooks">
+            <h2>Destaques</h2>
+            <a href="/destaques.html" class="more-btn">Ver mais<img src="/public/assets/buttons/ArrowRight.svg" alt="" width="26" height="26"></img></a>
+        </section>
+
+    <section class="section-ebooks">
+            <h2>Destaques</h2>
+            <a href="/destaques.html" class="more-btn">Ver mais<img src="/public/assets/buttons/ArrowRight.svg" alt="" width="26" height="26"></img></a>
+        </section>
+
+    <section id="banner-1">
+            <img src="/public/assets/imgs/banner-1.jpg" alt="">
+        </section>
+
+    <section class="section-ebooks">
+            <h2>Destaques</h2>
+            <a href="/destaques.html" class="more-btn">Ver mais<img src="/public/assets/buttons/ArrowRight.svg" alt="" width="26" height="26"></img></a>
+        </section>
+
+    <section class="section-ebooks">
+            <h2>Destaques</h2>
+            <a href="/destaques.html" class="more-btn">Ver mais<img src="/public/assets/buttons/ArrowRight.svg" alt="" width="26" height="26"></img></a>
+        </section>
+        
+        <section id="banner-2">
+            <img src="/public/assets/imgs/banner-2.jpg" alt="">
+        </section>
+
+         <section class="section-ebooks">
+            <h2>Destaques</h2>
+            <a href="/destaques.html" class="more-btn">Ver mais<img src="/public/assets/buttons/ArrowRight.svg" alt="" width="26" height="26"></img></a>
+        </section>
+
+         <section class="section-ebooks">
+            <h2>Destaques</h2>
+            <a href="/destaques.html" class="more-btn">Ver mais<img src="/public/assets/buttons/ArrowRight.svg" alt="" width="26" height="26"></img></a>
+        </section>
+        
+    </main>
+
+
+    <?php require 'partials/footer.php'; ?>
 </body>
 </html>
-
-<?php require 'partials/footer.php'; ?>
-
