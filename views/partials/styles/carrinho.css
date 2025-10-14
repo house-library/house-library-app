@@ -45,6 +45,7 @@
     padding: 1.5rem 0; /* largura do container de cada item*/
     gap: 1.5rem; /*distacia do titulo e nome do autor pro livro*/
     margin-bottom: 1.5rem;
+    position: relative; /* agrupa icone e preco */
 }
 
 .advice-summary {
@@ -119,7 +120,7 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    flex-wrap: nowrap; /* ← NUNCA quebra linha */
+    flex-wrap: nowrap; /* ← impede que a linha quebre*/
     gap: 2rem;
 }
 

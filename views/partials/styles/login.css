@@ -1,0 +1,105 @@
+@import 'reset.css';
+
+.main-login {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f2f5;
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.logo-login {
+    width: 15rem;
+    height: auto;
+}
+
+.brand-name {
+    margin-top: 0.25rem;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #131d4f;
+}
+
+.card-login {
+    width: 100%;
+    max-width: 40rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1.8rem 2rem;
+    gap: 1.5rem;
+}
+
+.textfield {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.textfield > input {
+    width: 100%;
+    border: 1px solid #d9d9d9;
+    border-radius: 10px;
+    padding: 1rem;
+    background: #d9d9d9;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.textfield > input:focus {
+    outline: 2px solid #131d4f;
+}
+
+.textfield > input::placeholder {
+    color: #888;
+}
+
+.user-register > a,
+.recovery-password > a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: 600;
+    color: #131d4f;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s;
+}
+
+.recovery-password {
+    width: 100%;
+    text-align: right;
+}
+
+.user-register > a:hover,
+.recovery-password > a:hover {
+    border-bottom-color: #131d4f;
+}
+
+.btn-login {
+    width: 100%;
+    padding: 1rem 0;
+    border: none;
+    border-radius: 8px;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 4px;
+    color: #fff;
+    background: #131d4f;
+    cursor: pointer;
+}
+
+.btn-login:hover {
+    background: #26367e;
+}

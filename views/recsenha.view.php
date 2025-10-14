@@ -1,25 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/views/partials/styles/recsenha.css">
 </head>
 
 <body>
-  <div>
-    <img src="/public/assets/logo.svg" alt="House Library Logo" width="60">
-
-    <h2>House Library</h2>
-
-    <form>
-      <input type="password" placeholder="Escreva sua nova senha" required><br><br>
-      <input type="password" placeholder="Escreva sua senha novamente" required><br><br>
-      <button type="submit">Confirmar</button>
-    </form>
-  </div>
+    <main class="main-login">
+       
+        <figure class="logo-container">
+      <img class="logo-login" src="/public/assets/imgs/logo.svg" alt="Logo da Marca">
+      <figcaption class="brand-name">House Library</figcaption>
+    </figure>
+        <div class="card-login">
+           
+            <div class="textfield">
+                <label for="usuario">Nova senha</label>
+                <input type="password" name="email" placeholder="Nova senha">
+            </div>
+            <div class="textfield">
+                <label for="senha">Digite novamente</label>
+                <input type="repeat-password" id="repeat-password" name="repeat-password" placeholder="Digite novamente">
+            </div>
+             
+            <button class="password-confirm">Confirmar</button>
+           
+        </div>
+    
+    
+    </main>
+    
 </body>
 </html>
+
+    
