@@ -1,6 +1,5 @@
-<?php
-require 'partials/header.php';
-?>
+<?php require 
+'../views/partials/headeradm.php'; ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -9,8 +8,12 @@ require 'partials/header.php';
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gerenciamento</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../views/partials/styles/reset.css">
+    <link rel="stylesheet" href="../views/partials/styles/headeradm.css">
+    <link rel="stylesheet" href="../views/partials/styles/footer.css">
+    <link rel="stylesheet" href="../views/partials/styles/gerencamento.css">
 </head>
 
 <body>
@@ -126,6 +129,9 @@ require 'partials/header.php';
         </form>
       </section>
     </main>
+
+    
+
 </body>
 </html>
 

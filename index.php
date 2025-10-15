@@ -17,7 +17,7 @@
     
     <main class="main">
         <section id="banner">
-            <img src="/house-library-app/public/assets/imgs/House_Library_banner.png" alt="">
+            <img src="/public/assets/imgs/House_Library_banner.png" alt="">
         </section>
         
         <section class="section-category">
@@ -72,6 +72,6 @@
     </main>
 
 
-    <?php require 'partials/footer.php'; ?>
+    <?php require './views/partials/footer.php'; ?>
 </body>
 </html>

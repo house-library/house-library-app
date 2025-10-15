@@ -7,14 +7,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/views/partials/styles/recsenha.css">
+<link rel="stylesheet" href="../views/partials/styles/recsenha.css">
 </head>
 
 <body>
     <main class="main-login">
        
         <figure class="logo-container">
-      <img class="logo-login" src="/public/assets/imgs/logo.svg" alt="Logo da Marca">
+      <img class="logo-login" src="../public/assets/imgs/logo.svg" alt="Logo da Marca">
       <figcaption class="brand-name">House Library</figcaption>
     </figure>
         <div class="card-login">

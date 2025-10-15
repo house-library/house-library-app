@@ -1,4 +1,5 @@
-  <?php require 'partials/header.php'; ?>
+<?php require 
+'../views/partials/headeradm.php'; ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -11,7 +12,13 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
  <link rel="stylesheet" href="/views/partials/styles/footer.css">
 <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <link rel="stylesheet" href="../views/partials/styles/reset.css">
+    <link rel="stylesheet" href="../views/partials/styles/headeradm.css">
+    <link rel="stylesheet" href="../views/partials/styles/footer.css">
+    <link rel="stylesheet" href="../views/partials/styles/estatisticas.css">
 </head>
+
+<?php require '../views/partials/headeradm.php'; ?>
 
 <body>
  <div id="myPlot" style="width:100%;max-width:700px"></div>
@@ -37,7 +44,10 @@ const layout = {
 // Display using Plotly
 Plotly.newPlot("myPlot", data, layout);
 </script>
+
+<?php require 'partials/footer.php'; ?>
+
 </body>
 </html>
 
-    <?php require 'partials/footer.php'; ?>
+    

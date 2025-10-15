@@ -1,6 +1,5 @@
 <?php
-require 'partials/header.php';
-?>
+require 'partials/header.php';?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -11,6 +10,10 @@ require 'partials/header.php';
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="../views/partials/styles/reset.css">
+    <link rel="stylesheet" href="../views/partials/styles/headeradm.css">
+    <link rel="stylesheet" href="../views/partials/styles/footer.css">
+    <link rel="stylesheet" href="../views/partials/styles/pagamento.css">
 </head>
 
 <body>
