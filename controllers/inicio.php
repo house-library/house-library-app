@@ -1,3 +1,3 @@
 <?php
 
-require '../views/inicio.view.php';
+require '../controllers/inicio.view.php';

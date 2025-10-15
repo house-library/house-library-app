@@ -13,11 +13,11 @@
     <link rel="stylesheet" href="/views/partials/styles/inicio.css">
 </head>
 <body>
-    <?php require 'partials/header.php'; ?>
+    <?php require './views/partials/header.php'; ?>
     
     <main class="main">
         <section id="banner">
-            <img src="/public/assets/imgs/House_Library_banner.png" alt="">
+            <img src="/house-library-app/public/assets/imgs/House_Library_banner.png" alt="">
         </section>
         
         <section class="section-category">
