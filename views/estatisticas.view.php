@@ -18,14 +18,17 @@
     <link rel="stylesheet" href="../views/partials/styles/estatisticas.css">
 </head>
 
-<?php require '../views/partials/headeradm.php'; ?>
-
 <body>
+
+ <main class="content">
+  <h1>Painel de estatísticas</h1>
+</main>
+
  <div id="myPlot" style="width:100%;max-width:700px"></div>
 
 <script>
-const xArray = [50,60,70,80,90,100,110,120,130,140,150];
-const yArray = [7,8,8,9,9,9,10,11,14,14,15];
+const xArray = [40,50,60,70,80,90,100,110,120,130,140,150];
+const yArray = [6,16,10,13,15,9,12,11,12,14,10];
 
 // Define Data
 const data = [{
@@ -36,14 +39,16 @@ const data = [{
 
 // Define Layout
 const layout = {
-  xaxis: {range: [40, 160], title: "Square Meters"},
-  yaxis: {range: [5, 16], title: "Price in Millions"},  
-  title: "House Prices vs. Size"
+  xaxis: {range: [40, 160], title: "Jan     Fev      Mar      Abr      Mai      Jun      Jul      Ago      Set      Out      Nov      Dez"},
+  yaxis: {range: [5, 16], title: "Quantidade de vendas"},  
+  title: "Vendas mensais"
 };
 
 // Display using Plotly
 Plotly.newPlot("myPlot", data, layout);
 </script>
+
+<h2>Mais vendidos</h2>
 
 <?php require 'partials/footer.php'; ?>
 

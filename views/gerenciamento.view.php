@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="../views/partials/styles/reset.css">
     <link rel="stylesheet" href="../views/partials/styles/headeradm.css">
     <link rel="stylesheet" href="../views/partials/styles/footer.css">
-    <link rel="stylesheet" href="../views/partials/styles/gerencamento.css">
+    <link rel="stylesheet" href="../views/partials/styles/gerenciamento.css">
 </head>
 
 <body>
@@ -38,7 +38,7 @@
               <img
                 id="preview-imagem"
                 class="preview-imagem"
-                src="/assets/capadefault.svg"
+                src="../public/assets/imgs/capadefault.svg"
                 alt="Pré-visualização da capa do livro"
               />
             </label>
@@ -54,25 +54,13 @@
           <div class="form-gerenciamento">
             <div class="form-input">
               <label for="titulo">
-                <input
-                  type="text"
-                  id="titulo"
-                  name="titulo"
-                  placeholder="Titulo:"
-                  required
-                />
+                <input type="text" id="titulo"name="titulo" placeholder="Titulo:"required/>
               </label>
             </div>
 
             <div class="form-input">
               <label for="categoria">
-                <input
-                  type="text"
-                  id="categoria"
-                  name="categoria"
-                  placeholder="Selecionar categoria:"
-                  required
-                />
+                <input type="text" id="categoria" name="categoria" placeholder="Selecionar categoria:" required/>
               </label>
             </div>
 
@@ -81,8 +69,7 @@
                 <select
                   name="faixa-etaria"
                   id="faixa"
-                  aria-label="Faixa etária"
-                >
+                  aria-label="Faixa etária">
                   <option value="" selected disabled>Faixa Etária</option>
                 </select>
               </label>
@@ -117,14 +104,12 @@
             </div>
 
             <div class="form-input">
-              <label for="descricao">
-                <select name="descricao" id="descricao" aria-label="Descrição">
-                  <option value="" selected disabled>Descrição</option>
-                </select>
+              <label for="descrição">
+                <input type="text" id="descrição"name="descrição" placeholder="Descrição:"required/>
               </label>
             </div>
 
-            <button type="submit">Publicar</button>
+            <button type="submit2">Publicar</button>
           </div>
         </form>
       </section>
