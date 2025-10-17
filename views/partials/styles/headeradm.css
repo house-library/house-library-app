@@ -15,46 +15,6 @@
     height: 6rem;
 }
 
-.search-form {
-    display: flex;
-    align-items: center;
-    position: relative;
-    justify-self: center;
-    width: 100%;
-    max-width: 40rem;
-    border-radius: 9999px;
-    border: 1px solid #131d4f;
-    padding: 0.5rem 1.5rem;
-    overflow: hidden;
-}
-
-.search-input {
-    flex-grow: 1;
-    width: 100%;
-    border: 0;
-    outline: none;
-    background: transparent;
-    font-size: 1rem;
-    color: #333;
-}
-
-.search-submit {
-    border: 0;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    width: 2.5rem;
-    height: 2.5rem;
-    background-color: #cbd5e1;
-    flex-shrink: 0;
-    background-image: url('/public/assets/header-icons/lupa.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 1.25rem;
-}
-
 .nav-list {
     display: flex;
     flex-direction: row;

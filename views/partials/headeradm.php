@@ -9,12 +9,6 @@
             </a>
         </div>
         
-        <div class="search-bar">
-            <form action="/buscar" method="GET" class="search-form" role="search">
-                <input type="search" class="search-input" name="search-input" placeholder="Pesquisar" required>
-                <button type="submit" class="search-submit" aria-label="Buscar"></button>
-            </form>
-        </div>
 
         <div class="header-nav">
             <nav class="main-nav">
