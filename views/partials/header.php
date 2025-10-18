@@ -1,8 +1,8 @@
 <header class="header">
     <div class="container">
         <div class="logo">
-            <a href="/controllers/index.php">
-                <img class="logo" src="/public/assets/imgs/logo.svg" alt="House Library">
+            <a href="./index.php">
+                <img class="logo" src="/house-library-app/public/assets/imgs/logo.svg" alt="House Library">
             </a>
         </div>
         
@@ -17,12 +17,12 @@
             <nav class="main-nav">
                 <ul class="nav-list">
                     <li>
-                        <a href="/controllers/favoritos.php" class="nav-link" aria-label="Favoritos">
+                        <a href="./views/favoritos.view.php" class="nav-link" aria-label="Favoritos">
                             <span>Favoritos</span>
                         </a>
                     </li>
                     <li>
-                        <a href="/controllers/carrinho.php" class="nav-link" aria-label="Carrinho de compras">
+                        <a href="./views/carrinho.view.php" class="nav-link" aria-label="Carrinho de compras">
                             <span>Carrinho</span>
                         </a>
                     </li>
