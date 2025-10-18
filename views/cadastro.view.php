@@ -14,7 +14,7 @@
     <main class="main-login">
 
       <figure class="logo-container">
-        <img class="logo-login" src="../public/assets/imgs/logo.svg" alt="Logo da House Library">
+        <img class="logo-login" src="/house-library-app/public/assets/imgs/logo.svg" alt="Logo da House Library">
         <figcaption class="brand-name">House Library</figcaption>
       </figure>
       

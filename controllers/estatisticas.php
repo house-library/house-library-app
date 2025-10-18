@@ -1,3 +1,4 @@
 <?php
 
-require '../views/estatisticas.view.php';
+declare(strict_types=1);
+require dirname(__DIR__) . '/views/estatisticas.view.php';

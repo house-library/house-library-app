@@ -1,3 +1,3 @@
 <?php
-
-require '../controllers/inicio.view.php';
+declare(strict_types=1);
+require __DIR__. '../controllers/inicio.view.php';

@@ -1,3 +1,4 @@
 <?php
 
-require '../views/conta.view.php';
+declare(strict_types=1);
+require __DIR__ . '../views/conta.view.php';
