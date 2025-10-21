@@ -72,6 +72,85 @@
             <button class="excluir">Excluir</button>
           </div>
         </div>
+
+        <div class="book-item">
+          <img src="/public/assets/capas-pi/infantil/asaventuraslily.png" alt="As aventuras de Lily">
+          <div class="book-info">
+               <h3>As aventuras de Lily</h3></h3>
+               <p>3 capitulos</p>
+               <p>Infantil</p>
+          </div>
+          <div class="book-actions">
+            <button class="editar">Editar</button>
+            <button class="excluir">Excluir</button>
+          </div>
+        </div>
+
+        <div class="book-item">
+          <img src="/public/assets/capas-pi/infantil/MeninoRaposa.png" alt="Manino Raposa">
+          <div class="book-info">
+               <h3>Menino Raposa</h3></h3>
+               <p>4 capitulos</p>
+               <p>Infantil</p>
+          </div>
+          <div class="book-actions">
+            <button class="editar">Editar</button>
+            <button class="excluir">Excluir</button>
+          </div>
+        </div>
+
+        <div class="book-item">
+          <img src="/public/assets/capas-pi/romance/nossaquimica.png" alt="Nossa química">
+          <div class="book-info">
+               <h3>Nossa química</h3></h3>
+               <p>7 capitulos</p>
+               <p>Romance</p>
+          </div>
+          <div class="book-actions">
+            <button class="editar">Editar</button>
+            <button class="excluir">Excluir</button>
+          </div>
+        </div>
+
+        <div class="book-item">
+          <img src="/public/assets/capas-pi/romance/mariana.png" alt="Mariana">
+          <div class="book-info">
+               <h3>Mariana</h3>
+               <p>9 capitulos</p>
+               <p>Romance</p>
+          </div>
+          <div class="book-actions">
+            <button class="editar">Editar</button>
+            <button class="excluir">Excluir</button>
+          </div>
+        </div>
+
+        <div class="book-item">
+          <img src="/public/assets/capas-pi/romance/quandovocechegou.png" alt="Quando você chegou">
+          <div class="book-info">
+               <h3>Quando você chegou</h3>
+               <p>5 capitulos</p>
+               <p>Romance</p>
+          </div>
+          <div class="book-actions">
+            <button class="editar">Editar</button>
+            <button class="excluir">Excluir</button>
+          </div>
+        </div>
+
+        <div class="book-item">
+          <img src="/public/assets/capas-pi/autoajuda/caminhodaluz.png" alt="No caminho da luz">
+          <div class="book-info">
+               <h3>No caminho da luz</h3>
+               <p>5 capitulos</p>
+               <p>Romance</p>
+          </div>
+          <div class="book-actions">
+            <button class="editar">Editar</button>
+            <button class="excluir">Excluir</button>
+          </div>
+        </div>
+</body>
 </body>
 </html>
 

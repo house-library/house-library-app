@@ -17,6 +17,7 @@ button-anterior{
 main{
     display: flex;
     justify-content: center;
+    height: 400px;
 }
 
 #gerenciamento form{
@@ -27,7 +28,7 @@ main{
 }
 
 .upload-container{
-    flex: 0 0 200px;
+    flex: 0 0 210px;
     display: flex;
     flex-direction: column;
 }
@@ -35,8 +36,8 @@ main{
 .upload-label{
     display: block;
     cursor: pointer;
-    width: 160px;
-    height: 240px;
+    width: 210px;
+    height: 310px;
     background-color: #ddd;
     border-radius: 5px;
     text-align: center;
@@ -108,13 +109,13 @@ main{
 
 .form-input [id=descrição]{
     width: 480px;
+    height: 112px;
     border: 1px solid #229799;
     border-radius: 3px;
     outline: none;
     background-color: white;
     font-size: 14px;
-    padding: 3rem;
-    
+    padding: 1rem;
 }
 
 textarea{
