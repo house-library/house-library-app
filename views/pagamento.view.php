@@ -13,20 +13,37 @@ require 'partials/header.php';?>
    <link rel="stylesheet" href="../views/partials/styles/reset.css">
     <link rel="stylesheet" href="../views/partials/styles/headeradm.css">
     <link rel="stylesheet" href="../views/partials/styles/footer.css">
-    <link rel="stylesheet" href="../views/partials/styles/pagamento.css">
+   <link rel="stylesheet" href="../views/partials/styles/pagamento.css">
+>
 </head>
 
 <body>
   <main>
       <section id="processo-pagamento">
         <form id="campo-pagamento" action="/finalizar-pagamento" method="POST">
-          <div class="selecionar-pais">
-            <label for="pais-select">País</label>
-            <select name="Pais" id="pais-select">
-              <option value="" selected disabled></option>
-            </select>
-          </div>
-
+         <div class="selecionar-pais">
+  <label for="pais-select">País *</label>
+  <select name="Pais" id="pais-select" required>
+    <option value="" disabled>Selecione um País</option>
+    <option value="BR" selected>Brasil</option>
+    <option value="PT">Portugal</option>
+    <option value="US">Estados Unidos</option>
+    <option value="CA">Canadá</option>
+    <option value="AR">Argentina</option>
+    </select>
+</div>
+<div class="codigo-promocional">
+  <label for="promo-code">Código Promocional</label>
+  <div class="input-grupo">
+    <input 
+      type="text" 
+      id="promo-code" 
+      name="codigo-promocional" 
+      placeholder="Digite seu código"
+    />
+    <button type="button" class="btn-aplicar">Aplicar</button>
+  </div>
+</div>
           <fieldset>
             <div class="opcao-cartao">
               <label class="opcao-cartao" for="cartao-radio">

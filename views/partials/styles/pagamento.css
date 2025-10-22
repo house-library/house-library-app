@@ -1,0 +1,294 @@
+body {
+ font-family: 'Poppins', sans-serif;
+ background-color: #f7f8fa;
+ color: #1e1e1e;
+ margin: 0;
+ padding: 0;
+}
+
+#processo-pagamento {
+ display: flex;
+ justify-content: center;
+ padding: 40px 0;
+}
+
+#campo-pagamento {
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: space-between;
+ background-color: #fff;
+ border: 1px solid #dcdcdc;
+ border-radius: 6px;
+ box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+ max-width: 1100px;
+ width: 100%;
+ padding: 30px;
+}
+
+.selecionar-pais {
+ width: 100%;
+ margin-bottom: 25px;
+}
+
+.selecionar-pais label {
+ display: block;
+ font-weight: 600;
+ font-size: 14px;
+ margin-bottom: 8px;
+ color: #333;
+}
+
+.selecionar-pais select {
+ width: 100%;
+ padding: 10px;
+ border: 1px solid #cfcfcf;
+ border-radius: 4px;
+ font-size: 14px;
+ background-color: #fff;
+ outline: none;
+}
+
+fieldset {
+ border: none;
+ padding: 0;
+ width: 65%;
+}
+
+.opcao-cartao {
+ display: flex;
+ align-items: center;
+ gap: 8px;
+ margin-bottom: 10px;
+}
+
+.opcao-cartao input {
+ accent-color: #243a5a;
+}
+
+.bandeiras {
+ display: flex;
+ gap: 8px;
+ margin-bottom: 20px;
+}
+
+.bandeiras img {
+ width: 40px;
+ height: auto;
+}
+
+.numero-cartao,
+.validade,
+.cvv {
+margin-bottom: 20px;
+}
+
+.numero-cartao label,
+.validade label,
+.cvv label {
+ display: block;
+ font-size: 14px;
+ color: #333;
+ font-weight: 600;
+ margin-bottom: 6px;
+}
+
+.numero-cartao input,
+.validade input,
+.cvv input {
+ border: 1px solid #cfcfcf;
+ border-radius: 4px;
+ padding: 10px;
+ font-size: 14px;
+ width: 100%;
+ outline: none;
+}
+
+.data-validade {
+ display: flex;
+ align-items: center;
+ gap: 6px;
+}
+
+.data-validade input {
+ width: 60px;
+ text-align: center;
+}
+.codigo-promocional {
+  width: 65%; 
+  margin-bottom: 25px;
+ }
+
+ .codigo-promocional label {
+  display: block;
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.codigo-promocional .input-grupo {
+  display: flex;
+  gap: 10px;
+}
+
+.codigo-promocional input {
+  flex-grow: 1; 
+  padding: 10px;
+  border: 1px solid #cfcfcf;
+  border-radius: 4px;
+  font-size: 14px;
+  outline: none;
+}
+
+.codigo-promocional .btn-aplicar {
+  background-color: #243a5a; 
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  flex-shrink: 0;
+}
+
+.codigo-promocional .btn-aplicar:hover {
+  background-color: #0f1724; 
+}
+
+#campo-pagamento fieldset {
+  width: 65%; 
+}
+
+@media (max-width: 900px) {
+    #campo-pagamento {
+        flex-direction: column; 
+        padding: 20px;
+    }
+
+    fieldset,
+    .opcao-pagamento,
+    .codigo-promocional { 
+        width: 100%;
+    }
+
+    #carrinho-resumo {
+        width: 100%;
+        margin-top: 30px; 
+    }
+}
+
+.cvv {
+
+}
+
+.cvv {
+ display: flex;
+ align-items: flex-end;
+ gap: 10px;
+}
+
+.cvv input {
+ width: 100px;
+}
+
+.cvv button {
+ background: transparent;
+ border: none;
+ cursor: pointer;
+ padding: 0;
+}
+
+.cvv img {
+ width: 18px;
+ height: 18px;
+}
+
+.opcao-pagamento {
+ width: 65%;
+ background-color: #fafafa;
+ border: 1px solid #ddd;
+ border-radius: 6px;
+ padding: 15px;
+ margin-top: 20px;
+}
+
+.opcao-pagamento label {
+ display: flex;
+ align-items: center;
+ gap: 10px;
+ cursor: pointer;
+ flex-wrap: wrap;
+}
+
+.opcao-pagamento p {
+ font-size: 13px;
+ color: #555;
+ margin: 0;
+}
+
+.opcao-pagamento img {
+ width: 28px;
+ height: auto;
+}
+
+#carrinho-resumo {
+ width: 30%;
+ background-color: #fff;
+ border: 1px solid #ddd;
+ border-radius: 6px;
+ padding: 25px;
+ box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+ align-self: flex-start;
+}
+
+#carrinho-resumo h3 {
+ font-size: 18px;
+ font-weight: 600;
+ margin-bottom: 20px;
+ color: #1e1e1e;
+}
+
+#carrinho-resumo p {
+ font-size: 14px;
+ margin-bottom: 10px;
+ display: flex;
+ justify-content: space-between;
+}
+
+#carrinho-resumo button {
+ background-color: #0f1724;
+ color: #fff;
+ border: none;
+ border-radius: 4px;
+ padding: 14px;
+ font-size: 15px;
+ font-weight: 600;
+ width: 100%;
+ margin-top: 15px;
+ cursor: pointer;
+ transition: background 0.2s ease;
+}
+
+#carrinho-resumo button:hover {
+ background-color: #1e293b;
+}
+
+@media (max-width: 900px) {
+ #campo-pagamento {
+ flex-direction: column;
+ padding: 20px;
+ }
+
+ fieldset,
+ 
+ .opcao-pagamento {
+  width: 100%;
+ }
+
+ #carrinho-resumo {
+ width: 100%;
+ margin-top: 30px;
+ }
+}

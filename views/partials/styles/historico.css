@@ -1,0 +1,149 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f7f8fa; 
+    color: #1e1e1e;
+}
+
+.history-main {
+    max-width: 900px; 
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.history-title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.purchase-item {
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+    border: 1px solid #dcdcdc;
+    border-radius: 6px;
+    background-color: #fff; 
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05); 
+    padding: 20px; 
+    margin-bottom: 20px;
+    width: 100%; 
+}
+
+.book-cover-container {
+    flex-shrink: 0; 
+    margin-right: 20px;
+}
+
+.book-cover-container img {
+    width: 100px; 
+    height: 140px; 
+    object-fit: cover;
+    border-radius: 3px;
+}
+
+.book-details {
+    flex-grow: 1; 
+}
+
+.book-details h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0 0 4px 0;
+}
+
+.book-details p {
+    font-size: 14px;
+    color: #555;
+    margin: 0 0 2px 0;
+}
+
+.book-details strong {
+    font-size: 15px;
+    color: #1e1e1e;
+}
+
+.action-button {
+    flex-shrink: 0; 
+    margin-left: 20px;
+}
+
+.btn-download {
+    background-color: #38c172; 
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.btn-download:hover {
+    background-color: #2d995b;
+}
+
+@media (max-width: 768px) {
+    .history-main {
+        margin-top: 20px;
+    }
+    
+    .purchase-item {
+        padding: 15px;
+    }
+
+    .book-cover-container {
+        margin-right: 15px;
+    }
+
+    .action-button {
+        margin-left: 10px;
+    }
+    
+    .btn-download {
+        padding: 8px 15px;
+    }
+}
+
+@media (max-width: 600px) {
+    .purchase-item {
+        flex-direction: column; 
+        align-items: flex-start;
+    }
+
+    .book-cover-container {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .book-details {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    
+    .action-button {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .btn-download {
+        width: 100%; 
+        padding: 12px 0; 
+    }
+}
+
+.history-main {
+    max-width: 1200px; 
+    width: 100%; 
+    margin: 40px 0 40px 100px; 
+    padding: 0 20px; 
+    box-sizing: border-box; 
+    text-align: left; 
+}
+
+.history-title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    text-align: left; 
+}

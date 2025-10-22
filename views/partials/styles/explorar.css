@@ -1,0 +1,88 @@
+body {
+    background-color: #f7f8fa;
+    color: #1e1e1e;
+}
+
+.explore-page-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px 40px; 
+}
+
+#campo-filtragem {
+    margin-bottom: 30px;
+}
+
+.filter-form {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 15px;
+}
+
+.filter-form select {
+    flex-basis: calc(25% - 15px); 
+    padding: 10px 15px;
+    border: 1px solid #dcdcdc;
+    margin-bottom: 10px;
+}
+
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+}
+
+.book-item {
+    text-align: center;
+    
+}
+
+.book-item img {
+    
+}
+
+.book-title {
+   
+}
+
+@media (max-width: 1200px) {
+    .filter-form select {
+        flex-basis: calc(33.333% - 15px); 
+    }
+
+    /* Grid: Passa de 6 para 4 colunas */
+    .book-grid {
+        grid-template-columns: repeat(4, 1fr); 
+    }
+}
+
+@media (max-width: 768px) {
+    .explore-page-container {
+        padding: 20px 20px;
+    }
+    
+    .filter-form select {
+        flex-basis: calc(50% - 7.5px); 
+        gap: 15px;
+    }
+
+    .book-grid {
+        grid-template-columns: repeat(3, 1fr); 
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .filter-form select {
+        flex-basis: 100%; 
+    }
+    
+    .book-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    
+    .book-title {
+        font-size: 12px;
+    }
+}
