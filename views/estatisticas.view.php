@@ -21,11 +21,15 @@
 
 <body>
 
- <main class="content">
-  <h1>Painel de estatísticas</h1>
-</main>
+<h2>Painel de estatísticas</h2>
 
- <div id="myPlot" style="width:80%;max-width:650px"></div>
+<section class="charts">
+      <div id="myPlot"></div>
+      <canvas id="myChart"></canvas>
+    </section>
+
+
+ <div id="myPlot" style="width:50%;max-width:60px"></div>
 
 <script>
 const xArray = [40,50,60,70,80,90,100,110,120,130,140,150];
@@ -40,7 +44,7 @@ const data = [{
 
 // Define Layout
 const layout = {
-  xaxis: {range: [40, 160], title: "Jan     Fev      Mar      Abr      Mai      Jun      Jul      Ago      Set      Out      Nov      Dez"},
+  xaxis: {range: [40, 160], title: "Jan   Fev    Mar    Abr    Mai    Jun    Jul    Ago   Set    Out    Nov    Dez"},
   yaxis: {range: [5, 16], title: "Quantidade de vendas"},  
   title: "Vendas mensais"
 };
@@ -49,11 +53,11 @@ const layout = {
 Plotly.newPlot("myPlot", data, layout);
 </script>
 
-<canvas id="myChart" style="width:75%;max-width:360px"></canvas>
+<canvas id="myChart" style="width:100px;max-width:50px"></canvas>
 
 <script>
 const xValues = ["Se ame", "Nossa química", "Vida secreta", "Era uma vez", "Espaço sideral"];
-const yValues = [55, 49, 44, 24, 15];
+const yValues = [389, 344, 266, 243, 241];
 const barColors = ["red", "green","blue","orange","brown"];
 
 const ctx = document.getElementById('myChart');
@@ -80,52 +84,41 @@ new Chart(ctx, {
 });
 </script>
 
-<h2>Mais vendidos</h2>
-          <div class="book-item">
-          <img src="/public/assets/capas-pi/ficcçao cientifica/2099.png" alt="2099">
-          <div class="book-info">
-               <h3>2099</h3>
-               <p>8 capitulos</p>
-               <p>Ficção cientifica</p>
-          </div>
-          </div>
+    <h2>Mais vendidos</h2> <br>
+    
+<div class="books">
+  <div class="book-item">
+    <img src="/public/assets/capas-pi/autoajuda/seame.png" alt="Se ame">
+    <h3>Se ame</h3>
+    <p>#01 mais vendido</p>
+  </div>
 
-          <div class="book-item">
-          <img src="/public/assets/capas-pi/ficcçao cientifica/2099.png" alt="2099">
-          <div class="book-info">
-               <h3>2099</h3>
-               <p>8 capitulos</p>
-               <p>Ficção cientifica</p>
-          </div>
-        </div>
+  <div class="book-item">
+    <img src="/public/assets/capas-pi/romance/nossaquimica.png" alt="Nossa química">
+    <h3>Nossa química</h3>
+    <p>#02 mais vendido</p>
+  </div>
 
-          <div class="book-item">
-          <img src="/public/assets/capas-pi/ficcçao cientifica/2099.png" alt="2099">
-          <div class="book-info">
-               <h3>2099</h3>
-               <p>8 capitulos</p>
-               <p>Ficção cientifica</p>
-          </div>
-          </div>
+  <div class="book-item">
+    <img src="/public/assets/capas-pi/misterio/vidasecreta.png" alt=" A vida secreta dos pintores">
+    <h3>A vida secreta dos pintores</h3>
+    <p>#03 mais vendido</p>
+  </div>
 
-          <div class="book-item">
-          <img src="/public/assets/capas-pi/ficcçao cientifica/2099.png" alt="2099">
-          <div class="book-info">
-               <h3>2099</h3>
-               <p>8 capitulos</p>
-               <p>Ficção cientifica</p>
-          </div>
-          </div>
+  <div class="book-item">
+    <img src="/public/assets/capas-pi/infantil/eraumavez.png" alt="Era uma vez">
+    <h3>Era uma vez</h3>
+    <p>#04 mais vendido</p>
+  </div>
 
-          <div class="book-item">
-          <img src="/public/assets/capas-pi/ficcçao cientifica/2099.png" alt="2099">
-          <div class="book-info">
-               <h3>2099</h3>
-               <p>8 capitulos</p>
-               <p>Ficção cientifica</p>
-          </div>
-          </div>
-
+  <div class="book-item">
+    <img src="/public/assets/capas-pi/ficcçao cientifica/espacosideral.png" alt="Espaço sideral">
+    <h3>Espaço sideral</h3>
+    <p>#05 mais vendido</p>
+  </div>
+</div>
+<br>
+<br>
 </body>
 </html>
 
