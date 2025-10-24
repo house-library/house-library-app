@@ -43,7 +43,8 @@
           </div>
           <div class="book-actions">
             <button class="editar">Editar</button>
-            <button class="excluir">Excluir</button>
+            <button class="excluir">
+              <img src="/public/assets/buttons/remove.svg"></button>
           </div>
         </div>
         
@@ -514,6 +515,488 @@
             <button class="excluir">Excluir</button>
           </div>
         </div>
+
+        <div class="book-item">
+          <img src="/public/assets/capas-pi/infantil/eraumavez.png" alt="Era uma vez">
+          <div class="book-info">
+               <h3>Era uma vez</h3>
+               <p>3 capitulos</p>
+               <p>Infantil</p>
+          </div>
+          <div class="book-actions">
+            <button class="editar">Editar</button>
+            <button class="excluir">Excluir</button>
+          </div>
+        </div>
+
+        <div class="book-item">
+          <img src="/public/assets/capas-pi/infantil/forteamora.png" alt="A forte amora">
+          <div class="book-info">
+               <h3>A forte amora</h3>
+               <p>3 capitulos</p>
+               <p>Infantil</p>
+          </div>
+          <div class="book-actions">
+            <button class="editar">Editar</button>
+            <button class="excluir">Excluir</button>
+          </div>
+        </div>
+
+        <div class="book-item">
+          <img src="/public/assets/capas-pi/infantil/guardiaomundo.png" alt="Os guardiões do bosque encantado">
+          <div class="book-info">
+               <h3>Os guardiões do bosque encantado</h3>
+               <p>3 capitulos</p>
+               <p>Infantil</p>
+          </div>
+          <div class="book-actions">
+            <button class="editar">Editar</button>
+            <button class="excluir">Excluir</button>
+          </div>
+        </div>
+
+        <div class="book-item">
+          <img src="/public/assets/capas-pi/infantil/limaofeliz.png" alt="O limão feliz">
+          <div class="book-info">
+               <h3>O limão feliz</h3>
+               <p>4 capitulos</p>
+               <p>Infantil</p>
+          </div>
+          <div class="book-actions">
+            <button class="editar">Editar</button>
+            <button class="excluir">Excluir</button>
+          </div>
+        </div>
+
+        <div class="book-item">
+          <img src="/public/assets/capas-pi/infantil/memoriasinfancia.png" alt="O limão feliz">
+          <div class="book-info">
+               <h3>Memórias da infância</h3>
+               <p>4 capitulos</p>
+               <p>Infantil</p>
+          </div>
+          <div class="book-actions">
+            <button class="editar">Editar</button>
+            <button class="excluir">Excluir</button>
+          </div>
+        </div>
+
+        <div class="book-item">
+          <img src="/public/assets/capas-pi/infantil/MeninoRaposa.png" alt="O menino e a raposa">
+          <div class="book-info">
+               <h3>O menino e a raposa</h3>
+               <p>4 capitulos</p>
+               <p>Infantil</p>
+          </div>
+          <div class="book-actions">
+            <button class="editar">Editar</button>
+            <button class="excluir">Excluir</button>
+          </div>
+        </div>
+
+        <div class="book-item">
+          <img src="/public/assets/capas-pi/infantil/monstrovermelho.png" alt="A lenda do monstro vermelho">
+          <div class="book-info">
+               <h3>A lenda do monstro vermelho</h3>
+               <p>4 capitulos</p>
+               <p>Infantil</p>
+          </div>
+          <div class="book-actions">
+            <button class="editar">Editar</button>
+            <button class="excluir">Excluir</button>
+          </div>
+        </div>
+
+        <div class="book-item">
+          <img src="/public/assets/capas-pi/infantil/omundoleo.png" alt="Leo o bom leão">
+          <div class="book-info">
+               <h3>Leo o bom leão</h3>
+               <p>4 capitulos</p>
+               <p>Infantil</p>
+          </div>
+          <div class="book-actions">
+            <button class="editar">Editar</button>
+            <button class="excluir">Excluir</button>
+          </div>
+        </div>
+
+        <div class="book-item">
+          <img src="/public/assets/capas-pi/infantil/sandramundo.png" alt="Como Sandra salvou o circo">
+          <div class="book-info">
+               <h3>Como Sandra salvou o circo</h3>
+               <p>5 capitulos</p>
+               <p>Infantil</p>
+          </div>
+          <div class="book-actions">
+            <button class="editar">Editar</button>
+            <button class="excluir">Excluir</button>
+          </div>
+        </div>
+
+        <div class="book-item">
+          <img src="/public/assets/capas-pi/infantil/todosjuntos.png" alt="Todos juntos agora">
+          <div class="book-info">
+               <h3>Todos juntos agora</h3>
+               <p>5 capitulos</p>
+               <p>Infantil</p>
+          </div>
+          <div class="book-actions">
+            <button class="editar">Editar</button>
+            <button class="excluir">Excluir</button>
+          </div>
+        </div>
+
+        <div class="book-item">
+          <img src="/public/assets/capas-pi/infantil/umatrupedocirco.png" alt="Uma trupe de circo">
+          <div class="book-info">
+               <h3>Uma trupe de circo</h3>
+               <p>5 capitulos</p>
+               <p>Infantil</p>
+          </div>
+          <div class="book-actions">
+            <button class="editar">Editar</button>
+            <button class="excluir">Excluir</button>
+          </div>
+        </div>
+
+        <div class="book-item">
+          <img src="/public/assets/capas-pi/infantil/viagemestrelas.png" alt="Uma trupe de circo">
+          <div class="book-info">
+               <h3>Viagem pelas estrelas</h3>
+               <p>6 capitulos</p>
+               <p>Infantil</p>
+          </div>
+          <div class="book-actions">
+            <button class="editar">Editar</button>
+            <button class="excluir">Excluir</button>
+          </div>
+        </div>
+
+        <div class="book-item">
+          <img src="/public/assets/capas-pi/infantil/vidasecretacoelhos.png" alt="A vida secreta dos coelhos">
+          <div class="book-info">
+               <h3>A vida secreta dos coelhos</h3>
+               <p>7 capitulos</p>
+               <p>Infantil</p>
+          </div>
+          <div class="book-actions">
+            <button class="editar">Editar</button>
+            <button class="excluir">Excluir</button>
+          </div>
+        </div>
+
+        <div class="book-item">
+          <img src="/public/assets/capas-pi/misterio/afabulagemeo.png" alt="A vida secreta dos coelhos">
+          <div class="book-info">
+               <h3>A fábula do gêmeo confundido</h3>
+               <p>9 capitulos</p>
+               <p>Mistério</p>
+          </div>
+          <div class="book-actions">
+            <button class="editar">Editar</button>
+            <button class="excluir">Excluir</button>
+          </div>
+        </div>
+
+        <div class="book-item">
+          <img src="/public/assets/capas-pi/misterio/ateofim.png" alt="Até o fim">
+          <div class="book-info">
+               <h3>Até o fim</h3>
+               <p>11 capitulos</p>
+               <p>Mistério</p>
+          </div>
+          <div class="book-actions">
+            <button class="editar">Editar</button>
+            <button class="excluir">Excluir</button>
+          </div>
+        </div>
+
+        <div class="book-item">
+          <img src="/public/assets/capas-pi/misterio/caodesaparecido.png" alt="O mistério do cachorro desaparecido">
+          <div class="book-info">
+               <h3>O mistério do cachorro desaparecido</h3>
+               <p>11 capitulos</p>
+               <p>Mistério</p>
+          </div>
+          <div class="book-actions">
+            <button class="editar">Editar</button>
+            <button class="excluir">Excluir</button>
+          </div>
+        </div>
+
+        <div class="book-item">
+          <img src="/public/assets/capas-pi/misterio/criaturasmbrias.png" alt="Criaturas sombrias">
+          <div class="book-info">
+               <h3>Criaturas sombrias</h3>
+               <p>10 capitulos</p>
+               <p>Mistério</p>
+          </div>
+          <div class="book-actions">
+            <button class="editar">Editar</button>
+            <button class="excluir">Excluir</button>
+          </div>
+        </div>
+
+        <div class="book-item">
+          <img src="/public/assets/capas-pi/misterio/entradaelegancia.png" alt="Sua entrada com elegância">
+          <div class="book-info">
+               <h3>Sua entrada com elegância</h3>
+               <p>9 capitulos</p>
+               <p>Mistério</p>
+          </div>
+          <div class="book-actions">
+            <button class="editar">Editar</button>
+            <button class="excluir">Excluir</button>
+          </div>
+        </div>
+
+        <div class="book-item">
+          <img src="/public/assets/capas-pi/misterio/espreitaescuro.png" alt="O que espreita no escuro">
+          <div class="book-info">
+               <h3>O que espreita no escuro</h3>
+               <p>7 capitulos</p>
+               <p>Mistério</p>
+          </div>
+          <div class="book-actions">
+            <button class="editar">Editar</button>
+            <button class="excluir">Excluir</button>
+          </div>
+        </div>
+
+        <div class="book-item">
+          <img src="/public/assets/capas-pi/misterio/estrelasnoite.png" alt="Pelas estrelas da noite">
+          <div class="book-info">
+               <h3>Pelas estrelas da noite</h3>
+               <p>8 capitulos</p>
+               <p>Mistério</p>
+          </div>
+          <div class="book-actions">
+            <button class="editar">Editar</button>
+            <button class="excluir">Excluir</button>
+          </div>
+        </div>
+
+        <div class="book-item">
+          <img src="/public/assets/capas-pi/misterio/florestamisteriosa.png" alt="A floresta misteriosa">
+          <div class="book-info">
+               <h3>A floresta misteriosa</h3>
+               <p>8 capitulos</p>
+               <p>Mistério</p>
+          </div>
+          <div class="book-actions">
+            <button class="editar">Editar</button>
+            <button class="excluir">Excluir</button>
+          </div>
+        </div>
+
+        <div class="book-item">
+          <img src="/public/assets/capas-pi/misterio/olharesmare.png" alt="Olhares na maré">
+          <div class="book-info">
+               <h3>Olhares na maré</h3>
+               <p>4 capitulos</p>
+               <p>Mistério</p>
+          </div>
+          <div class="book-actions">
+            <button class="editar">Editar</button>
+            <button class="excluir">Excluir</button>
+          </div>
+        </div>
+
+        <div class="book-item">
+          <img src="/public/assets/capas-pi/misterio/segredosdomar.png" alt="Os segredos do mar">
+          <div class="book-info">
+               <h3>Os segredos do mar</h3>
+               <p>5 capitulos</p>
+               <p>Mistério</p>
+          </div>
+          <div class="book-actions">
+            <button class="editar">Editar</button>
+            <button class="excluir">Excluir</button>
+          </div>
+        </div>
+
+        <div class="book-item">
+          <img src="/public/assets/capas-pi/misterio/semsolucao.png" alt="Sem solução">
+          <div class="book-info">
+               <h3>Sem solução</h3>
+               <p>6 capitulos</p>
+               <p>Mistério</p>
+          </div>
+          <div class="book-actions">
+            <button class="editar">Editar</button>
+            <button class="excluir">Excluir</button>
+          </div>
+        </div>
+
+        <div class="book-item">
+          <img src="/public/assets/capas-pi/misterio/vidasecreta.png" alt="A vida secreta dos pintores">
+          <div class="book-info">
+               <h3>A vida secreta dos pintores</h3>
+               <p>8 capitulos</p>
+               <p>Mistério</p>
+          </div>
+          <div class="book-actions">
+            <button class="editar">Editar</button>
+            <button class="excluir">Excluir</button>
+          </div>
+        </div>
+
+        <div class="book-item">
+          <img src="/public/assets/capas-pi/romance/amorquefloresce.png" alt="No mesmo calho: Um amor que floresce">
+          <div class="book-info">
+               <h3>No mesmo calho: Um amor que floresce</h3>
+               <p>10 capitulos</p>
+               <p>Romance</p>
+          </div>
+          <div class="book-actions">
+            <button class="editar">Editar</button>
+            <button class="excluir">Excluir</button>
+          </div>
+        </div>
+
+        <div class="book-item">
+          <img src="/public/assets/capas-pi/romance/cartadeamor.png" alt="Carta de amor do passado">
+          <div class="book-info">
+               <h3>Carta de amor do passado</h3>
+               <p>9 capitulos</p>
+               <p>Romance</p>
+          </div>
+          <div class="book-actions">
+            <button class="editar">Editar</button>
+            <button class="excluir">Excluir</button>
+          </div>
+        </div>
+
+        <div class="book-item">
+          <img src="/public/assets/capas-pi/romance/cartasverao.png" alt="Cartas para um verão inesperado">
+          <div class="book-info">
+               <h3>Cartas para um verão inesperado</h3>
+               <p>11 capitulos</p>
+               <p>Romance</p>
+          </div>
+          <div class="book-actions">
+            <button class="editar">Editar</button>
+            <button class="excluir">Excluir</button>
+          </div>
+        </div>
+
+        <div class="book-item">
+          <img src="/public/assets/capas-pi/romance/coracaopapeç.png" alt="Coração de papel">
+          <div class="book-info">
+               <h3>Coração de papel</h3>
+               <p>13 capitulos</p>
+               <p>Romance</p>
+          </div>
+          <div class="book-actions">
+            <button class="editar">Editar</button>
+            <button class="excluir">Excluir</button>
+          </div>
+        </div>
+
+        <div class="book-item">
+          <img src="/public/assets/capas-pi/romance/coracoesilencio.png" alt="Corações em silêncio">
+          <div class="book-info">
+               <h3>Corações em silêncio</h3>
+               <p>14 capitulos</p>
+               <p>Romance</p>
+          </div>
+          <div class="book-actions">
+            <button class="editar">Editar</button>
+            <button class="excluir">Excluir</button>
+          </div>
+        </div>
+
+        <div class="book-item">
+          <img src="/public/assets/capas-pi/romance/historiaverao.png" alt="Uma história de verão">
+          <div class="book-info">
+               <h3>Uma história de verão</h3>
+               <p>9 capitulos</p>
+               <p>Romance</p>
+          </div>
+          <div class="book-actions">
+            <button class="editar">Editar</button>
+            <button class="excluir">Excluir</button>
+          </div>
+        </div>
+
+        <div class="book-item">
+          <img src="/public/assets/capas-pi/romance/mariana.png" alt="Mariana">
+          <div class="book-info">
+               <h3>Mariana</h3>
+               <p>7 capitulos</p>
+               <p>Romance</p>
+          </div>
+          <div class="book-actions">
+            <button class="editar">Editar</button>
+            <button class="excluir">Excluir</button>
+          </div>
+        </div>
+
+        <div class="book-item">
+          <img src="/public/assets/capas-pi/romance/nossaquimica.png" alt="Nossa química">
+          <div class="book-info">
+               <h3>Nossa química</h3>
+               <p>5 capitulos</p>
+               <p>Romance</p>
+          </div>
+          <div class="book-actions">
+            <button class="editar">Editar</button>
+            <button class="excluir">Excluir</button>
+          </div>
+        </div>
+
+        <div class="book-item">
+          <img src="/public/assets/capas-pi/romance/outroladoamor.png" alt="Desvendando o mistério, o outro lado do amor">
+          <div class="book-info">
+               <h3>Desvendando o mistério, o outro lado do amor</h3>
+               <p>7 capitulos</p>
+               <p>Romance</p>
+          </div>
+          <div class="book-actions">
+            <button class="editar">Editar</button>
+            <button class="excluir">Excluir</button>
+          </div>
+        </div>
+
+        <div class="book-item">
+          <img src="/public/assets/capas-pi/romance/quandovocechegou.png" alt="Quando você chegou">
+          <div class="book-info">
+               <h3>Quando você chegou</h3>
+               <p>10 capitulos</p>
+               <p>Romance</p>
+          </div>
+          <div class="book-actions">
+            <button class="editar">Editar</button>
+            <button class="excluir">Excluir</button>
+          </div>
+        </div>
+
+        <div class="book-item">
+          <img src="/public/assets/capas-pi/romance/tudopornosdois.png" alt="Tudo por nós dois">
+          <div class="book-info">
+               <h3>Tudo por nós dois</h3>
+               <p>7 capitulos</p>
+               <p>Romance</p>
+          </div>
+          <div class="book-actions">
+            <button class="editar">Editar</button>
+            <button class="excluir">Excluir</button>
+          </div>
+        </div>
+
+        <div class="book-item">
+          <img src="/public/assets/capas-pi/romance/ultimoromance.png" alt="A última mensagem de amor">
+          <div class="book-info">
+               <h3>A última mensagem de amor</h3>
+               <p>8 capitulos</p>
+               <p>Romance</p>
+          </div>
+          <div class="book-actions">
+            <button class="editar">Editar</button>
+            <button class="excluir">Excluir</button>
+          </div>
+        </div>
+
 
 </body>
 </html>
