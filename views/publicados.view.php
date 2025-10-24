@@ -43,8 +43,7 @@
           </div>
           <div class="book-actions">
             <button class="editar">Editar</button>
-            <button class="excluir">
-              <img src="/public/assets/buttons/remove.svg"></button>
+            <button class="excluir">Excluir</button>
           </div>
         </div>
         

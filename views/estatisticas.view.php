@@ -124,3 +124,5 @@ new Chart(ctx, {
 
 <?php require 'partials/footer.php'; ?>
     
+
+  

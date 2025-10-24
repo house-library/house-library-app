@@ -13,56 +13,93 @@ require 'partials/header.php'; ?>
  <link rel="stylesheet" href="../views/partials/styles/reset.css">
     <link rel="stylesheet" href="../views/partials/styles/header.css">
     <link rel="stylesheet" href="../views/partials/styles/footer.css">
-    <link rel="stylesheet" href="../views/partials/detalhes.css">
+    <link rel="stylesheet" href="../views/partials/styles/detalhes.css">
 </head>
 
 <body>
-    <main>
-<h1>House Library</h1>
+    <section class="ebook">
+      <img src="/public/assets/capas-pi/classicos/20milleguas.png" alt="Vinte mil léguas submarinas" class="book-cover">
+      <div class="book-info">
+        <h3>Vinte mil léguas submarinas</h3>
+        <br>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta vero eligendi laudantium perspiciatis possimus illum. Officia blanditiis cum aliquid dolore voluptatum laboriosam minus nisi optio. Quidem quod sunt dignissimos temporibus!
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta vero eligendi laudantium perspiciatis possimus illum. Officia blanditiis cum aliquid dolore voluptatum laboriosam minus nisi optio. Quidem quod sunt dignissimos temporibus!
+        </p>
+        <br>
+        <button class="btn">Adicionar ao carrinho</button>
+      </div>
+    </section>
+    
+    <br>
+    <H2>Você também pode gostar de:</H2>
+    <br><br>
 
-        <section>
-            <img src="" alt="Capa do livro Argonauta">
-            <h2>Argonauta</h2>
-            <p>
-                Você é o último. Seu mundo foi aniquilado, apagado da existência cósmica.
-                Com memórias despedaçadas e uma responsabilidade impossível, você precisa
-                encontrar o caminho em meio ao vazio que liga os portais, a fim de descobrir
-                seu destino em meio ao fio da realidade.
-            </p>
-            <button>Adicionar ao carrinho</button>
-        </section>
+    <div class="books">
+  <div class="book-item">
+    <img src="/public/assets/capas-pi/classicos/arepublica.png" alt="A república">
+    <h3>A república</h3>
+    <button class="btn">Adicionar ao carrinho</button>
+  </div>
 
-        <section>
-            <h3>Você também pode gostar de:</h3>
-            <ul>
-                <li>
-                    <img src="" alt="Neuromancer">
-                    <p>Neuromancer</p>
-                    <button>Adicionar ao carrinho</button>
-                </li>
-                <li>
-                    <img src="" alt="A Mão Esquerda da Escuridão">
-                    <p>A Mão Esquerda da Escuridão</p>
-                    <button>Adicionar ao carrinho</button>
-                </li>
-                <li>
-                    <img src="" alt="Fundação">
-                    <p>Fundação<br>Isaac Asimov</p>
-                    <button>Adicionar ao carrinho</button>
-                </li>
-                <li>
-                    <img src="" alt="Duna">
-                    <p>Duna<br>Frank Herbert</p>
-                    <button>Adicionar ao carrinho</button>
-                </li>
-                <li>
-                    <img src="" alt="Hyperion">
-                    <p>Hyperion<br>Dan Simmons</p>
-                    <button>Adicionar ao carrinho</button>
-                </li>
-            </ul>
-        </section>
-    </main>
+  <div class="book-item">
+    <img src="/public/assets/capas-pi/classicos/dracula.png" alt="Drácula">
+    <h3>Drácula</h3>
+    <button class="btn">Adicionar ao carrinho</button>
+  </div>
+
+  <div class="book-item">
+    <img src="/public/assets/capas-pi/classicos/iliada.png" alt=">A Ilíada">
+    <h3>A Ilíada</h3>
+    <button class="btn">Adicionar ao carrinho</button>
+  </div>
+
+  <div class="book-item">
+    <img src="/public/assets/capas-pi/classicos/ilhatesouro.png" alt="A ilha do tesouro">
+    <h3>A ilha do tesouro</h3>
+    <button class="btn">Adicionar ao carrinho</button>
+  </div>
+
+  <div class="book-item">
+    <img src="/public/assets/capas-pi/classicos/odisseia.png" alt="A odisseia">
+    <h3>A odisseia</h3>
+    <button class="btn">Adicionar ao carrinho</button>
+  </div>
+</div>
+
+   <div class="books">
+  <div class="book-item">
+    <img src="/public/assets/capas-pi/classicos/fausto.png" alt="Fausto">
+    <h3>Fausto</h3>
+    <button class="btn">Adicionar ao carrinho</button>
+  </div>
+
+  <div class="book-item">
+    <img src="/public/assets/capas-pi/classicos/principe.png" alt="O príncipe">
+    <h3>O príncipe</h3>
+    <button class="btn">Adicionar ao carrinho</button>
+  </div>
+
+  <div class="book-item">
+    <img src="/public/assets/capas-pi/classicos/paraisoperdido.png" alt="A Ilíada">
+    <h3>Paraíso perdido</h3>
+    <button class="btn">Adicionar ao carrinho</button>
+  </div>
+
+  <div class="book-item">
+    <img src="/public/assets/capas-pi/classicos/cartasportuguesas.png" alt="A ilha do tesouro">
+    <h3>Cartas portuguesas</h3>
+    <button class="btn">Adicionar ao carrinho</button>
+  </div>
+
+  <div class="book-item">
+    <img src="/public/assets/capas-pi/classicos/orgulhoepreconceito.png" alt="A odisseia">
+    <h3>Orgulho e preconceito</h3>
+    <button class="btn">Adicionar ao carrinho</button>
+  </div>
+</div>
+    
+    
 </body>
 </html>
     

@@ -17,10 +17,6 @@
 </head>
 
 <body>
-  <header>
-      <a href="" class="button-anterior">Anterior</a>
-    </header>
-
     <main>
       <section id="gerenciamento">
         <form
