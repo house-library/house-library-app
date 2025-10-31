@@ -4,6 +4,7 @@
 *::after {
     box-sizing: border-box;
     margin: 0;
+    padding: 0;
 }
 
 body {
@@ -13,6 +14,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100dvh;
+    padding: 0;
 }
 ul,
 ol {
@@ -27,6 +29,7 @@ picture,
 video,
 canvas,
 svg {
+    max-inline-size: 100%;
     display: block;
     max-width: 100%;
 }

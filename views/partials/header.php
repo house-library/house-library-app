@@ -2,7 +2,7 @@
     <div class="container">
         <div class="logo">
             <a href="./index.php">
-                <img class="logo" src="/house-library-app/public/assets/imgs/logo.svg" alt="House Library">
+                <img class="logo" src="./public/assets/imgs/logo.svg" alt="House Library">
             </a>
         </div>
         

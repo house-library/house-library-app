@@ -1,7 +1,7 @@
 @import 'reset.css';
 
 .footer {
-    padding: 4rem 0; /*tamanho total do footer*/
+    padding: 4rem 2rem; /*tamanho total do footer*/
     border-top: 1px solid #80808033;
     background-color: #f8fafc;
 }
@@ -29,7 +29,6 @@
         5,
         1fr
     ); /*cria 5 colunas com uma distancia de 1fr entre cada*/
-    justify-content: space-around; /* distribui igualmente o espaço livre entre as*/
 }
 
 .footer-heading {

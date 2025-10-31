@@ -1,15 +1,27 @@
 @import 'reset.css';
 /* HEADER */
 
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 100;
+    background-color: #ffffff;
+    height: 8rem;
+}
+
 .header .container {
     display: grid;
+    max-width: 90rem;
+    margin: 0 auto;
     grid-template-columns: auto 1fr auto;
     align-items: center;
-    gap: 2rem;
+    gap: 1rem;
     width: 100%;
-    max-width: 75rem;
-    margin: 0 auto;
     height: 8rem;
+    padding: 0 2rem;
 }
 
 .logo {
@@ -50,7 +62,7 @@
     height: 2.5rem;
     background-color: #cbd5e1;
     flex-shrink: 0;
-    background-image: url('/house-library-app/public/assets/header-icons/lupa.svg');
+    background-image: url('./public/assets/header-icons/lupa.svg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: 1.25rem;

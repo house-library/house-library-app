@@ -2,7 +2,7 @@
     <div class="footer--grid"> 
         <div class="footer-logo">
             <a href="/controllers/inicio.php" class="footer-logo">
-                <img src="/house-library-app/public/assets/imgs/logo.svg" alt="House Library">
+                <img src="./public/assets/imgs/logo.svg" alt="House Library">
                 <span class="logo-text">House Library</span>
             </a>
         </div>
@@ -53,17 +53,17 @@
         <div class="footer-col">
             <h3 class="footer-pay">Formas de Pagamento</h3>
             <ul class="payment-icons">
-                <img src="/house-library-app/public/assets/footer-icons/visa.svg" alt="Visa">
-                <img src="/house-library-app/public/assets/footer-icons/mastercard.svg" alt="Mastercard">
-                <img src="/house-library-app/public/assets/footer-icons/boleto.svg" alt="Boleto">
-                <img src="/house-library-app/public/assets/footer-icons/pix.svg" alt="Pix">
+                <img src="./public/assets/footer-icons/visa.svg" alt="Visa">
+                <img src="./public/assets/footer-icons/mastercard.svg" alt="Mastercard">
+                <img src="./public/assets/footer-icons/boleto.svg" alt="Boleto">
+                <img src="./public/assets/footer-icons/pix.svg" alt="Pix">
             </ul>
             
             <h3 class="footer-social">Redes Sociais</h3>
             <ul class="social-links">
-                <li><a class="social-link" href="https://whatsapp.com" target="_blank"><img src="/house-library-app/public/assets/footer-icons/whatsapp.svg" alt="Whatsapp"></a></li>
-                <li><a class="social-link" href="https://facebook.com" target="_blank"><img src="/house-library-app/public/assets/footer-icons/facebook.svg" alt="Facebook"></a></li>
-                <li><a class="social-link" href="https://instagram.com" target="_blank"><img src="/house-library-app/public/assets/footer-icons/instagram.svg" alt="Instagram"></a></li>
+                <li><a class="social-link" href="https://whatsapp.com" target="_blank"><img src="./public/assets/footer-icons/whatsapp.svg" alt="Whatsapp"></a></li>
+                <li><a class="social-link" href="https://facebook.com" target="_blank"><img src="./public/assets/footer-icons/facebook.svg" alt="Facebook"></a></li>
+                <li><a class="social-link" href="https://instagram.com" target="_blank"><img src="./public/assets/footer-icons/instagram.svg" alt="Instagram"></a></li>
             </ul>
         </div>
     </div>
