@@ -11,7 +11,7 @@
 
 .hero-image img {
     width: 100%;
-    height: 350px;
+    height: auto;
 }
 
 .ul-category {
@@ -90,16 +90,25 @@
     }
 }
 
+@media (max-width: 50em) {
+    .hero-image img {
+        height: 300px;
+    }
+}
+
+/* 448px */
 @media (max-width: 28em) {
     .banner img {
-        width: 100%;
         height: 150px;
         object-fit: cover;
         object-position: left;
     }
 
-    .category-link {
-        padding: 0;
+    .section-category {
         display: none;
+    }
+
+    .section-ebooks {
+        margin-top: 4rem;
     }
 }

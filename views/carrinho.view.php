@@ -19,16 +19,18 @@
         <h1 class="page-title">Carrinho</h1>
         
         <div class="shop-container">
-            <!-- COLUNA ESQUERDA: Itens do carrinho -->
             <section class="cart-items">
                 
-               
-                <div class="count-And-remove">
-                    <h2>Itens (2)</h2>
+            <div class="cart-header">
+               <div class="cart-title">
+                <h2>Carrinho</h2>
+                 <p>Itens ()</p>
+               </div>
+
                     <button class="remove-all">Remover todos</button>
-                </div>
                 
-                
+            </div>
+
                 <div class="item-list">
                     <img class="book-cover" src="/public/assets/capas-pi/classicos/dracula.png" alt="Capa de Dracula">
                     <div class="item-info">
@@ -36,8 +38,8 @@
                         <p>Bram Stoker</p>
                     </div>
                     <div class="items-action">
-                    <p class="item-price">R$ 5,00</p>
-                    <button class="remove-item"><img src="/public/assets/buttons/remove.svg" alt=""></button>
+                        <button class="remove-item"><img src="/public/assets/buttons/remove.svg" alt=""></button>
+                        <p class="item-price">R$ 5,00</p>
                     </div>
                 </div>
 
@@ -48,14 +50,13 @@
                         <h3>O Principe</h3>
                         <p>Maquiavel</p>
                     </div>
-                    <div>
+                    <div class="items-action">
                         <button class="remove-item"><img src="/public/assets/buttons/remove.svg" alt=""></button>
                         <p class="item-price">R$ 5,00</p>
                     </div>
                 </div>
             
             
-            <!-- COLUNA DIREITA: Resumo -->
             
         </section>
 
@@ -79,7 +80,8 @@
     </div>
     
         <section class="recommendations">
-      <h2>Você também pode gostar de:</h2>
+      <h2>Recomendados para você</h2>
+      <div class="books-reco-wrapper">
       <div class="books-reco">
           <div>
               <img class="img-reco" src="/public/assets/capas-pi/classicos/ilhatesouro.png">
@@ -118,6 +120,12 @@
               <button class="add-book">Adicionar</button>
           </div>
       </div>
+      </div>
+      <button class="arrow-btn arrow-next">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </button>
   </section>
     </main>
     
