@@ -21,8 +21,8 @@
 
 .shop-container {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* grade dos itens e area de finalizacao de compra */
-    gap: 6rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 10rem;
 }
 
 .cart-header {
@@ -54,7 +54,6 @@
     padding: 0.5rem;
     background: transparent;
     border: 1px solid #9c9c9cff;
-    margin-right: 6rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
@@ -74,7 +73,7 @@
 }
 
 .item-list:last-child {
-    border-bottom: none; /* Remove borda do último item */
+    border-bottom: none;
 }
 
 .item-info {
@@ -156,15 +155,15 @@
 .complete-purchase span {
     color: #fff;
     font-size: 1.5rem;
-    line-height: 1; /* zera a altura de linha */
+    line-height: 1;
 }
 
 .complete-purchase:hover {
     background-color: #0e1536ff;
 }
+
 .recommendations {
     margin-top: 5rem;
-    overflow-x: hidden;
 }
 
 .recommendations h2 {
@@ -172,19 +171,14 @@
 }
 
 .books-reco {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-wrap: nowrap; /* ← impede que a linha quebre*/
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
     gap: 2rem;
-    overflow-x: hidden;
-    scroll-behavior: smooth;
 }
 
 .img-reco {
     width: 100%;
-    margin-bottom: 1rem;
-    height: 20rem;
+    height: auto;
     object-fit: cover;
 }
 
@@ -208,43 +202,110 @@
     color: #fff;
 }
 
-.books-reco-wrapper {
-    position: relative;
+@media (max-width: 81.25em) {
+    .main {
+        padding: 4rem 8rem;
+    }
+
+    .book-cover {
+        width: 7rem;
+        height: 10.3rem;
+    }
 }
 
-.arrow-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 3rem;
-    height: 3rem;
-    background: white;
-    border: 1px solid #e0e0e0;
-    border-radius: 50%;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition:
-        opacity 0.3s ease,
-        background-color 0.3s ease;
-    z-index: 10;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+@media (max-width: 62.5em) {
+    .main {
+        padding: 4rem 2rem;
+    }
+
+    .shop-container {
+        gap: 8rem;
+    }
+
+    .page-title {
+        font-size: 2rem;
+    }
+
+    .cart-title h2 {
+        font-size: 1.5rem;
+    }
+
+    .complete-purchase span {
+        font-size: 1.25rem;
+    }
+
+    .book-cover {
+        width: 6.5rem;
+        height: 9.5rem;
+    }
+
+    .img-reco {
+        max-height: 16rem;
+    }
 }
 
-.arrow-next {
-    right: -1.5rem;
-}
+@media (max-width: 54em) {
+    .shop-container {
+        grid-template-areas:
+            'cart'
+            'advice'
+            'summary';
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
 
-.books-reco-wrapper:hover .arrow-btn {
-    opacity: 1;
-}
+    .recommendations {
+        margin-top: 2rem;
+    }
 
-.arrow-btn:hover {
-    background-color: #f5f5f5;
-}
+    .recommendations h2 {
+        font-size: 1.3rem;
+    }
 
-.arrow-btn svg {
-    color: #333;
+    .page-title {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .cart-header {
+        margin-top: 2rem;
+    }
+
+    .cart-title h2 {
+        font-size: 1.1rem;
+    }
+
+    .cart-title p {
+        font-size: 0.9rem;
+    }
+
+    .complete-purchase {
+        height: 3rem;
+    }
+
+    .complete-purchase span {
+        font-size: 1.125rem;
+    }
+
+    .item-info {
+        gap: 0.3rem;
+    }
+
+    .item-info h3 {
+        font-size: 0.9rem;
+    }
+
+    .item-info p {
+        font-size: 0.8rem;
+    }
+
+    .item-list {
+        padding: 1rem 0;
+        gap: 1rem;
+    }
+
+    .book-cover {
+        width: 5.5rem;
+        height: 8rem;
+    }
 }

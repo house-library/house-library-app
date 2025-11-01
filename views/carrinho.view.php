@@ -112,13 +112,7 @@
               <h3 class="books-heading">Titulo</h3>
               <p class="books-heading-p">Nome do autor</p> 
               <button class="add-book">Adicionar</button>
-          </div>
-          <div>
-              <img class="img-reco" src="/public/assets/capas-pi/classicos/condedemontecristo.png">
-              <h3 class="books-heading">Titulo</h3>
-              <p class="books-heading">Nome do autor</p> 
-              <button class="add-book">Adicionar</button>
-          </div>
+</div>
       </div>
       </div>
       <button class="arrow-btn arrow-next">
