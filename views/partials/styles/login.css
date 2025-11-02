@@ -1,105 +1,157 @@
-@import 'reset.css';
+/* --- Variáveis e Configurações Base --- */
+:root {
+    /* Cores */
+    --cor-fundo-principal: #1f1f21; /* Um tom escuro para o fundo geral */
+    --cor-fundo-secundario: #2c2c2f; /* Fundo do card/área central */
+    --cor-texto-principal: #ffffff;
+    --cor-texto-secundario: #aaaaaa;
+    --cor-acento-principal: #007aff; /* Azul para botões/destaques */
+    --cor-borda-clara: #444444;
+    --cor-input-fundo: #3a3a3d;
 
-.main-login {
-    width: 100vw;
-    height: 100vh;
+    /* Espaçamento */
+    --espacamento-padrao: 1rem;
+    --espacamento-grande: 1.5rem;
+}
+
+/* Configuração de fonte raiz para REM */
+html {
+    font-size: 16px; /* Base 16px */
+}
+
+body {
+    background-color: var(--cor-fundo-principal);
+    color: var(--cor-texto-principal);
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+/* --- Container Principal --- */
+.explore-page-container {
+    max-width: 90rem; /* Limite de largura para o conteúdo principal */
+    margin: 0 auto;
+    padding: var(--espacamento-grande);
+}
+
+/* --- Campo de Filtragem (Filtros e Pesquisa) --- */
+#campo-filtragem {
+    background-color: var(--cor-fundo-secundario);
+    padding: var(--espacamento-grande);
+    margin-bottom: var(--espacamento-grande);
+    border-radius: 0.5rem;
+}
+
+.filter-form {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #f0f2f5;
+    flex-wrap: wrap; /* Permite que os selects quebrem a linha */
+    gap: var(--espacamento-padrao);
 }
 
-.logo-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 2rem;
-}
-
-.logo-login {
-    width: 15rem;
-    height: auto;
-}
-
-.brand-name {
-    margin-top: 0.25rem;
-    font-size: 1.5rem;
-    font-weight: 800;
-    color: #131d4f;
-}
-
-.card-login {
-    width: 100%;
-    max-width: 40rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 1.8rem 2rem;
-    gap: 1.5rem;
-}
-
-.textfield {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    gap: 0.5rem;
-}
-
-.textfield > input {
-    width: 100%;
-    border: 1px solid #d9d9d9;
-    border-radius: 10px;
-    padding: 1rem;
-    background: #d9d9d9;
-    font-size: 1rem;
-    box-sizing: border-box;
-}
-
-.textfield > input:focus {
-    outline: 2px solid #131d4f;
-}
-
-.textfield > input::placeholder {
-    color: #888;
-}
-
-.user-register > a,
-.recovery-password > a {
-    text-decoration: none;
-    color: inherit;
-    font-weight: 600;
-    color: #131d4f;
-    border-bottom: 2px solid transparent;
-    transition: all 0.3s;
-}
-
-.recovery-password {
-    width: 100%;
-    text-align: right;
-}
-
-.user-register > a:hover,
-.recovery-password > a:hover {
-    border-bottom-color: #131d4f;
-}
-
-.btn-login {
-    width: 100%;
-    padding: 1rem 0;
-    border: none;
-    border-radius: 8px;
-    text-transform: uppercase;
-    font-weight: 800;
-    letter-spacing: 4px;
-    color: #fff;
-    background: #131d4f;
+.filter-form select {
+    /* Estilo para os selects */
+    padding: 0.75rem var(--espacamento-padrao);
+    border: 1px solid var(--cor-borda-clara);
+    border-radius: 0.25rem;
+    background-color: var(--cor-input-fundo);
+    color: var(--cor-texto-principal);
+    appearance: none; /* Remove a seta padrão do select */
+    flex-grow: 1; /* Permite que cresça, mas o max-width limita o tamanho */
     cursor: pointer;
+    min-width: 10rem; /* Garante uma largura mínima para cada select */
+    max-width: 15rem; /* Limita o tamanho em telas maiores */
+    font-size: 0.9rem;
+    height: 3rem; /* Altura uniforme para os selects */
 }
 
-.btn-login:hover {
-    background: #26367e;
+.filter-form select:focus {
+    border-color: var(--cor-acento-principal);
+    outline: none;
+}
+
+.filter-form option {
+    background-color: var(--cor-input-fundo);
+    color: var(--cor-texto-principal);
+}
+
+/* Estiliza o placeholder/opção disabled */
+.filter-form select option[disabled] {
+    color: var(--cor-texto-secundario);
+}
+
+/* --- Grade de Livros --- */
+.book-grid {
+    display: grid;
+    /* Colunas base para telas grandes, como no figma (5 colunas) */
+    grid-template-columns: repeat(5, 1fr); 
+    gap: var(--espacamento-grande);
+}
+
+.book-item {
+    border-radius: 0.5rem;
+    overflow: hidden; /* Garante que a imagem respeite o border-radius */
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3); /* Sombra para destacar a capa */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    aspect-ratio: 2/3; /* Proporção de capa de livro padrão */
+}
+
+.book-item:hover {
+    transform: translateY(-0.25rem); /* Efeito de elevação ao passar o mouse */
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5);
+}
+
+.book-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que a imagem preencha o container */
+    display: block;
+}
+
+/* --- Media Queries para Responsividade (Mobile, Tablet, Desktop) --- */
+
+/* Tablet (Telas entre 768px e 1024px) */
+@media (max-width: 64rem) { /* 1024px */
+    .explore-page-container {
+        padding: var(--espacamento-padrao);
+    }
+
+    .book-grid {
+        /* 4 colunas em tablets */
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.25rem;
+    }
+}
+
+/* Mobile (Telas abaixo de 768px) */
+@media (max-width: 48rem) { /* 768px */
+    .book-grid {
+        /* 3 colunas em mobile */
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--espacamento-padrao);
+    }
+
+    .filter-form {
+        /* Em mobile, os selects podem ocupar a largura total ou metade */
+        justify-content: center;
+    }
+
+    .filter-form select {
+        min-width: 8rem;
+        max-width: none; /* Permite que ocupe a largura conforme necessário */
+        flex-basis: calc(50% - 0.5rem); /* Duas colunas com espaço no meio */
+    }
+}
+
+/* Mobile Pequeno (Telas abaixo de 400px) */
+@media (max-width: 25rem) { /* 400px */
+    .book-grid {
+        /* 2 colunas em telas muito pequenas */
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+    }
+    
+    .filter-form select {
+        flex-basis: 100%; /* Uma coluna em telas muito pequenas */
+    }
 }
