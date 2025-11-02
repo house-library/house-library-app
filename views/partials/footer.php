@@ -50,7 +50,7 @@
             </nav>
         </div>
 
-        <div class="footer-col">
+        <div class="footer-col-paysocial">
             <h3 class="footer-pay">Formas de Pagamento</h3>
             <ul class="payment-icons">
                 <img src="./public/assets/footer-icons/visa.svg" alt="Visa">

@@ -202,6 +202,7 @@
     color: #fff;
 }
 
+/* 1.229px*/
 @media (max-width: 81.25em) {
     .main {
         padding: 4rem 8rem;
