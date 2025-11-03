@@ -1,16 +1,9 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../views/partials/styles/login.css">
-</head>
+<?php declare(strict_types=1);
 
-<body>
+// 1. Inclui o _head.php (que abre o <body>)
+// A variável $viewData já existe neste escopo
+loadPartial('head', $viewData);
+?>
     <main class="main-login">
        
         <figure class="logo-container">
@@ -39,7 +32,6 @@
     
     </main>
     
-</body>
-</html>
+<?= loadPartial('footer') ?>    
 
     

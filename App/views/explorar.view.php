@@ -1,21 +1,6 @@
-<?php
-require '../views/partials/header.php'; // Usa o novo header.php acima
-?>
+<?= loadPartial('head', $viewData) ?>
+<?= loadPartial('header') ?>    
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Explorar</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../views/partials/styles/reset.css">
-    <link rel="stylesheet" href="../views/partials/styles/header.css"> <link rel="stylesheet" href="../views/partials/styles/footer.css">
-    <link rel="stylesheet" href="../views/partials/styles/explorar.css"> </head>
-
-<body>
     <main class="explore-page-container">
         <div id="campo-filtragem">
             <form action="/buscar" method="GET" class="filter-form">
@@ -59,7 +44,6 @@ require '../views/partials/header.php'; // Usa o novo header.php acima
             </div>
             </section>
     </main>
-</body>
-</html>
 
-<?php require '../views/partials/footer.php'; ?>
+
+<?= loadPartial('footer') ?>    

@@ -1,29 +1,13 @@
- <?php 
- require '../views/partials/header.php'; ?>
+<?= loadPartial('head', $viewData) ?>
+<?= loadPartial('header') ?>    
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Favoritos</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
- <link rel="stylesheet" href="../views/partials/styles/reset.css">
- <link rel="stylesheet" href="../views/partials/styles/header.css">
- <link rel="stylesheet" href="../views/partials/styles/footer.css">
- <link rel="stylesheet" href="../views/partials/styles/favoritos.css">
-</head>
-
-<body>
   <main class="favorites-main">
     <h2 class="favorites-title">Favoritos</h2>
 
     <section class="favorite-item">
       <div class="item-details-container">
         <div class="book-cover-container">
-          <img src="caminho/para/argonauta.jpg" alt="Capa do livro Argonauta" width="120">
+          <img src="/assets/capa-pi/misterio/ateofim" alt="Capa do livro Até o Fim" width="120">
         </div>
         <div class="book-info">
           <p class="book-author"><strong>Michael Lowy</strong></p>
@@ -51,5 +35,4 @@
       <a href="#" class="arrow">&gt;</a>
     </div>
 
-  </main>
-</body>
+  <?= loadPartial('footer') ?>    

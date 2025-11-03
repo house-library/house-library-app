@@ -1,26 +1,11 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Início</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="./views/partials/styles/reset.css">
-    <link rel="stylesheet" href="./views/partials/styles/header.css">
-    <link rel="stylesheet" href="./views/partials/styles/footer.css">
-    <link rel="stylesheet" href="./views/partials/styles/inicio.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-</head>
-<body>
-    <?php require './views/partials/header.php'; ?>
-    
-    <main class="main">
+<?= loadPartial('head', $viewData) ?>
+
+<?= loadPartial('header') ?>    
+
+<main class="main">
         
            <div class="hero-image">
-                <img src="./public/assets/imgs/House_Library_banner.png" alt="Biblioteca ao fundo com logo da House Library a frente">
+                <img src="/assets/imgs/House_Library_banner.png" alt="Biblioteca ao fundo com logo da House Library a frente">
             </div>
         
         
@@ -48,7 +33,7 @@
         </section>
 
         <section class="banner">
-            <img src="./public/assets/imgs/banner-2.png" alt="">
+            <img src="/assets/imgs/banner-2.png" alt="">
         </section>
 
     <section class="section-ebooks">
@@ -62,7 +47,7 @@
         </section>
         
         <section class="banner">
-            <img src="./public/assets/imgs/banner-3.png" alt="">
+            <img src="/assets/imgs/banner-3.png" alt="">
         </section>
 
          <section class="section-ebooks">
@@ -78,7 +63,5 @@
     </main>
 
 
-    <?php require './views/partials/footer.php'; ?>
-    <script src="./views/partials/script/header.js"></script>
-</body>
-</html>
+    <script src="/js/header.js"></script>
+<?= loadPartial('footer') ?>    

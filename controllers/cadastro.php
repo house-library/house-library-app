@@ -1,4 +1,8 @@
-<?php
+<?php declare(strict_types=1);
 
-declare(strict_types=1);
-require dirname(__DIR__) . '/views/cadastro.view.php';
+$data = [
+    'title' => 'Cadastro',
+    'styles' => ['cadastro.css'],
+];
+
+loadView('cadastro', $data);

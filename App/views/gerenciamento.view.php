@@ -1,22 +1,6 @@
-<?php require 
-'../views/partials/headeradm.php'; ?>
+<?= loadPartial('head', $viewData) ?>
+<?= loadPartial('headeradm') ?> 
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gerenciamento</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../views/partials/styles/reset.css">
-    <link rel="stylesheet" href="../views/partials/styles/headeradm.css">
-    <link rel="stylesheet" href="../views/partials/styles/footer.css">
-    <link rel="stylesheet" href="../views/partials/styles/gerenciamento.css">
-</head>
-
-<body>
     <main>
       <section id="gerenciamento">
         <form
@@ -34,7 +18,7 @@
               <img
                 id="preview-imagem"
                 class="preview-imagem"
-                src="../public/assets/imgs/capadefault.svg"
+                src="/assets/imgs/capadefault.svg"
                 alt="Pré-visualização da capa do livro"
               />
             </label>
@@ -113,7 +97,5 @@
 
     
 
-</body>
-</html>
 
-<?php require 'partials/footer.php'; ?>
+<?php loadPartial('footer'); ?>    

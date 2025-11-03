@@ -1,25 +1,6 @@
-<?php require 
-'../views/partials/headeradm.php'; ?>
+<?= loadPartial('head', $viewData) ?>
+<?= loadPartial('headeradm') ?>    
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Estatísticas</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
- <link rel="stylesheet" href="/views/partials/styles/footer.css">
-<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.0"></script>
-    <link rel="stylesheet" href="../views/partials/styles/reset.css">
-    <link rel="stylesheet" href="../views/partials/styles/headeradm.css">
-    <link rel="stylesheet" href="../views/partials/styles/footer.css">
-    <link rel="stylesheet" href="../views/partials/styles/estatisticas.css">
-</head>
-
-<body>
 
 <h2>Painel de estatísticas</h2>
 
@@ -88,41 +69,39 @@ new Chart(ctx, {
     
 <div class="books">
   <div class="book-item">
-    <img src="/public/assets/capas-pi/autoajuda/seame.png" alt="Se ame">
+    <img src="/assets/capas-pi/autoajuda/seame.png" alt="Se ame">
     <h3>Se ame</h3>
     <p>#01 mais vendido</p>
   </div>
 
   <div class="book-item">
-    <img src="/public/assets/capas-pi/romance/nossaquimica.png" alt="Nossa química">
+    <img src="/assets/capas-pi/romance/nossaquimica.png" alt="Nossa química">
     <h3>Nossa química</h3>
     <p>#02 mais vendido</p>
   </div>
 
   <div class="book-item">
-    <img src="/public/assets/capas-pi/misterio/vidasecreta.png" alt=" A vida secreta dos pintores">
+    <img src="/assets/capas-pi/misterio/vidasecreta.png" alt=" A vida secreta dos pintores">
     <h3>A vida secreta dos pintores</h3>
     <p>#03 mais vendido</p>
   </div>
 
   <div class="book-item">
-    <img src="/public/assets/capas-pi/infantil/eraumavez.png" alt="Era uma vez">
+    <img src="/assets/capas-pi/infantil/eraumavez.png" alt="Era uma vez">
     <h3>Era uma vez</h3>
     <p>#04 mais vendido</p>
   </div>
 
   <div class="book-item">
-    <img src="/public/assets/capas-pi/ficcçao cientifica/espacosideral.png" alt="Espaço sideral">
+    <img src="/assets/capas-pi/ficcçao cientifica/espacosideral.png" alt="Espaço sideral">
     <h3>Espaço sideral</h3>
     <p>#05 mais vendido</p>
   </div>
 </div>
 <br>
 <br>
-</body>
-</html>
+<?= loadPartial('footer') ?>    
 
-<?php require 'partials/footer.php'; ?>
     
 
   

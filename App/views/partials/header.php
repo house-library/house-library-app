@@ -4,7 +4,7 @@
     <div class="container desktop-header">
         <div class="logo">
             <a href="./index.php">
-                <img src="./public/assets/imgs/logo.svg" alt="House Library">
+                <img src="/assets/imgs/logo.svg" alt="House Library">
             </a>
         </div>
 
@@ -33,7 +33,7 @@
 
             <div class="logo-mobile">
                 <a href="./index.php">
-                    <img src="./public/assets/imgs/logo.svg" alt="House Library">
+                    <img src="/assets/imgs/logo.svg" alt="House Library">
                 </a>
             </div>
 
