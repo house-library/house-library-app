@@ -1,4 +1,8 @@
-<?php
+<?php declare(strict_types=1);
 
-declare(strict_types=1);
-require dirname(__DIR__) . '/views/publicados.view.php';
+$data = [
+    'title' => 'publicados',
+    'styles' => ['publicados.css'],
+];
+
+loadView('publicados', $data);

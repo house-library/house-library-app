@@ -1,4 +1,8 @@
-<?php
+<?php declare(strict_types=1);
 
-declare(strict_types=1);
-require dirname(__DIR__) . '/views/gerenciamento.view.php';
+$data = [
+    'title' => 'gerenciamento',
+    'styles' => ['gerenciamento.css'],
+];
+
+loadView('gerenciamento', $data);

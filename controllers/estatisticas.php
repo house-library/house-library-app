@@ -1,4 +1,8 @@
-<?php
+<?php declare(strict_types=1);
 
-declare(strict_types=1);
-require dirname(__DIR__) . '/views/estatisticas.view.php';
+$data = [
+    'title' => 'Estatisticas',
+    'styles' => ['estatisticas.css'],
+];
+
+loadView('estatisticas', $data);

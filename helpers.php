@@ -1,0 +1,51 @@
+<?php
+declare(strict_types=1);
+
+/**
+ * Conseguir o caminho base
+ *
+ * @param string $path
+ * @return string
+ */
+function basePath(string $path = ''): string
+{
+    return __DIR__ . '/' . $path;
+}
+
+/**
+ * Carregar a view
+ *
+ * @param string $name
+ * @return void
+ */
+function loadView(string $name, array $data = []): void
+{
+    $path = basePath("App/views/{$name}.view.php");
+
+    if (file_exists($path)) {
+        $viewData = $data;
+
+        require $path;
+    } else {
+        echo "Erro: View '{$name}' não encontrada no caminho: {$path}";
+    }
+}
+
+/**
+ * Carregar a partial
+ *
+ * @param string $name
+ * @return void
+ */
+function loadPartial(string $name, array $data = []): void
+{
+    $partialPath = basePath("App/views/partials/{$name}.php");
+
+    if (file_exists($partialPath)) {
+        $viewData = $data;
+
+        require $partialPath;
+    } else {
+        echo "Erro: Partial '{$name}' não encontrada no caminho: {$partialPath}";
+    }
+}

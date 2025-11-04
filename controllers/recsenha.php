@@ -1,4 +1,8 @@
-<?php
+<?php declare(strict_types=1);
 
-declare(strict_types=1);
-require dirname(__DIR__) . '/views/recsenha.view.php';
+$data = [
+    'title' => 'Recuperação de senha',
+    'styles' => ['recsenha.css'],
+];
+
+loadView('recsenha', $data);
