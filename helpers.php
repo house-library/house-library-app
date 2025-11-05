@@ -49,3 +49,10 @@ function loadPartial(string $name, array $data = []): void
         echo "Erro: Partial '{$name}' não encontrada no caminho: {$partialPath}";
     }
 }
+
+// formatar o preço
+
+function formatPrice($preco)
+{
+    return '$' . number_format(floatval($preco));
+}

@@ -1,4 +1,4 @@
-<?= loadPartial('head') ?>
+<?php loadPartial('head', $viewData); ?>
 
 
     <main class="main-login">
@@ -25,4 +25,4 @@
     
     </main>
 
-    <?= loadPartial('footer') ?>    
+    <?php loadPartial('footer'); ?>    

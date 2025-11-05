@@ -1,5 +1,5 @@
-<?= loadPartial('head') ?>
-<?= loadPartial('header') ?>    
+<?php loadPartial('head', $viewData); ?>
+<?php loadPartial('header'); ?>    
 
 
   <main>
@@ -141,6 +141,6 @@
       </section>
     </main>
 
-    <?= loadPartial('footer') ?>    
+    <?php loadPartial('footer'); ?>    
 
 

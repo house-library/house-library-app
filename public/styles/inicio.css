@@ -37,9 +37,15 @@
 
 .section-ebooks {
     display: flex;
+    flex-direction: column;
+    margin-bottom: 8rem;
+}
+
+.section-header {
+    display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 8rem;
+    margin-bottom: 1.5rem;
 }
 
 .more-btn {
