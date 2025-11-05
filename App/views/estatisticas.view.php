@@ -1,5 +1,5 @@
-<?= loadPartial('head', $viewData) ?>
-<?= loadPartial('headeradm') ?>    
+<?php loadPartial('head', $viewData); ?>
+<?php loadPartial('headeradm'); ?>    
 
 
 <h2>Painel de estatísticas</h2>
@@ -100,7 +100,7 @@ new Chart(ctx, {
 </div>
 <br>
 <br>
-<?= loadPartial('footer') ?>    
+<?php loadPartial('footer'); ?>    
 
     
 

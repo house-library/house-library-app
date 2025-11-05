@@ -1,5 +1,5 @@
-<?= loadPartial('head', $viewData) ?>
-<?= loadPartial('headeradm') ?> 
+<?php loadPartial('head', $viewData); ?>
+<?php loadPartial('headeradm'); ?> 
 
     <main>
       <section id="gerenciamento">

@@ -1,5 +1,5 @@
-<?= loadPartial('head', $viewData) ?>
-<?= loadPartial('header') ?>  
+<?php loadPartial('head', $viewData); ?>
+<?php loadPartial('header'); ?>  
 
     <main class="history-main">
         <h2 class="history-title">Histórico de compras</h2>
@@ -34,4 +34,4 @@
     </main>
 
 
-<?= loadPartial('footer') ?>    
+<?php loadPartial('footer'); ?>    
