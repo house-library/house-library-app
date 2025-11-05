@@ -75,49 +75,7 @@
                 <button class="complete-purchase"><span>Finalizar Compra</span></button>
             </div>
         </aside>
-
     </div>
-    
-        <section class="recommendations">
-      <h2>Você também pode gostar de:</h2>
-      <div class="books-reco">
-          <div>
-              <img class="img-reco" src="/public/assets/capas-pi/classicos/ilhatesouro.png">
-              <h3 class="books-heading">Titulo</h3>
-              <p class="books-heading">Nome do autor</p> 
-              <button class="add-book">Adicionar</button>
-          </div>
-           <div>
-              <img class="img-reco" src="/public/assets/capas-pi/classicos/fausto.png">
-              <h3 class="books-heading">Titulo</h3>
-              <p class="books-heading">Nome do autor</p> 
-              <button class="add-book">Adicionar</button>
-          </div>
-           <div>
-              <img class="img-reco" src="/public/assets/capas-pi/classicos/odisseia.png">
-              <h3 class="books-heading">Titulo</h3>
-              <p class="books-heading">Nome do autor</p> 
-              <button class="add-book">Adicionar</button>
-          </div>
-           <div>
-              <img class="img-reco" src="/public/assets/capas-pi/classicos/orgulhoepreconceito.png">
-              <h3 class="books-heading">Titulo</h3>
-              <p class="books-heading">Nome do autor</p> 
-              <button class="add-book">Adicionar</button>
-          </div>
-           <div>
-              <img class="img-reco" src="/public/assets/capas-pi/classicos/damacamelias.png">
-              <h3 class="books-heading">Titulo</h3>
-              <p class="books-heading-p">Nome do autor</p> 
-              <button class="add-book">Adicionar</button>
-          </div>
-          <div>
-              <img class="img-reco" src="/public/assets/capas-pi/classicos/condedemontecristo.png">
-              <h3 class="books-heading">Titulo</h3>
-              <p class="books-heading">Nome do autor</p> 
-              <button class="add-book">Adicionar</button>
-          </div>
-      </div>
   </section>
     </main>
     

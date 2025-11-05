@@ -7,10 +7,6 @@ body {
   padding: 2rem;
 }
 
-h2{
-    text-align: center;
-}
-
 .ebook {
   display: flex;
   align-items: flex-start;
@@ -23,18 +19,6 @@ h2{
 .ebook img.book-cover {
   width: 230px;
   border-radius: 4px;
-}
-
-.book-info h2 {
-  font-size: 1.8rem;
-  margin-bottom: 0.8rem;
-}
-
-.book-info p {
-  max-width: 500px;
-  margin-bottom: 1.5rem;
-  color: #333;
-  font-size: 0.95rem;
 }
 
 .btn {
@@ -77,30 +61,3 @@ h2{
     margin: 10px -30 5px;
 }
 
-
-
-
-
-/* até 1000px (tablets) */
-@media (max-width: 81.25em) {
-  body {
-    padding: 1.5rem;
-  }
-
-  .ebook {
-    gap: 3rem;
-  }
-
-  .ebook img.book-cover {
-    width: 200px;
-  }
-
-  .book-info {
-    max-width: 450px;
-    flex-direction: wrap;
-  }
-
-  .books {
-    gap: 2rem;
-  }
-}

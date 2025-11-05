@@ -26,12 +26,14 @@
                 <button type="submit" class="search-submit" aria-label="Buscar"></button>
             </form>
         </div>
-        <button class="new-ebook">+ Novo e-book</button>
+        <a href="/controllers/gerenciamento.php" class="new-ebook">+ Novo e-book</a>
         <br><br>
-        <button class="painel">Painel de estatísticas</button>
+        <a href="/controllers/estatisticas.php" class="painel">Painel de estatísticas</a>
       </header>
         <br>
         <br>
+
+         
 
         <section class="book-list">
         <div class="book-item">
@@ -42,7 +44,7 @@
             <p>Autoajuda</p>
           </div>
           <div class="book-actions">
-            <button class="editar">Editar</button>
+            <a href="/controllers/gerenciamento.php" class="editar">Editar</a>
             <button class="excluir">Excluir</button>
           </div>
         </div>
@@ -55,7 +57,7 @@
                <p>Autoajuda</p>
           </div>
           <div class="book-actions">
-            <button class="editar">Editar</button>
+            <a href="/controllers/gerenciamento.php" class="editar">Editar</a>
             <button class="excluir">Excluir</button>
           </div>
         </div>
@@ -68,7 +70,7 @@
                <p>Autoajuda</p>
           </div>
           <div class="book-actions">
-            <button class="editar">Editar</button>
+            <a href="/controllers/gerenciamento.php" class="editar">Editar</a>
             <button class="excluir">Excluir</button>
           </div>
         </div>
@@ -81,7 +83,7 @@
                <p>Autoajuda</p>
           </div>
           <div class="book-actions">
-            <button class="editar">Editar</button>
+            <a href="/controllers/gerenciamento.php" class="editar">Editar</a>
             <button class="excluir">Excluir</button>
           </div>
         </div>
@@ -94,20 +96,20 @@
                <p>Autoajuda</p>
           </div>
           <div class="book-actions">
-            <button class="editar">Editar</button>
+            <a href="/controllers/gerenciamento.php" class="editar">Editar</a>
             <button class="excluir">Excluir</button>
           </div>
         </div>
 
         <div class="book-item">
-          <img src="/public/assets/capas-pi/autoajuda/grandesmudancas.png" alt="Grandes mudabças">
+          <img src="/public/assets/capas-pi/autoajuda/grandesmudancas.png" alt="Grandes mudanças">
           <div class="book-info">
                <h3>Grandes mudabças</h3></h3>
                <p>7 capitulos</p>
                <p>Autoajuda</p>
           </div>
           <div class="book-actions">
-            <button class="editar">Editar</button>
+            <a href="/controllers/gerenciamento.php" class="editar">Editar</a>
             <button class="excluir">Excluir</button>
           </div>
         </div>
@@ -120,7 +122,7 @@
                <p>Autoajuda</p>
           </div>
           <div class="book-actions">
-            <button class="editar">Editar</button>
+            <a href="/controllers/gerenciamento.php" class="editar">Editar</a>
             <button class="excluir">Excluir</button>
           </div>
         </div>
@@ -133,7 +135,7 @@
                <p>Autoajuda</p>
           </div>
           <div class="book-actions">
-            <button class="editar">Editar</button>
+            <a href="/controllers/gerenciamento.php" class="editar">Editar</a>
             <button class="excluir">Excluir</button>
           </div>
         </div>
@@ -146,7 +148,7 @@
                <p>Autoajuda</p>
           </div>
           <div class="book-actions">
-            <button class="editar">Editar</button>
+            <a href="/controllers/gerenciamento.php" class="editar">Editar</a>
             <button class="excluir">Excluir</button>
           </div>
         </div>
@@ -159,7 +161,20 @@
                <p>Autoajuda</p>
           </div>
           <div class="book-actions">
-            <button class="editar">Editar</button>
+            <a href="/controllers/gerenciamento.php" class="editar">Editar</a>
+            <button class="excluir">Excluir</button>
+          </div>
+        </div>
+
+        <div class="book-item">
+          <img src="/public/assets/capas-pi/autoajuda/vidasemestresse.png" alt="Se ame">
+          <div class="book-info">
+               <h3>O guia definitivo para uma vida sem estresse</h3>
+               <p>6 capitulos</p>
+               <p>Autoajuda</p>
+          </div>
+          <div class="book-actions">
+            <a href="/controllers/gerenciamento.php" class="editar">Editar</a>
             <button class="excluir">Excluir</button>
           </div>
         </div>
@@ -172,7 +187,7 @@
                <p>Classico</p>
           </div>
           <div class="book-actions">
-            <button class="editar">Editar</button>
+            <a href="/controllers/gerenciamento.php" class="editar">Editar</a>
             <button class="excluir">Excluir</button>
           </div>
         </div>
@@ -185,7 +200,7 @@
                <p>Classico</p>
           </div>
           <div class="book-actions">
-            <button class="editar">Editar</button>
+            <a href="/controllers/gerenciamento.php" class="editar">Editar</a>
             <button class="excluir">Excluir</button>
           </div>
         </div>
@@ -198,7 +213,7 @@
                <p>Classico</p>
           </div>
           <div class="book-actions">
-            <button class="editar">Editar</button>
+            <a href="/controllers/gerenciamento.php" class="editar">Editar</a>
             <button class="excluir">Excluir</button>
           </div>
         </div>
@@ -211,7 +226,7 @@
                <p>Classico</p>
           </div>
           <div class="book-actions">
-            <button class="editar">Editar</button>
+            <a href="/controllers/gerenciamento.php" class="editar">Editar</a>
             <button class="excluir">Excluir</button>
           </div>
         </div>
@@ -224,7 +239,7 @@
                <p>Classico</p>
           </div>
           <div class="book-actions">
-            <button class="editar">Editar</button>
+            <a href="/controllers/gerenciamento.php" class="editar">Editar</a>
             <button class="excluir">Excluir</button>
           </div>
         </div>
@@ -237,7 +252,7 @@
                <p>Classico</p>
           </div>
           <div class="book-actions">
-            <button class="editar">Editar</button>
+            <a href="/controllers/gerenciamento.php" class="editar">Editar</a>
             <button class="excluir">Excluir</button>
           </div>
         </div>
@@ -250,7 +265,7 @@
                <p>Classico</p>
           </div>
           <div class="book-actions">
-            <button class="editar">Editar</button>
+            <a href="/controllers/gerenciamento.php" class="editar">Editar</a>
             <button class="excluir">Excluir</button>
           </div>
         </div>
@@ -263,7 +278,7 @@
                <p>Classico</p>
           </div>
           <div class="book-actions">
-            <button class="editar">Editar</button>
+            <a href="/controllers/gerenciamento.php" class="editar">Editar</a>
             <button class="excluir">Excluir</button>
           </div>
         </div>
@@ -276,7 +291,7 @@
                <p>Classico</p>
           </div>
           <div class="book-actions">
-            <button class="editar">Editar</button>
+            <a href="/controllers/gerenciamento.php" class="editar">Editar</a>
             <button class="excluir">Excluir</button>
           </div>
         </div>
@@ -289,7 +304,7 @@
                <p>Classico</p>
           </div>
           <div class="book-actions">
-            <button class="editar">Editar</button>
+            <a href="/controllers/gerenciamento.php" class="editar">Editar</a>
             <button class="excluir">Excluir</button>
           </div>
         </div>
@@ -302,7 +317,7 @@
                <p>Classico</p>
           </div>
           <div class="book-actions">
-            <button class="editar">Editar</button>
+            <a href="/controllers/gerenciamento.php" class="editar">Editar</a>
             <button class="excluir">Excluir</button>
           </div>
         </div>
@@ -315,7 +330,7 @@
                <p>Classico</p>
           </div>
           <div class="book-actions">
-            <button class="editar">Editar</button>
+            <a href="/controllers/gerenciamento.php" class="editar">Editar</a>
             <button class="excluir">Excluir</button>
           </div>
         </div>
@@ -328,7 +343,7 @@
                <p>Classico</p>
           </div>
           <div class="book-actions">
-            <button class="editar">Editar</button>
+            <a href="/controllers/gerenciamento.php" class="editar">Editar</a>
             <button class="excluir">Excluir</button>
           </div>
         </div>
@@ -341,7 +356,7 @@
                <p>Classico</p>
           </div>
           <div class="book-actions">
-            <button class="editar">Editar</button>
+            <a href="/controllers/gerenciamento.php" class="editar">Editar</a>
             <button class="excluir">Excluir</button>
           </div>
         </div>
@@ -354,7 +369,7 @@
                <p>Fição científica</p>
           </div>
           <div class="book-actions">
-            <button class="editar">Editar</button>
+            <a href="/controllers/gerenciamento.php" class="editar">Editar</a>
             <button class="excluir">Excluir</button>
           </div>
         </div>
@@ -367,7 +382,7 @@
                <p>Fição científica</p>
           </div>
           <div class="book-actions">
-            <button class="editar">Editar</button>
+            <a href="/controllers/gerenciamento.php" class="editar">Editar</a>
             <button class="excluir">Excluir</button>
           </div>
         </div>
@@ -380,7 +395,7 @@
                <p>Fição científica</p>
           </div>
           <div class="book-actions">
-            <button class="editar">Editar</button>
+            <a href="/controllers/gerenciamento.php" class="editar">Editar</a>
             <button class="excluir">Excluir</button>
           </div>
         </div>
@@ -393,7 +408,7 @@
                <p>Fição científica</p>
           </div>
           <div class="book-actions">
-            <button class="editar">Editar</button>
+            <a href="/controllers/gerenciamento.php" class="editar">Editar</a>
             <button class="excluir">Excluir</button>
           </div>
         </div>
@@ -406,7 +421,7 @@
                <p>Fição científica</p>
           </div>
           <div class="book-actions">
-            <button class="editar">Editar</button>
+            <a href="/controllers/gerenciamento.php" class="editar">Editar</a>
             <button class="excluir">Excluir</button>
           </div>
         </div>
@@ -419,7 +434,7 @@
                <p>Fição científica</p>
           </div>
           <div class="book-actions">
-            <button class="editar">Editar</button>
+            <a href="/controllers/gerenciamento.php" class="editar">Editar</a>
             <button class="excluir">Excluir</button>
           </div>
         </div>
@@ -432,7 +447,7 @@
                <p>Fição científica</p>
           </div>
           <div class="book-actions">
-            <button class="editar">Editar</button>
+            <a href="/controllers/gerenciamento.php" class="editar">Editar</a>
             <button class="excluir">Excluir</button>
           </div>
         </div>
@@ -445,7 +460,7 @@
                <p>Fição científica</p>
           </div>
           <div class="book-actions">
-            <button class="editar">Editar</button>
+            <a href="/controllers/gerenciamento.php" class="editar">Editar</a>
             <button class="excluir">Excluir</button>
           </div>
         </div>
@@ -458,7 +473,7 @@
                <p>Fição científica</p>
           </div>
           <div class="book-actions">
-            <button class="editar">Editar</button>
+            <a href="/controllers/gerenciamento.php" class="editar">Editar</a>
             <button class="excluir">Excluir</button>
           </div>
         </div>
@@ -471,7 +486,7 @@
                <p>Fição científica</p>
           </div>
           <div class="book-actions">
-            <button class="editar">Editar</button>
+            <a href="/controllers/gerenciamento.php" class="editar">Editar</a>
             <button class="excluir">Excluir</button>
           </div>
         </div>
@@ -484,7 +499,7 @@
                <p>Fição científica</p>
           </div>
           <div class="book-actions">
-            <button class="editar">Editar</button>
+            <a href="/controllers/gerenciamento.php" class="editar">Editar</a>
             <button class="excluir">Excluir</button>
           </div>
         </div>
@@ -497,7 +512,7 @@
                <p>Fição científica</p>
           </div>
           <div class="book-actions">
-            <button class="editar">Editar</button>
+            <a href="/controllers/gerenciamento.php" class="editar">Editar</a>
             <button class="excluir">Excluir</button>
           </div>
         </div>
@@ -510,7 +525,7 @@
                <p>Infantil</p>
           </div>
           <div class="book-actions">
-            <button class="editar">Editar</button>
+            <a href="/controllers/gerenciamento.php" class="editar">Editar</a>
             <button class="excluir">Excluir</button>
           </div>
         </div>
@@ -523,7 +538,7 @@
                <p>Infantil</p>
           </div>
           <div class="book-actions">
-            <button class="editar">Editar</button>
+            <a href="/controllers/gerenciamento.php" class="editar">Editar</a>
             <button class="excluir">Excluir</button>
           </div>
         </div>
@@ -536,7 +551,7 @@
                <p>Infantil</p>
           </div>
           <div class="book-actions">
-            <button class="editar">Editar</button>
+            <a href="/controllers/gerenciamento.php" class="editar">Editar</a>
             <button class="excluir">Excluir</button>
           </div>
         </div>
@@ -549,7 +564,7 @@
                <p>Infantil</p>
           </div>
           <div class="book-actions">
-            <button class="editar">Editar</button>
+            <a href="/controllers/gerenciamento.php" class="editar">Editar</a>
             <button class="excluir">Excluir</button>
           </div>
         </div>
@@ -562,7 +577,7 @@
                <p>Infantil</p>
           </div>
           <div class="book-actions">
-            <button class="editar">Editar</button>
+            <a href="/controllers/gerenciamento.php" class="editar">Editar</a>
             <button class="excluir">Excluir</button>
           </div>
         </div>
@@ -575,7 +590,7 @@
                <p>Infantil</p>
           </div>
           <div class="book-actions">
-            <button class="editar">Editar</button>
+            <a href="/controllers/gerenciamento.php" class="editar">Editar</a>
             <button class="excluir">Excluir</button>
           </div>
         </div>
@@ -588,7 +603,7 @@
                <p>Infantil</p>
           </div>
           <div class="book-actions">
-            <button class="editar">Editar</button>
+            <a href="/controllers/gerenciamento.php" class="editar">Editar</a>
             <button class="excluir">Excluir</button>
           </div>
         </div>
@@ -601,7 +616,7 @@
                <p>Infantil</p>
           </div>
           <div class="book-actions">
-            <button class="editar">Editar</button>
+            <a href="/controllers/gerenciamento.php" class="editar">Editar</a>
             <button class="excluir">Excluir</button>
           </div>
         </div>
@@ -614,7 +629,7 @@
                <p>Infantil</p>
           </div>
           <div class="book-actions">
-            <button class="editar">Editar</button>
+            <a href="/controllers/gerenciamento.php" class="editar">Editar</a>
             <button class="excluir">Excluir</button>
           </div>
         </div>
@@ -627,7 +642,7 @@
                <p>Infantil</p>
           </div>
           <div class="book-actions">
-            <button class="editar">Editar</button>
+            <a href="/controllers/gerenciamento.php" class="editar">Editar</a>
             <button class="excluir">Excluir</button>
           </div>
         </div>
@@ -640,7 +655,7 @@
                <p>Infantil</p>
           </div>
           <div class="book-actions">
-            <button class="editar">Editar</button>
+            <a href="/controllers/gerenciamento.php" class="editar">Editar</a>
             <button class="excluir">Excluir</button>
           </div>
         </div>
@@ -653,7 +668,7 @@
                <p>Infantil</p>
           </div>
           <div class="book-actions">
-            <button class="editar">Editar</button>
+            <a href="/controllers/gerenciamento.php" class="editar">Editar</a>
             <button class="excluir">Excluir</button>
           </div>
         </div>
@@ -666,7 +681,7 @@
                <p>Infantil</p>
           </div>
           <div class="book-actions">
-            <button class="editar">Editar</button>
+            <a href="/controllers/gerenciamento.php" class="editar">Editar</a>
             <button class="excluir">Excluir</button>
           </div>
         </div>
@@ -679,7 +694,7 @@
                <p>Infantil</p>
           </div>
           <div class="book-actions">
-            <button class="editar">Editar</button>
+            <a href="/controllers/gerenciamento.php" class="editar">Editar</a>
             <button class="excluir">Excluir</button>
           </div>
         </div>
@@ -692,7 +707,7 @@
                <p>Mistério</p>
           </div>
           <div class="book-actions">
-            <button class="editar">Editar</button>
+            <a href="/controllers/gerenciamento.php" class="editar">Editar</a>
             <button class="excluir">Excluir</button>
           </div>
         </div>
@@ -705,7 +720,7 @@
                <p>Mistério</p>
           </div>
           <div class="book-actions">
-            <button class="editar">Editar</button>
+            <a href="/controllers/gerenciamento.php" class="editar">Editar</a>
             <button class="excluir">Excluir</button>
           </div>
         </div>
@@ -718,7 +733,7 @@
                <p>Mistério</p>
           </div>
           <div class="book-actions">
-            <button class="editar">Editar</button>
+            <a href="/controllers/gerenciamento.php" class="editar">Editar</a>
             <button class="excluir">Excluir</button>
           </div>
         </div>
@@ -731,7 +746,7 @@
                <p>Mistério</p>
           </div>
           <div class="book-actions">
-            <button class="editar">Editar</button>
+            <a href="/controllers/gerenciamento.php" class="editar">Editar</a>
             <button class="excluir">Excluir</button>
           </div>
         </div>
@@ -744,7 +759,7 @@
                <p>Mistério</p>
           </div>
           <div class="book-actions">
-            <button class="editar">Editar</button>
+            <a href="/controllers/gerenciamento.php" class="editar">Editar</a>
             <button class="excluir">Excluir</button>
           </div>
         </div>
@@ -757,7 +772,7 @@
                <p>Mistério</p>
           </div>
           <div class="book-actions">
-            <button class="editar">Editar</button>
+            <a href="/controllers/gerenciamento.php" class="editar">Editar</a>
             <button class="excluir">Excluir</button>
           </div>
         </div>
@@ -770,7 +785,7 @@
                <p>Mistério</p>
           </div>
           <div class="book-actions">
-            <button class="editar">Editar</button>
+            <a href="/controllers/gerenciamento.php" class="editar">Editar</a>
             <button class="excluir">Excluir</button>
           </div>
         </div>
@@ -783,7 +798,7 @@
                <p>Mistério</p>
           </div>
           <div class="book-actions">
-            <button class="editar">Editar</button>
+            <a href="/controllers/gerenciamento.php" class="editar">Editar</a>
             <button class="excluir">Excluir</button>
           </div>
         </div>
@@ -796,7 +811,7 @@
                <p>Mistério</p>
           </div>
           <div class="book-actions">
-            <button class="editar">Editar</button>
+            <a href="/controllers/gerenciamento.php" class="editar">Editar</a>
             <button class="excluir">Excluir</button>
           </div>
         </div>
@@ -809,7 +824,7 @@
                <p>Mistério</p>
           </div>
           <div class="book-actions">
-            <button class="editar">Editar</button>
+            <a href="/controllers/gerenciamento.php" class="editar">Editar</a>
             <button class="excluir">Excluir</button>
           </div>
         </div>
@@ -822,7 +837,7 @@
                <p>Mistério</p>
           </div>
           <div class="book-actions">
-            <button class="editar">Editar</button>
+            <a href="/controllers/gerenciamento.php" class="editar">Editar</a>
             <button class="excluir">Excluir</button>
           </div>
         </div>
@@ -835,7 +850,7 @@
                <p>Mistério</p>
           </div>
           <div class="book-actions">
-            <button class="editar">Editar</button>
+            <a href="/controllers/gerenciamento.php" class="editar">Editar</a>
             <button class="excluir">Excluir</button>
           </div>
         </div>
@@ -848,7 +863,7 @@
                <p>Romance</p>
           </div>
           <div class="book-actions">
-            <button class="editar">Editar</button>
+            <a href="/controllers/gerenciamento.php" class="editar">Editar</a>
             <button class="excluir">Excluir</button>
           </div>
         </div>
@@ -861,7 +876,7 @@
                <p>Romance</p>
           </div>
           <div class="book-actions">
-            <button class="editar">Editar</button>
+            <a href="/controllers/gerenciamento.php" class="editar">Editar</a>
             <button class="excluir">Excluir</button>
           </div>
         </div>
@@ -874,7 +889,7 @@
                <p>Romance</p>
           </div>
           <div class="book-actions">
-            <button class="editar">Editar</button>
+            <a href="/controllers/gerenciamento.php" class="editar">Editar</a>
             <button class="excluir">Excluir</button>
           </div>
         </div>
@@ -887,7 +902,7 @@
                <p>Romance</p>
           </div>
           <div class="book-actions">
-            <button class="editar">Editar</button>
+            <a href="/controllers/gerenciamento.php" class="editar">Editar</a>
             <button class="excluir">Excluir</button>
           </div>
         </div>
@@ -900,7 +915,7 @@
                <p>Romance</p>
           </div>
           <div class="book-actions">
-            <button class="editar">Editar</button>
+            <a href="/controllers/gerenciamento.php" class="editar">Editar</a>
             <button class="excluir">Excluir</button>
           </div>
         </div>
@@ -913,7 +928,7 @@
                <p>Romance</p>
           </div>
           <div class="book-actions">
-            <button class="editar">Editar</button>
+            <a href="/controllers/gerenciamento.php" class="editar">Editar</a>
             <button class="excluir">Excluir</button>
           </div>
         </div>
@@ -926,7 +941,7 @@
                <p>Romance</p>
           </div>
           <div class="book-actions">
-            <button class="editar">Editar</button>
+            <a href="/controllers/gerenciamento.php" class="editar">Editar</a>
             <button class="excluir">Excluir</button>
           </div>
         </div>
@@ -939,7 +954,7 @@
                <p>Romance</p>
           </div>
           <div class="book-actions">
-            <button class="editar">Editar</button>
+            <a href="/controllers/gerenciamento.php" class="editar">Editar</a>
             <button class="excluir">Excluir</button>
           </div>
         </div>
@@ -952,7 +967,7 @@
                <p>Romance</p>
           </div>
           <div class="book-actions">
-            <button class="editar">Editar</button>
+            <a href="/controllers/gerenciamento.php" class="editar">Editar</a>
             <button class="excluir">Excluir</button>
           </div>
         </div>
@@ -965,7 +980,7 @@
                <p>Romance</p>
           </div>
           <div class="book-actions">
-            <button class="editar">Editar</button>
+            <a href="/controllers/gerenciamento.php" class="editar">Editar</a>
             <button class="excluir">Excluir</button>
           </div>
         </div>
@@ -978,7 +993,7 @@
                <p>Romance</p>
           </div>
           <div class="book-actions">
-            <button class="editar">Editar</button>
+            <a href="/controllers/gerenciamento.php" class="editar">Editar</a>
             <button class="excluir">Excluir</button>
           </div>
         </div>
@@ -991,7 +1006,7 @@
                <p>Romance</p>
           </div>
           <div class="book-actions">
-            <button class="editar">Editar</button>
+            <a href="/controllers/gerenciamento.php" class="editar">Editar</a>
             <button class="excluir">Excluir</button>
           </div>
         </div>

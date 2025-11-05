@@ -49,7 +49,7 @@ require 'partials/header.php'; ?>
   </div>
 
   <div class="book-item">
-    <img src="/public/assets/capas-pi/classicos/iliada.png" alt=">A Ilíada">
+    <img src="/public/assets/capas-pi/classicos/iliada.png" alt="A Ilíada">
     <h3>A Ilíada</h3>
     <button class="btn">Adicionar ao carrinho</button>
   </div>
@@ -81,7 +81,7 @@ require 'partials/header.php'; ?>
   </div>
 
   <div class="book-item">
-    <img src="/public/assets/capas-pi/classicos/paraisoperdido.png" alt="A Ilíada">
+    <img src="/public/assets/capas-pi/classicos/paraisoperdido.png" alt="Paraíso perdido">
     <h3>Paraíso perdido</h3>
     <button class="btn">Adicionar ao carrinho</button>
   </div>
@@ -93,7 +93,7 @@ require 'partials/header.php'; ?>
   </div>
 
   <div class="book-item">
-    <img src="/public/assets/capas-pi/classicos/orgulhoepreconceito.png" alt="A odisseia">
+    <img src="/public/assets/capas-pi/classicos/orgulhoepreconceito.png" alt="Orgulho e preconceito">
     <h3>Orgulho e preconceito</h3>
     <button class="btn">Adicionar ao carrinho</button>
   </div>
