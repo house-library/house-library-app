@@ -1,0 +1,63 @@
+[33mfb62772[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m HEAD@{0}: checkout: moving from responsividade/index to main
+[33ma39a673[m[33m ([m[1;32mresponsividade/index[m[33m)[m HEAD@{1}: pull origin main --rebase (finish): returning to refs/heads/responsividade/index
+[33ma39a673[m[33m ([m[1;32mresponsividade/index[m[33m)[m HEAD@{2}: pull origin main --rebase (pick): refactor: rota finalizada
+[33mae6b47a[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{3}: pull origin main --rebase (start): checkout ae6b47afb9c95c32dcc17b4619ccb935d08b4af3
+[33m2ee15df[m HEAD@{4}: commit: refactor: rota finalizada
+[33m398e5be[m[33m ([m[1;31morigin/responsividade/index[m[33m)[m HEAD@{5}: merge main: Merge made by the 'ort' strategy.
+[33mf6c817d[m HEAD@{6}: reset: moving to f6c817d
+[33mfb62772[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m HEAD@{7}: checkout: moving from responsividade/index to responsividade/index
+[33mfb62772[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m HEAD@{8}: reset: moving to origin/main
+[33mf6c817d[m HEAD@{9}: reset: moving to f6c817d
+[33maba9e7e[m HEAD@{10}: checkout: moving from main to responsividade/index
+[33mfb62772[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m HEAD@{11}: reset: moving to origin/main
+[33mf6c817d[m HEAD@{12}: checkout: moving from main to main
+[33mf6c817d[m HEAD@{13}: reset: moving to f6c817d
+[33mfb62772[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m HEAD@{14}: pull: Fast-forward
+[33me1f56f6[m HEAD@{15}: checkout: moving from responsividade/index to main
+[33maba9e7e[m HEAD@{16}: pull --rebase origin main (finish): returning to refs/heads/responsividade/index
+[33maba9e7e[m HEAD@{17}: pull --rebase origin main (pick): refactor:
+[33mfb62772[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m HEAD@{18}: pull --rebase origin main (start): checkout fb62772ca645544bfddfb419032528439918501a
+[33mf6c817d[m HEAD@{19}: commit: refactor:
+[33me928af2[m HEAD@{20}: commit (merge): Merge branch 'main' into responsividade/index
+[33m7952eaf[m HEAD@{21}: checkout: moving from main to responsividade/index
+[33me1f56f6[m HEAD@{22}: pull origin main: Fast-forward
+[33m14b7450[m HEAD@{23}: checkout: moving from responsividade/index to main
+[33m7952eaf[m HEAD@{24}: commit: feat: implementação de roteador e rota
+[33m645fa6e[m HEAD@{25}: commit: refactor: responsividade das paginas index/carrinho e partials header/footer
+[33m46cd5e7[m HEAD@{26}: commit: refactor: responsividade da pagina carrinho
+[33mc1e11a1[m HEAD@{27}: commit: refactor: responsividade do index
+[33md197e12[m HEAD@{28}: commit: responsividade na pagina index
+[33m14b7450[m HEAD@{29}: checkout: moving from main to responsividade/index
+[33m14b7450[m HEAD@{30}: checkout: moving from branch-joao to main
+[33m14b7450[m HEAD@{31}: checkout: moving from main to branch-joao
+[33m14b7450[m HEAD@{32}: pull origin main: Fast-forward
+[33m8ee5faf[m HEAD@{33}: checkout: moving from main to main
+[33m8ee5faf[m HEAD@{34}: pull: Fast-forward
+[33mc71bce3[m HEAD@{35}: commit: pagina de cadastro, login e recuperação de senha finalizada, faltando o media querie
+[33m61e8e2d[m HEAD@{36}: commit: feat: pagina do carrinho desktop finalizada, faltando media querie
+[33m5668de1[m HEAD@{37}: commit (merge): Merge remote-tracking branch 'origin/main'
+[33m779867a[m HEAD@{38}: commit: header, footer e pagina inicial
+[33m136a619[m HEAD@{39}: commit: header e footer
+[33md749035[m HEAD@{40}: commit: header e footer
+[33m952f668[m HEAD@{41}: pull: Fast-forward
+[33m8131f7b[m HEAD@{42}: reset: moving to HEAD
+[33m8131f7b[m HEAD@{43}: reset: moving to HEAD
+[33m8131f7b[m HEAD@{44}: commit: feat: header css
+[33m6d43886[m HEAD@{45}: commit: feat: header css
+[33me448a3c[m HEAD@{46}: commit: refactor: troca de icones e prosseguimento do css do header
+[33me8e9408[m HEAD@{47}: commit: feat: inicio do css do header
+[33mfef3d80[m HEAD@{48}: commit: refactor: links e caminhos de imagens corrigidos para estrutura mvc
+[33m8e6c6bf[m HEAD@{49}: commit: refactor: Implementei o padrão Controller-View, reorganizei as pastas para separar responsabilidades e componentizei head, header e footer.
+[33m576605a[m HEAD@{50}: commit: feat: estrutura da database finalizada
+[33md6d177e[m HEAD@{51}: commit: docs: aumentei o tamanho e diminui o peso das capas
+[33m853c1db[m HEAD@{52}: pull origin main: Fast-forward
+[33m992107c[m HEAD@{53}: commit: feat:finalizei telas de Pagamento e Gerenciamento e ajustei Carrinho
+[33md4e6fb3[m HEAD@{54}: pull origin main: Fast-forward
+[33m9604521[m HEAD@{55}: commit: FEAT: Estutura base HTML da pagina explorar finalizada
+[33mbe7f921[m HEAD@{56}: commit: FEAT: estrutura base HTML da pagina explora
+[33m719f268[m HEAD@{57}: commit: Estrutura HTML da tela inicial e pasta de assets
+[33m0ea650d[m HEAD@{58}: commit: Estrutura HTML da tela inicial e pasta de assets
+[33mccbdda3[m HEAD@{59}: commit: Adiciona estrutura final do HTML e pasta de assets
+[33m6fcdd15[m HEAD@{60}: commit: Docs: Atualiza README para a versão correta e final
+[33m9f3d344[m HEAD@{61}: commit: Docs: finalizei a estrutura base do README
+[33mdd01839[m HEAD@{62}: clone: from https://github.com/house-library/house-library-app.git
