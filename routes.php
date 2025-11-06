@@ -6,6 +6,7 @@ $router->get('/', 'Home@index');
 $router->get('/listings', 'ListingsController@index');
 $router->get('/listings/create', 'ListingsController@create');
 $router->get('/listing', 'ListingsController@show');
+$router->post('/listings', 'ListingsController@store');
 
 // paginas do site
 $router->get('/carrinho', 'Carrinho@index');

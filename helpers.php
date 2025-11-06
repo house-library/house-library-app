@@ -51,8 +51,13 @@ function loadPartial(string $name, array $data = []): void
 }
 
 // formatar o preço
-
 function formatPrice($preco)
 {
     return '$' . number_format(floatval($preco));
+}
+
+// higienizar os dados
+function sanitize($dirty)
+{
+    return filter_var(trim($dirty), FILTER_SANITIZE_SPECIAL_CHARS);
 }
