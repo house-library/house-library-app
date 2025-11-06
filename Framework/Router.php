@@ -48,21 +48,51 @@ class Router
         $this->registerRoutes('DELETE', $uri, $controller);
     }
 
-    public function route($uri, $method)
+    public function route($uri)
     {
+        // 1. Pega o método
+        $requestMethod = $_SERVER['REQUEST_METHOD'];
+
         foreach ($this->routes as $route) {
-            if ($route['uri'] === $uri && $route['method'] === $method) {
-                $controller = 'App\\Controllers\\' . $route['controller'];
-                $controllerMethod = $route['controllerMethod'];
+            $uriSegments = explode('/', trim($uri, '/'));
+            $routeSegments = explode('/', trim($route['uri'], '/'));
 
-                $controllerInstance = new $controller();
-                $controllerInstance->$controllerMethod();
+            if (
+                count($uriSegments) === count($routeSegments) &&
+                strtoupper($route['method']) === $requestMethod
+            ) {
+                $params = [];
+                $match = true;
 
-                return;
+                for ($i = 0; $i < count($uriSegments); $i++) {
+                    // Se os segmentos não batem e não é um placeholder
+                    if (
+                        $routeSegments[$i] !== $uriSegments[$i] &&
+                        !preg_match('/\{(.+?)}/', $routeSegments[$i])
+                    ) {
+                        $match = false; //
+                        break;
+                    }
+
+                    // Se for um placeholder capture o valor
+                    if (
+                        preg_match('/\{(.+?)}/', $routeSegments[$i], $matches)
+                    ) {
+                        $params[$matches[1]] = $uriSegments[$i]; //
+                    }
+                }
+
+                if ($match) {
+                    $controller = 'App\\Controllers\\' . $route['controller'];
+                    $controllerMethod = $route['controllerMethod'];
+
+                    $controllerInstance = new $controller();
+                    $controllerInstance->$controllerMethod($params);
+                    return; // Rota encontrada. Saia da função.
+                }
             }
         }
 
-        // Caso nenhuma rota combine
         $this->error();
     }
 }

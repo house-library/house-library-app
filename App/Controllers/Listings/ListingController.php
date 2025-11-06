@@ -32,19 +32,12 @@ class ListingController
         loadView('listings/create');
     }
 
-    public function show()
+    public function show($params)
     {
-        $id = $_GET['id'] ?? '';
+        $id = $params['id'] ?? '';
 
         $config = require basePath('config/db.php');
         $db = new Database($config);
-
-        // Verifica se o ID é válido (número)
-        if (empty($id) || !ctype_digit($id)) {
-            // Redireciona ou mostra erro 404 se o ID for inválido
-            loadView('error', ['message' => 'Livro não encontrado.']);
-            exit();
-        }
 
         $params = ['id' => $id];
 
@@ -74,6 +67,11 @@ class ListingController
             'livro' => $livro,
             'livrosRelacionados' => $livrosRelacionados,
         ];
+
+        if (!$listing) {
+            ErrorController::notFound('404 Não Encontrado');
+            return;
+        }
 
         loadView('listings/show', $data);
     }

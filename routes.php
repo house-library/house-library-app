@@ -1,7 +1,7 @@
 <?php
 
 // pagina principal
-$router->get('/', 'HomeController@index');
+$router->get('/', 'Home@index');
 
 $router->get('/listings', 'ListingsController@index');
 $router->get('/listings/create', 'ListingsController@create');
