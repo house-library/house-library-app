@@ -1,5 +1,5 @@
-<?= loadPartial('head', $viewData) ?>
-<?= loadPartial('header') ?>    
+<?php loadPartial('head', $viewData); ?>
+<?php loadPartial('header'); ?>    
 
   <main class="favorites-main">
     <h2 class="favorites-title">Favoritos</h2>
@@ -35,4 +35,4 @@
       <a href="#" class="arrow">&gt;</a>
     </div>
 
-  <?= loadPartial('footer') ?>    
+  <?php loadPartial('footer'); ?>    

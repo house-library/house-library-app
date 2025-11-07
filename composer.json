@@ -1,0 +1,16 @@
+{
+    "name": "joaovitor/ecommerce-livros",
+    "description": "E-commerce de livros",
+    "authors": [
+        {
+            "name": "Joao Vitor",
+            "email": "joaovitorppff13@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Framework\\": "Framework/",
+            "App\\": "App/"
+        }
+    }
+}

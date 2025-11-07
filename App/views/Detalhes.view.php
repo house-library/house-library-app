@@ -1,6 +1,6 @@
-<?= loadPartial('head', $viewData) ?>
+<?php loadPartial('head', $viewData); ?>
 
-<?= loadPartial('header') ?>    
+<?php loadPartial('header'); ?>    
 
 
     <section class="ebook">
@@ -99,6 +99,6 @@
     
     
 
-<?= loadPartial('footer') ?>    
+<?php loadPartial('footer'); ?>    
 
 

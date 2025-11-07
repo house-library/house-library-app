@@ -1,5 +1,5 @@
-<?= loadPartial('head', $viewData) ?>
-<?= loadPartial('header') ?>    
+<?php loadPartial('head', $viewData); ?>
+<?php loadPartial('header', $viewData); ?>    
 
     <main class="explore-page-container">
         <div id="campo-filtragem">
@@ -221,4 +221,4 @@
     </main>
 
 
-<?= loadPartial('footer') ?>    
+<?php loadPartial('footer', $viewData); ?>    
