@@ -23,6 +23,7 @@ function loadView(string $name, array $data = []): void
     $path = basePath("App/views/{$name}.view.php");
 
     if (file_exists($path)) {
+        $viewData = $data;
         extract($data);
 
         require $path;
@@ -42,6 +43,7 @@ function loadPartial(string $name, array $data = []): void
     $partialPath = basePath("App/views/partials/{$name}.php");
 
     if (file_exists($partialPath)) {
+        $viewData = $data;
         extract($data);
 
         require $partialPath;

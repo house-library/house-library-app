@@ -1,6 +1,4 @@
-<?php loadPartial('head', [
-    'styles' => $styles ?? ['gerenciamento.css'],
-]); ?>  
+<?php loadPartial('head', $viewData); ?>
 <?php loadPartial('headeradm'); ?> 
 
 <main>
