@@ -1,4 +1,9 @@
-<?php
+<?php declare(strict_types=1);
 
-declare(strict_types=1);
-require dirname(__DIR__) . '/views/login.view.php';
+$data = [
+    'title' => 'Login',
+    'styles' => ['login.css'],
+];
+
+// 2. Chama a view e PASSA os dados
+loadView('login', $data);

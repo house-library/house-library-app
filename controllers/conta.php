@@ -1,4 +1,8 @@
-<?php
+<?php declare(strict_types=1);
 
-declare(strict_types=1);
-require __DIR__ . '../views/conta.view.php';
+$data = [
+    'title' => 'Conta',
+    'styles' => ['conta.css'],
+];
+
+loadView('conta', $data);

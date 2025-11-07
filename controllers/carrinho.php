@@ -1,4 +1,8 @@
-<?php
+<?php declare(strict_types=1);
 
-declare(strict_types=1);
-require dirname(__DIR__) . '/views/carrinho.view.php';
+$data = [
+    'title' => 'Carrinho',
+    'styles' => ['carrinho.css'],
+];
+
+loadView('carrinho', $data);

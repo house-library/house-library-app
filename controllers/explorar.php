@@ -1,4 +1,8 @@
-<?php
+<?php declare(strict_types=1);
 
-declare(strict_types=1);
-require dirname(__DIR__) . '/views/explorar.view.php';
+$data = [
+    'title' => 'Explorar',
+    'styles' => ['explorar.css'],
+];
+
+loadView('explorar', $data);

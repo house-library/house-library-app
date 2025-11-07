@@ -1,4 +1,8 @@
-<?php
+<?php declare(strict_types=1);
 
-declare(strict_types=1);
-require dirname(__DIR__) . '/views/favoritos.view.php';
+$data = [
+    'title' => 'Favoritos',
+    'styles' => ['favoritos.css'],
+];
+
+loadView('favoritos', $data);

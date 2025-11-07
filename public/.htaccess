@@ -1,0 +1,11 @@
+ewriteEngine on
+
+# Define a base para este subdiretório
+RewriteBase /house-library-app/public/
+
+# Se o arquivo ou diretório solicitado não existir...
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# ...redirecione para o index.php (sem a barra inicial)
+RewriteRule ^(.*)$ index.php [NC, L, QSA]
