@@ -1,4 +1,6 @@
-<?= loadPartial('head', $viewData) ?>
+<?php loadPartial('head', [
+    'styles' => $styles ?? [],
+]); ?>
 <?= loadPartial('header') ?>    
 
     <main class="explore-page-container">

@@ -2,7 +2,7 @@
 
 namespace App\Controllers;
 
-class ErrorController
+class Error
 {
     public static function notFound($message = 'Erro 404: Não encontrado')
     {

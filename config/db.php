@@ -3,7 +3,7 @@
 return [
     'host' => 'localhost',
     'port' => 3307,
-    'dbname' => 'house_library',
+    'dbname' => 'houselibrary',
     'username' => 'root',
     'password' => '',
 ];

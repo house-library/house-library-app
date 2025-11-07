@@ -23,7 +23,7 @@ function loadView(string $name, array $data = []): void
     $path = basePath("App/views/{$name}.view.php");
 
     if (file_exists($path)) {
-        $viewData = $data;
+        extract($data);
 
         require $path;
     } else {
@@ -42,11 +42,11 @@ function loadPartial(string $name, array $data = []): void
     $partialPath = basePath("App/views/partials/{$name}.php");
 
     if (file_exists($partialPath)) {
-        $viewData = $data;
+        extract($data);
 
         require $partialPath;
     } else {
-        echo "Erro: Partial '{$name}' não encontrada no caminho: {$partialPath}";
+        echo "Erro: Partial '{$view}' não encontrada no caminho: {$partialPath}";
     }
 }
 
@@ -57,7 +57,14 @@ function formatPrice($preco)
 }
 
 // higienizar os dados
-function sanitize($dirty)
+function sanitize(string $dirty)
 {
     return filter_var(trim($dirty), FILTER_SANITIZE_SPECIAL_CHARS);
+}
+
+// redirecionar a determinada url
+function redirect(string $url)
+{
+    header("Location: {$url}");
+    exit();
 }

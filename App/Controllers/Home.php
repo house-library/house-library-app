@@ -16,12 +16,46 @@ class Home
 
     public function index()
     {
-        $livros = $this->db->query('SELECT * FROM LIVROS')->fetchAll();
+        // Buscar livros por categoria
+        $aventuras = $this->db
+            ->query("SELECT * FROM livros WHERE categoria = 'Aventura' LIMIT 6")
+            ->fetchAll();
+
+        $infantis = $this->db
+            ->query("SELECT * FROM livros WHERE categoria = 'Infantil' LIMIT 6")
+            ->fetchAll();
+
+        $classicos = $this->db
+            ->query(
+                "SELECT * FROM livros WHERE categoria IN ('Romance', 'Ficção Científica') LIMIT 6",
+            )
+            ->fetchAll();
+
+        $biografias = $this->db
+            ->query(
+                "SELECT * FROM livros WHERE categoria = 'Biografias' LIMIT 6",
+            )
+            ->fetchAll();
+
+        $cultura = $this->db
+            ->query("SELECT * FROM livros WHERE categoria = 'Cultura' LIMIT 6")
+            ->fetchAll();
+
+        $ciencia = $this->db
+            ->query(
+                "SELECT * FROM livros WHERE categoria = 'Tecnologia' LIMIT 6",
+            )
+            ->fetchAll();
 
         $data = [
             'title' => 'Início',
             'styles' => ['inicio.css'],
-            'livros' => $livros,
+            'aventuras' => $aventuras,
+            'infantis' => $infantis,
+            'classicos' => $classicos,
+            'biografias' => $biografias,
+            'cultura' => $cultura,
+            'ciencia' => $ciencia,
         ];
 
         loadView('home', $data);

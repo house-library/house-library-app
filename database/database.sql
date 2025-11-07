@@ -1,64 +1,82 @@
+CREATE DATABASE HouseLibrary;
+USE HouseLibrary;
+ 
 CREATE TABLE CLIENTES 
 ( 
- email_cliente VARCHAR(100) NOT NULL,  
- nome_cliente VARCHAR(100) NOT NULL,  
- cpf_cliente VARCHAR(14) NOT NULL,  
- senha_cliente VARCHAR(255) NOT NULL,  
- cliente_id INT PRIMARY KEY AUTO_INCREMENT,  
- UNIQUE (email_cliente),
- UNIQUE (cpf_cliente)
-); 
+email_cliente VARCHAR(100) NOT NULL,  
+nome_cliente VARCHAR(100) NOT NULL,  
+cpf_cliente VARCHAR(11) NOT NULL,  
+senha_cliente VARCHAR(255) NOT NULL,  
+cliente_id INT PRIMARY KEY AUTO_INCREMENT,  
+UNIQUE (email_cliente),
+UNIQUE (cpf_cliente)
+);
 
+CREATE TABLE ADMINISTRADOR 
+( 
+ADM_NOME VARCHAR(100) NOT NULL,  
+ADM_EMAIL VARCHAR(100) NOT NULL,  
+ADM_SENHA VARCHAR(255) NOT NULL,  
+ADM_ID INT PRIMARY KEY AUTO_INCREMENT,  
+UNIQUE (ADM_EMAIL)
+);
+  
+ 
 CREATE TABLE LIVROS 
 ( 
- ano_lancamento INT NOT NULL,  
- preco INT NOT NULL,  
- idioma VARCHAR(50) NOT NULL,  
- categoria VARCHAR(100) NOT NULL,  
- nome_autor VARCHAR(100) NOT NULL,  
- titulo VARCHAR(100) NOT NULL, 
- sinopse VARCHAR(350) NOT NULL, 
- descricao TEXT NOT NULL,  
- livro_id INT PRIMARY KEY AUTO_INCREMENT,  
-); 
-
+ano_lancamento INT NOT NULL,  
+preco INT NOT NULL,  
+idioma VARCHAR(50) NOT NULL,  
+categoria VARCHAR(100) NOT NULL,  
+nome_autor VARCHAR(100) NOT NULL,  
+titulo VARCHAR(100) NOT NULL, 
+sinopse VARCHAR(2000) NOT NULL, 
+descricao TEXT NOT NULL,
+url_capa VARCHAR(2083) NOT NULL,
+livros_id INT PRIMARY KEY AUTO_INCREMENT,
+UNIQUE (url_capa)
+);
+ 
+ 
 CREATE TABLE DETALHES_PEDIDOS 
 ( 
- valor_pago INT NOT NULL,  
- quantidade INT NOT NULL,  
- detalhes_id INT PRIMARY KEY AUTO_INCREMENT,  
- pedidos_id INT NOT NULL,  
- livros_id INT NOT NULL,  
-); 
+valor_pago INT NOT NULL,  
+quantidade INT NOT NULL,  
+detalhes_id INT PRIMARY KEY AUTO_INCREMENT,  
+pedidos_id INT NOT NULL,  
+livros_id INT NOT NULL
+);
 
 CREATE TABLE PAGAMENTOS 
 ( 
- pagamento_id INT PRIMARY KEY AUTO_INCREMENT,  
- cvv VARCHAR(3),  
- num_cartao VARCHAR (16),  
- metodo_pagamento_id INT NOT NULL,
- status_pagamento VARCHAR(50) NOT NULL,  
- validade VARCHAR(7),  
- codigo_promocional VARCHAR(30),  
- pedidos_id INT NOT NULL
-); 
+pagamento_id INT PRIMARY KEY AUTO_INCREMENT,  
+cvv VARCHAR(3),  
+num_cartao VARCHAR (16),  
+metodo_pagamento_id INT NOT NULL,
+status_pagamento VARCHAR(50) NOT NULL,  
+validade VARCHAR(7),  
+codigo_promocional VARCHAR(30),  
+pedidos_id INT NOT NULL
+);
 
+ 
 CREATE TABLE METODOS_PAGAMENTO (
     metodo_id INT PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(50) UNIQUE NOT NULL
 );
-
+ 
 CREATE TABLE PEDIDOS 
 ( 
- pedidos_id INT PRIMARY KEY AUTO_INCREMENT,  
- status VARCHAR(50) NOT NULL,  
- valor_total DECIMAL (20, 2),  
- data_pedido DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP, 
- cliente_id INT NOT NULL,  
-); 
-
-ALTER TABLE DETALHES_PEDIDOS ADD FOREIGN KEY(pedidos_id) REFERENCES PEDIDOS (pedidos_id)
-ALTER TABLE DETALHES_PEDIDOS ADD FOREIGN KEY(livros_id) REFERENCES LIVROS (livros_id)
-ALTER TABLE PAGAMENTOS ADD FOREIGN KEY(pedidos_id) REFERENCES PEDIDOS (pedidos_id)
-ALTER TABLE PEDIDOS ADD FOREIGN KEY(cliente_id) REFERENCES CLIENTES (cliente_id)
+pedidos_id INT PRIMARY KEY AUTO_INCREMENT,  
+status_pedido VARCHAR(50) NOT NULL,  
+valor_total DECIMAL (20, 2),  
+data_pedido DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP, 
+cliente_id INT NOT NULL
+);
+ 
+ALTER TABLE DETALHES_PEDIDOS ADD FOREIGN KEY(pedidos_id) REFERENCES PEDIDOS (pedidos_id);
+ALTER TABLE DETALHES_PEDIDOS ADD FOREIGN KEY(livros_id) REFERENCES LIVROS (livros_id);
+ALTER TABLE PAGAMENTOS ADD FOREIGN KEY(pedidos_id) REFERENCES PEDIDOS (pedidos_id);
+ALTER TABLE PEDIDOS ADD FOREIGN KEY(cliente_id) REFERENCES CLIENTES (cliente_id);
 ALTER TABLE PAGAMENTOS ADD FOREIGN KEY(metodo_pagamento_id) REFERENCES METODOS_PAGAMENTO (metodo_id);
+ 

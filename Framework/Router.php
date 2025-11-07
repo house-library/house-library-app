@@ -2,6 +2,8 @@
 
 namespace Framework;
 
+use App\Controllers\ErrorController;
+
 class Router
 {
     protected $routes = [];
@@ -48,10 +50,15 @@ class Router
         $this->registerRoutes('DELETE', $uri, $controller);
     }
 
-    public function route($uri)
+    public function route(string $uri)
     {
         // 1. Pega o método
         $requestMethod = $_SERVER['REQUEST_METHOD'];
+
+        // Verifica se existe o input _method
+        if ($requestMethod === 'POST' && isset($_POST['_method'])) {
+            $requestMethod = strtoupper($_POST['_method']);
+        }
 
         foreach ($this->routes as $route) {
             $uriSegments = explode('/', trim($uri, '/'));
@@ -88,7 +95,7 @@ class Router
 
                     $controllerInstance = new $controller();
                     $controllerInstance->$controllerMethod($params);
-                    return; // Rota encontrada. Saia da função.
+                    return; // Rota encontrada
                 }
             }
         }

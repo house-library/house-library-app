@@ -1,4 +1,4 @@
-<?php loadPartial('head', $viewData); ?>
+<?php loadPartial('head', $data); ?>
 <?php loadPartial('header'); ?>
 
 <main class="main">
