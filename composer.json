@@ -12,5 +12,8 @@
             "Framework\\": "Framework/",
             "App\\": "App/"
         }
+    },
+    "require": {
+        "monolog/monolog": "^3.9"
     }
 }

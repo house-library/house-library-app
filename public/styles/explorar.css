@@ -1,6 +1,4 @@
-/* --- Variáveis e Configurações Base (Sem alteração) --- */
 :root {
-    /* Cores atualizadas para o Tema Claro (Fundo Branco) */
     --cor-fundo-principal: #ffffff; 
     --cor-fundo-card: #ffffff; 
     --cor-texto-principal: #1f1f21; 
@@ -12,13 +10,11 @@
     --cor-sombra: rgba(0, 0, 0, 0.1); 
     --cor-borda-select: #229799; 
 
-    /* Espaçamento */
     --espacamento-padrao: 1rem;
     --espacamento-pequeno: 0.5rem;
     --espacamento-grande: 1.5rem;
 }
 
-/* Configuração de fonte raiz para REM (Sem alteração) */
 html {
     font-size: 16px; 
 }
@@ -31,7 +27,6 @@ body {
     padding: 0;
 }
 
-/* --- Container Principal (Sem alteração) --- */
 .explore-page-container {
     max-width: 90rem; 
     margin: 0 auto;
@@ -40,7 +35,6 @@ body {
     min-height: 100vh;
 }
 
-/* --- Campo de Filtragem --- */
 #campo-filtragem {
     padding: 0; 
     margin-bottom: var(--espacamento-grande);
@@ -55,37 +49,28 @@ body {
 }
 
 .filter-form select {
-    /* MUDANÇA: Centralizar o texto (verticalmente) */
+
     display: flex;
     align-items: center;
-    /* Ajuste no padding para não cobrir o ícone da seta */
     padding: 0.75rem calc(var(--espacamento-padrao) + 1.5rem) 0.75rem var(--espacamento-padrao); 
-
-    /* MUDANÇA: Adicionar a seta para baixo (Ícone SVG codificado em Data URL) */
-    /* Cor da seta: #1f1f21 (cor do texto principal) */
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%231f1f21'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
-    /* Posição da seta: 1rem da direita e centralizada verticalmente */
     background-position: right 1rem center;
-    background-size: 0.75rem 0.75rem; /* Tamanho da seta */
+    background-size: 0.75rem 0.75rem; 
 
-    /* Regras de 4x2 e cor de borda (Mantidas) */
     border: 1px solid var(--cor-borda-select); 
     flex-basis: calc(25% - (3 * var(--espacamento-padrao) / 4));
     min-width: 10rem; 
 
-    /* Restante dos estilos (Mantidos) */
     border-radius: 0.5rem; 
     background-color: var(--cor-input-fundo);
     color: var(--cor-input-texto);
-    appearance: none; /* Remove a seta padrão */
+    appearance: none; 
     cursor: pointer;
     font-size: 0.9rem;
     height: 3rem; 
     box-shadow: 0 1px 3px var(--cor-sombra); 
 }
-
-/* O restante do CSS (focus, options, book-grid e media queries) permanece o mesmo. */
 
 .filter-form select:focus {
     border-color: var(--cor-acento-principal);
@@ -102,7 +87,6 @@ body {
     color: var(--cor-texto-secundario);
 }
 
-/* --- Grade de Livros e Media Queries (Sem Alteração) --- */
 .book-grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr); 
@@ -130,7 +114,20 @@ body {
     display: block;
 }
 
-/* Tablet (Até 1024px) */
+.books {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--espacamento-grande);
+}
+
+.book-item {
+    flex: 1 1 15%; 
+    max-width: 15%;
+}
+
 @media (max-width: 64rem) { 
     .filter-form select {
         flex-basis: calc(25% - (3 * var(--espacamento-padrao) / 4));
+    }
+}

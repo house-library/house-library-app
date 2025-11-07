@@ -5,20 +5,17 @@
     <h2 class="favorites-title">Favoritos</h2>
 
     <section class="favorite-item">
-      <div class="item-details-container">
-        <div class="book-cover-container">
-          <img src="/assets/capa-pi/misterio/ateofim" alt="Capa do livro Até o Fim" width="120">
+        <div class="book-item">
+    <img src="/assets/capas-pi/classicos/paraisoperdido.png" alt="A Ilíada">
         </div>
         <div class="book-info">
-          <p class="book-author"><strong>Michael Lowy</strong></p>
-          <h3>Argonauta</h3>
+          <p class="book-author"><strong>John Milton</strong></p>
+          <h3>Paraíso perdido</h3>
           <div class="book-rating">
             <span>&#9733;&#9733;&#9733;&#9733;&#9733;</span> (6)
           </div>
           <p class="book-description">
-            Você é o último. Seu mundo foi aniquilado, apagado da existência como se nunca tivesse existido.
-            Mas você ainda respira. Em meio ao vazio infinito, uma cidade impossível surge diante de você: NUO,
-            o refúgio dos perdidos, o lar daqueles que sobreviveram ao fim de sua realidade.
+            “Ela o toca, ela o arranca, e logo o come. A terra estremeceu com tal ferida; Desde os cimentos seus a natureza, Pela extensão das maravilhas suas, Aflita suspirou, sinais mostrando Da ampla desgraça e perdição de tudo.” Esta edição segue a tradução original de Lima Leitão, publicada em 1840, restituindo versos emendados por edições subsequentes à sua forma original.
           </p>
         </div>
       </div>
