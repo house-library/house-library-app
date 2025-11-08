@@ -5,15 +5,16 @@ namespace Framework;
 use PDO;
 use PDOException;
 use Exception;
+use PDOStatement;
 
 class Database
 {
     // conexão com banco de dados
     public $conn;
 
-    public function __construct($config)
+    public function __construct(array $config)
     {
-        $dsn = "mysql:host={$config['host']};port={$config['port']};dbname={$config['dbname']}";
+        $dsn = "mysql:host={$config['host']};port={$config['port']};dbname={$config['dbname']};charset=utf8mb4";
 
         $options = [
             PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
@@ -35,7 +36,7 @@ class Database
     }
 
     // consulta ao banco de dados
-    public function query($query, $params = [])
+    public function query(string $query, array $params = []): PDOStatement
     {
         try {
             $sth = $this->conn->prepare($query);

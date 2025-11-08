@@ -6,6 +6,8 @@ require __DIR__ . '/../helpers.php';
 
 use Framework\Router;
 
+$config = require basePath('config/db.php');
+
 // Istancia a rota
 $router = new Router();
 
