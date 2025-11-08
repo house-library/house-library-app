@@ -22,6 +22,8 @@ $router->get('/login', 'Login@index');
 $router->get('/pagamento', 'Pagamento@index');
 $router->get('/publicados', 'Publicados@index');
 $router->get('/recsenha', 'Recsenha@index');
+$router->get('/categoria', 'Categoria@index');
+
 
 return $router;
 // routes.php

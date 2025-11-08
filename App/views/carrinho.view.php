@@ -1,6 +1,6 @@
-<?php loadPartial('head', $viewData); ?>
+<?php loadPartial('head', data: $viewData); ?>
 
-<?php loadPartial('header', $viewData); ?>    
+<?php loadPartial(name: 'header'); ?>    
     
     <main class="main">
         <h1 class="page-title">Carrinho</h1>
