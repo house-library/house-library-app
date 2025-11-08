@@ -50,7 +50,7 @@ class Router
         $this->registerRoutes('DELETE', $uri, $controller);
     }
 
-    public function route(string $uri)
+    public function route(string $uri, Database $db)
     {
         // 1. Pega o método
         $requestMethod = $_SERVER['REQUEST_METHOD'];
@@ -93,7 +93,7 @@ class Router
                     $controller = 'App\\Controllers\\' . $route['controller'];
                     $controllerMethod = $route['controllerMethod'];
 
-                    $controllerInstance = new $controller();
+                    $controllerInstance = new $controller($db);
                     $controllerInstance->$controllerMethod($params);
                     return; // Rota encontrada
                 }

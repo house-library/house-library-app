@@ -48,7 +48,7 @@ function loadPartial(string $name, array $data = []): void
 
         require $partialPath;
     } else {
-        echo "Erro: Partial '{$view}' não encontrada no caminho: {$partialPath}";
+        echo "Erro: Partial '{$name}' não encontrada no caminho: {$partialPath}";
     }
 }
 

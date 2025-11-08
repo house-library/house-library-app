@@ -19,6 +19,9 @@ class Database
         $options = [
             PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
             PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+
+            //conexao com o banco online no aiven
+            PDO::MYSQL_ATTR_SSL_CA => basePath('config/ca.pem'),
         ];
 
         try {

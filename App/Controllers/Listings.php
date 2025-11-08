@@ -42,7 +42,7 @@ class Listings
         $params = ['id' => $id];
 
         $livro = $this->db
-            ->query('SELECT * FROM livros WHERE livros_id = :id', $params)
+            ->query('SELECT * FROM LIVROS WHERE livros_id = :id', $params)
             ->fetch();
 
         if (!$livro) {
@@ -52,7 +52,7 @@ class Listings
 
         $livrosRelacionados = $this->db
             ->query(
-                'SELECT * FROM livros 
+                'SELECT * FROM LIVROS 
              WHERE categoria = :categoria 
              AND livros_id != :id 
              LIMIT 4',
@@ -145,7 +145,7 @@ class Listings
         $fields = implode(', ', array_keys($newListingData));
         $values = ':' . implode(', :', array_keys($newListingData));
 
-        $query = "INSERT INTO livros ($fields) VALUES ($values)";
+        $query = "INSERT INTO LIVROS ($fields) VALUES ($values)";
         $this->db->query($query, $newListingData);
 
         redirect('/listings');
@@ -157,7 +157,7 @@ class Listings
         $params = ['id' => $id];
 
         $livro = $this->db
-            ->query('SELECT * FROM livros WHERE livros_id = :id', $params)
+            ->query('SELECT * FROM LIVROS WHERE livros_id = :id', $params)
             ->fetch();
 
         if (!$livro) {
@@ -165,7 +165,7 @@ class Listings
             return;
         }
 
-        $this->db->query('DELETE FROM livros WHERE livros_id = :id', $params);
+        $this->db->query('DELETE FROM LIVROS WHERE livros_id = :id', $params);
 
         redirect('/listings');
     }
@@ -176,7 +176,7 @@ class Listings
         $params = ['id' => $id];
 
         $livro = $this->db
-            ->query('SELECT * FROM livros WHERE livros_id = :id', $params)
+            ->query('SELECT * FROM LIVROS WHERE livros_id = :id', $params)
             ->fetch();
 
         if (!$livro) {

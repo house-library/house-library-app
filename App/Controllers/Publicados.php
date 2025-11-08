@@ -1,11 +1,13 @@
 <?php
-// Caminho: App/Controllers/CarrinhoController.php
 
 namespace App\Controllers;
+use Framework\Database;
 
 class Publicados
 {
-    public function index()
+    public function __construct(private $db) {}
+
+    public function index(): void
     {
         $data = [
             'title' => 'Publicados',
