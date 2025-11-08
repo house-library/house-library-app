@@ -1,4 +1,16 @@
 <?php
 
-declare(strict_types=1);
-require dirname(__DIR__) . '/views/categoria.view.php';
+namespace App\Controllers;
+
+class categoria
+{
+    public function index()
+    {
+        $data = [
+            'title' => 'Categoria',
+            'styles' => ['categoria.css'],
+        ];
+
+        loadView('categoria', $data);
+    }
+}
