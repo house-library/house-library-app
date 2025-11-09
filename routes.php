@@ -18,6 +18,7 @@ $router->delete('/listings/{id}', 'Listings@destroy');
 $router->get('/listings/edit/{id}', 'Listings@edit');
 
 // Páginas do site
+// Páginas do site (usuario)
 $router->get('/carrinho', 'Carrinho@index');
 $router->get('/cadastro', 'Cadastro@index');
 $router->get('/conta', 'Conta@index');
@@ -31,10 +32,14 @@ $router->get('/login', 'Login@index');
 $router->get('/pagamento', 'Pagamento@index');
 $router->get('/publicados', 'Publicados@index');
 $router->get('/recsenha', 'Recsenha@index');
-$router->get('/categoria', 'Categoria@index');
-$router->get('/403', 'Error403@index');
-$router->get('/404', 'Error404@index');
-$router->get('/errpr', 'Error404@index');
+$router->get('/favoritos', 'Favoritos@index');
+$router->get('/historico', 'Historico@index');
+$router->get('/error', 'Error@index');
 
+// Páginas do site (adm)
+$router->get('/estatisticas', 'Estatisticas@index');
+$router->get('/gerenciamento', 'Listings@create');
+$router->get('/publicados', 'Publicados@index');
+$router->get('/categoriasadm', 'categoriasadm@index');
 
 return $router;
