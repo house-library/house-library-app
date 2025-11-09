@@ -16,34 +16,81 @@ class Home
 
     public function index()
     {
-        // Buscar livros por categoria
         $aventuras = $this->db
-            ->query("SELECT * FROM livros WHERE categoria = 'Aventura' LIMIT 6")
+            ->query(
+                "
+                SELECT L.* 
+                FROM LIVROS L
+                INNER JOIN CATEGORIA C ON L.categoria_id = C.categoria_id
+                WHERE C.descricao = 'Aventura' 
+                AND C.status = 'A'
+                LIMIT 6
+            ",
+            )
             ->fetchAll();
 
         $infantis = $this->db
-            ->query("SELECT * FROM livros WHERE categoria = 'Infantil' LIMIT 6")
+            ->query(
+                "
+                SELECT L.* 
+                FROM LIVROS L
+                INNER JOIN CATEGORIA C ON L.categoria_id = C.categoria_id
+                WHERE C.descricao = 'Infantil' 
+                AND C.status = 'A'
+                LIMIT 6
+            ",
+            )
             ->fetchAll();
 
         $classicos = $this->db
             ->query(
-                "SELECT * FROM livros WHERE categoria IN ('Romance', 'Ficção Científica') LIMIT 6",
+                "
+                SELECT L.* 
+                FROM LIVROS L
+                INNER JOIN CATEGORIA C ON L.categoria_id = C.categoria_id
+                WHERE C.descricao IN ('Romance', 'Ficção Científica') 
+                AND C.status = 'A'
+                LIMIT 6
+            ",
             )
             ->fetchAll();
 
         $biografias = $this->db
             ->query(
-                "SELECT * FROM livros WHERE categoria = 'Biografias' LIMIT 6",
+                "
+                SELECT L.* 
+                FROM LIVROS L
+                INNER JOIN CATEGORIA C ON L.categoria_id = C.categoria_id
+                WHERE C.descricao = 'Biografias' 
+                AND C.status = 'A'
+                LIMIT 6
+            ",
             )
             ->fetchAll();
 
         $cultura = $this->db
-            ->query("SELECT * FROM livros WHERE categoria = 'Cultura' LIMIT 6")
+            ->query(
+                "
+                SELECT L.* 
+                FROM LIVROS L
+                INNER JOIN CATEGORIA C ON L.categoria_id = C.categoria_id
+                WHERE C.descricao = 'Cultura' 
+                AND C.status = 'A'
+                LIMIT 6
+            ",
+            )
             ->fetchAll();
 
         $ciencia = $this->db
             ->query(
-                "SELECT * FROM livros WHERE categoria = 'Tecnologia' LIMIT 6",
+                "
+                SELECT L.* 
+                FROM LIVROS L
+                INNER JOIN CATEGORIA C ON L.categoria_id = C.categoria_id
+                WHERE C.descricao = 'Ciência' 
+                AND C.status = 'A'
+                LIMIT 6
+            ",
             )
             ->fetchAll();
 

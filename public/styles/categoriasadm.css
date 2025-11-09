@@ -1,0 +1,39 @@
+.container {
+    max-width: 80rem;
+    padding: 0 2rem;
+    margin: 0 auto;
+}
+
+.main {
+    flex: 1;
+    min-height: 400px;
+    margin-top: 10rem;
+} /* 1. Garante que o <html> preencha a altura */
+html {
+    height: 100%;
+}
+
+/* 2. Transforma o <body> em um container flex vertical */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Altura mínima de 100% da tela */
+    margin: 0; /* Garante que não haja margens de body padrão */
+}
+
+/* 3. Ajuste sua classe .main */
+.main {
+    flex: 1; /* Esta é a regra-chave. Faz o main "crescer" e ocupar o espaço */
+
+    /* Remova a altura mínima fixa. 
+       'flex: 1' já cuida disso de forma responsiva. */
+    /* min-height: 400px; */
+
+    margin-top: 10rem; /* Sua margem original */
+}
+
+/* 4. (Opcional) Garante que o header e o footer não encolham */
+header,
+footer {
+    flex-shrink: 0;
+}

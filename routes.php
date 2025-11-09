@@ -32,6 +32,9 @@ $router->get('/pagamento', 'Pagamento@index');
 $router->get('/publicados', 'Publicados@index');
 $router->get('/recsenha', 'Recsenha@index');
 $router->get('/categoria', 'Categoria@index');
-$router->get('/error', 'Error@index');
+$router->get('/403', 'Error403@index');
+$router->get('/404', 'Error404@index');
+$router->get('/errpr', 'Error404@index');
+
 
 return $router;

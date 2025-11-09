@@ -1,168 +1,168 @@
 @import 'reset.css';
 
 body {
-  background-color: #fff;
-  padding: 2rem;
-  color: #333;
-  font-family: Arial, sans-serif;
+    background-color: #fff;
+    color: #333;
+    font-family: Arial, sans-serif;
 }
 
 main {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 6rem 12rem;
-  min-height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 8rem;
+    padding: 8rem;
+    min-height: 400px;
 }
 
 #gerenciamento form {
-  display: flex;
-  gap: 2rem;
-  flex-wrap: wrap;
-  max-width: 1100px;
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    max-width: 1100px;
 }
 
 .upload-container {
-  flex: 0 0 210px;
-  display: flex;
-  flex-direction: column;
+    flex: 0 0 210px;
+    display: flex;
+    flex-direction: column;
 }
 
 .upload-label {
-  display: block;
-  cursor: pointer;
-  width: 210px;
-  height: 310px;
-  background-color: #ddd;
-  border-radius: 5px;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
+    display: block;
+    cursor: pointer;
+    width: 210px;
+    height: 310px;
+    background-color: #ddd;
+    border-radius: 5px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
 }
 
 .upload-placeholder {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 14px;
-  color: #444;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 14px;
+    color: #444;
 }
 
 .upload-text {
-  display: block;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
 }
 
 .upload-hint {
-  font-size: 12px;
-  color: #666;
+    font-size: 12px;
+    color: #666;
 }
 
 .preview-imagem {
-  display: none;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 5px;
+    display: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
 }
 
 #input-capa {
-  display: none;
+    display: none;
 }
 
 .form-gerenciamento {
-  flex: 1;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-  align-items: center;
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    align-items: center;
 }
 
 .form-input input,
 .form-input select,
 .form-input textarea {
-  width: 100%;
-  padding: 0.8rem;
-  border: 1px solid #229799;
-  border-radius: 3px;
-  outline: none;
-  background-color: white;
-  font-size: 14px;
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #229799;
+    border-radius: 3px;
+    outline: none;
+    background-color: white;
+    font-size: 14px;
 }
 
-.form-input [id="descrição"] {
-  width: 480px;
-  height: 112px;
-  border: 1px solid #229799;
-  border-radius: 3px;
-  outline: none;
-  background-color: white;
-  font-size: 14px;
-  padding: 1rem;
+.form-input [id='descrição'] {
+    width: 480px;
+    height: 112px;
+    border: 1px solid #229799;
+    border-radius: 3px;
+    outline: none;
+    background-color: white;
+    font-size: 14px;
+    padding: 1rem;
 }
 
-button[type="submit2"] {
-  grid-column: 1 / -1;
-  background-color: #131d4f;
-  color: white;
-  border: none;
-  padding: 0.8rem;
-  cursor: pointer;
-  width: 150px;
-  height: 45px;
-  border-radius: 5px;
-  align-self: center;
-  justify-self: center;
-  transition: background 0.3s;
+button[type='submit2'] {
+    grid-column: 1 / -1;
+    background-color: #131d4f;
+    color: white;
+    border: none;
+    padding: 0.8rem;
+    cursor: pointer;
+    width: 150px;
+    height: 45px;
+    border-radius: 5px;
+    align-self: center;
+    justify-self: center;
+    transition: background 0.3s;
 }
 
-button[type="submit2"]:hover {
-  background-color: #0f1740;
+button[type='submit2']:hover {
+    background-color: #0f1740;
 }
 
 @media (max-width: 81.25em) {
-  main {
-    padding: 3rem 5rem;
-  }
+    main {
+        padding: 3rem 5rem;
+    }
 
-  .upload-container {
-    flex: 0 0 180px;
-  }
+    .upload-container {
+        flex: 0 0 180px;
+    }
 
-  .upload-label {
-    width: 180px;
-    height: 270px;
-  }
+    .upload-label {
+        width: 180px;
+        height: 270px;
+    }
 
-  .form-gerenciamento {
-    grid-template-columns: 1fr 1fr;
-  }
+    .form-gerenciamento {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 @media (max-width: 62.5em) {
-  main {
-    padding: 3rem 2rem;
-  }
+    main {
+        padding: 3rem 2rem;
+    }
 
-  #gerenciamento form {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
+    #gerenciamento form {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
 
-  .upload-container {
-    align-items: center;
-  }
+    .upload-container {
+        align-items: center;
+    }
 
-  .form-gerenciamento {
-    grid-template-columns: 1fr;
-    width: 100%;
-  }
+    .form-gerenciamento {
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
 
-  button[type="submit2"] {
-    width: 100%;
-    justify-self: center;
-  }
+    button[type='submit2'] {
+        width: 100%;
+        justify-self: center;
+    }
 }

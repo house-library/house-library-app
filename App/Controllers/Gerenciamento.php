@@ -8,7 +8,7 @@ class Gerenciamento
     {
         $data = [
             'title' => 'Gerenciamento',
-            'styles' => ['gerenciamento.css'],
+            'styles' => ['header.css', 'headeradm.css', 'gerenciamento.css'],
         ];
 
         loadView('gerenciamento', $data);

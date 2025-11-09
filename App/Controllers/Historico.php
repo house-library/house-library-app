@@ -3,7 +3,7 @@
 
 namespace App\Controllers;
 
-class Historico
+class categoriasAdm
 {
     public function index()
     {
