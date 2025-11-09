@@ -2,6 +2,10 @@
     padding: 4rem 12rem;
 }
 
+h1{
+    padding-top: 4rem;
+}
+
 .container {
     max-width: 80rem;
     padding: 0 2rem;

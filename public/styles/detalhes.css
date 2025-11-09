@@ -1,12 +1,5 @@
 @import 'reset.css';
 
-body {
-  background-color: #ffffff;
-  color: #000000;
-  line-height: 1.6;
-  padding: 2rem;
-}
-
 h2{
     text-align: center;
 }
@@ -74,7 +67,9 @@ h2{
 
 .book-item h3{
     font-family: 16px;
-    margin: 10px -30 5px;
+    margin: 15px 0px;
+    white-space: nowrap;
+    text-align: center;
 }
 
 
@@ -84,7 +79,6 @@ h2{
     border: 2px solid #8c8c8c;
     padding: 2rem;
     width: 20rem;
-
 }
 
 .complete-purchase {
@@ -119,7 +113,8 @@ h2{
   margin-top: 3rem;
 }
 
-/* opcional: limite de largura para o aside */
 .cart-summary {
   flex-shrink: 0; /* impede o aside de encolher */
+  padding-top: 3.5rem;
+
 }

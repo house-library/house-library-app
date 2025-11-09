@@ -2,16 +2,14 @@
 
 <?php loadPartial('header'); ?>    
 
-
+<main>
     <div class="ebook-container">
   <section class="ebook">
     <img src="/assets/capas-pi/classicos/20milleguas.png" alt="Vinte mil léguas submarinas" class="book-cover">
     <div class="book-info">
       <h3>Vinte mil léguas submarinas</h3>
       <br>
-      <br>
       De Júlio Verne
-      <br>
       <br>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta vero eligendi laudantium perspiciatis possimus illum. Officia blanditiis cum aliquid dolore voluptatum laboriosam minus nisi optio. Quidem quod sunt dignissimos temporibus!
@@ -102,6 +100,7 @@
     <button class="btn">Adicionar ao carrinho</button>
   </div>
 </div>
+</main>
     
     
 

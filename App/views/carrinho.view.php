@@ -3,6 +3,7 @@
 <?php loadPartial('header', $viewData); ?>    
     
     <main class="main">
+        <br><br>
         <h1 class="page-title">Carrinho</h1>
         
         <div class="shop-container">
