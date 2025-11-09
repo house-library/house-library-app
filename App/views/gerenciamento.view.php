@@ -1,6 +1,8 @@
 <?php loadPartial('head', $viewData); ?>
 <?php loadPartial('headeradm'); ?>
 
+<?php include ("vlibras.html");?>
+
 
 <main>
     <section id="gerenciamento">

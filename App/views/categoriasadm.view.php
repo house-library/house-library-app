@@ -1,6 +1,8 @@
 <?php loadPartial('head', $data); ?>
 <?php loadPartial('headeradm'); ?>
 
+<?php include ("vlibras.html");?>
+
 <main>
     <div class="container">
     <span class="material-symbols-outlined">label</span>

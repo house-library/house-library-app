@@ -1,6 +1,7 @@
 <?php loadPartial('head', $viewData); ?>
+<?php loadPartial('header'); ?> 
 
-<?php loadPartial('header'); ?>    
+<?php include ("vlibras.html");?>
 
 <main>
     <div class="ebook-container">

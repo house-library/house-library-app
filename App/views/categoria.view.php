@@ -2,6 +2,7 @@
 require '../views/partials/header.php'; // Usa o novo header.php acima
 ?>
 
+<?php include ("vlibras.html");?>
 
 <!DOCTYPE html>
 <html lang="en">

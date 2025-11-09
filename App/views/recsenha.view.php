@@ -1,5 +1,6 @@
 <?php loadPartial('head', $viewData); ?>
 
+<?php include ("vlibras.html");?>
 
     <main class="main-login">
        

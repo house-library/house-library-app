@@ -1,6 +1,7 @@
 <?php loadPartial('head', $viewData); ?>
+<?php loadPartial('header', $viewData); ?> 
 
-<?php loadPartial('header', $viewData); ?>    
+<?php include ("vlibras.html");?>
     
     <main class="main">
         <br><br>

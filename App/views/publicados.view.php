@@ -1,6 +1,8 @@
 <?php loadPartial('head', $viewData); ?>
 <?php loadPartial('headeradm'); ?>    
 
+<?php include ("vlibras.html");?>
+
     <main class="main-content">
      <header class="top-bar">    
          </div>
@@ -151,7 +153,7 @@
         </div>
 
         <div class="book-item">
-          <img src="/public/assets/capas-pi/autoajuda/vidasemestresse.png" alt="Se ame">
+          <img src="/assets/capas-pi/autoajuda/vidasemestresse.png" alt="O guia definitivo para uma vida sem estresse">
           <div class="book-info">
                <h3>O guia definitivo para uma vida sem estresse</h3>
                <p>6 capitulos</p>
@@ -346,7 +348,7 @@
         </div>
 
         <div class="book-item">
-          <img src="/assets/capas-pi/ficcçao cientifica/2099.png" alt="2099">
+          <img src="/assets/capas-pi/fic-cientifica/2099.png" alt="2099">
           <div class="book-info">
                <h3>2099</h3>
                <p>5 capitulos</p>
@@ -359,7 +361,7 @@
         </div>
 
         <div class="book-item">
-          <img src="/assets/capas-pi/ficcçao cientifica/alem.png" alt="Além">
+          <img src="/assets/capas-pi/fic-cientifica/alem.png" alt="Além">
           <div class="book-info">
                <h3>Além</h3>
                <p>6 capitulos</p>
@@ -372,7 +374,7 @@
         </div>
 
         <div class="book-item">
-          <img src="/assets/capas-pi/ficcçao cientifica/alemmundo.png" alt="Além do mundo">
+          <img src="/assets/capas-pi/fic-cientifica/alemmundo.png" alt="Além do mundo">
           <div class="book-info">
                <h3>Além do mundo</h3>
                <p>6 capitulos</p>
@@ -385,7 +387,7 @@
         </div>
 
         <div class="book-item">
-          <img src="/assets/capas-pi/ficcçao cientifica/anel.png" alt="Anel de jaspe">
+          <img src="/assets/capas-pi/fic-cientifica/anel.png" alt="Anel de jaspe">
           <div class="book-info">
                <h3>Anel de jaspe</h3>
                <p>7 capitulos</p>
@@ -398,7 +400,7 @@
         </div>
 
         <div class="book-item">
-          <img src="/assets/capas-pi/ficcçao cientifica/brilhonevoa.png" alt="Brilho na névoa">
+          <img src="/assets/capas-pi/fic-cientifica/brilhonevoa.png" alt="Brilho na névoa">
           <div class="book-info">
                <h3>Brilho na névoa</h3>
                <p>12 capitulos</p>
@@ -411,7 +413,7 @@
         </div>
        
           <div class="book-item">
-          <img src="/assets/capas-pi/ficcçao cientifica/espacosideral.png" alt="Espaço sideral">
+          <img src="/assets/capas-pi/fic-cientifica/espacosideral.png" alt="Espaço sideral">
           <div class="book-info">
                <h3>Espaço sideral</h3>
                <p>8 capitulos</p>
@@ -424,7 +426,7 @@
         </div>
 
         <div class="book-item">
-          <img src="/assets/capas-pi/ficcçao cientifica/homensdnoite.png" alt="Homens da noite">
+          <img src="/assets/capas-pi/fic-cientifica/homensdnoite.png" alt="Homens da noite">
           <div class="book-info">
                <h3>Homens da noite</h3>
                <p>7 capitulos</p>
@@ -437,7 +439,7 @@
         </div>
 
         <div class="book-item">
-          <img src="/assets/capas-pi/ficcçao cientifica/imoveis.png" alt="Os imóveis">
+          <img src="/assets/capas-pi/fic-cientifica/imoveis.png" alt="Os imóveis">
           <div class="book-info">
                <h3>Os imóveis</h3>
                <p>9 capitulos</p>
@@ -450,7 +452,7 @@
         </div>
 
         <div class="book-item">
-          <img src="/assets/capas-pi/ficcçao cientifica/invasoresguerreiros.png" alt="Invasores e guerreiros">
+          <img src="/assets/capas-pi/fic-cientifica/invasoresguerreiros.png" alt="Invasores e guerreiros">
           <div class="book-info">
                <h3>Invasores e guerreiros</h3>
                <p>8 capitulos</p>
@@ -463,7 +465,7 @@
         </div>
 
         <div class="book-item">
-          <img src="/assets/capas-pi/ficcçao cientifica/maravilha.png" alt="Maravilha">
+          <img src="/assets/capas-pi/fic-cientifica/maravilha.png" alt="Maravilha">
           <div class="book-info">
                <h3>Maravilha</h3>
                <p>6 capitulos</p>
@@ -476,7 +478,7 @@
         </div>
 
         <div class="book-item">
-          <img src="/assets/capas-pi/ficcçao cientifica/overdrimecosmico.png" alt="Overdrive Cóscimco">
+          <img src="/assets/capas-pi/fic-cientifica/overdrimecosmico.png" alt="Overdrive Cóscimco">
           <div class="book-info">
                <h3>Overdrive Cóscimco</h3>
                <p>6 capitulos</p>
@@ -489,7 +491,7 @@
         </div>
 
         <div class="book-item">
-          <img src="/assets/capas-pi/ficcçao cientifica/sonsuniverso.png" alt="Sons do universo lua">
+          <img src="/assets/capas-pi/fic-cientifica/sonsuniverso.png" alt="Sons do universo lua">
           <div class="book-info">
                <h3>Sons do universo lua</h3>
                <p>6 capitulos</p>
@@ -502,7 +504,7 @@
         </div>
 
         <div class="book-item">
-          <img src="/assets/capas-pi/infantil/asaventuraslily.png" alt="As aventuras de lily">
+          <img src="/assets/capas-pi/literatura_infantil/asaventuraslily.png" alt="As aventuras de lily">
           <div class="book-info">
                <h3>As aventuras de lily</h3>
                <p>6 capitulos</p>
@@ -515,7 +517,7 @@
         </div>
 
         <div class="book-item">
-          <img src="/assets/capas-pi/infantil/eraumavez.png" alt="Era uma vez">
+          <img src="/assets/capas-pi/literatura_infantil/eraumavez.png" alt="Era uma vez">
           <div class="book-info">
                <h3>Era uma vez</h3>
                <p>3 capitulos</p>
@@ -528,7 +530,7 @@
         </div>
 
         <div class="book-item">
-          <img src="/assets/capas-pi/infantil/forteamora.png" alt="A forte amora">
+          <img src="/assets/capas-pi/literatura_infantil/forteamora.png" alt="A forte amora">
           <div class="book-info">
                <h3>A forte amora</h3>
                <p>3 capitulos</p>
@@ -541,7 +543,7 @@
         </div>
 
         <div class="book-item">
-          <img src="/assets/capas-pi/infantil/guardiaomundo.png" alt="Os guardiões do bosque encantado">
+          <img src="/assets/capas-pi/literatura_infantil/guardiaomundo.png" alt="Os guardiões do bosque encantado">
           <div class="book-info">
                <h3>Os guardiões do bosque encantado</h3>
                <p>3 capitulos</p>
@@ -554,7 +556,7 @@
         </div>
 
         <div class="book-item">
-          <img src="/assets/capas-pi/infantil/limaofeliz.png" alt="O limão feliz">
+          <img src="/assets/capas-pi/literatura_infantil/limaofeliz.png" alt="O limão feliz">
           <div class="book-info">
                <h3>O limão feliz</h3>
                <p>4 capitulos</p>
@@ -567,7 +569,7 @@
         </div>
 
         <div class="book-item">
-          <img src="/assets/capas-pi/infantil/memoriasinfancia.png" alt="O limão feliz">
+          <img src="/assets/capas-pi/literatura_infantil/memoriasinfancia.png" alt="Memórias da infância">
           <div class="book-info">
                <h3>Memórias da infância</h3>
                <p>4 capitulos</p>
@@ -580,7 +582,7 @@
         </div>
 
         <div class="book-item">
-          <img src="/assets/capas-pi/infantil/MeninoRaposa.png" alt="O menino e a raposa">
+          <img src="/assets/capas-pi/literatura_infantil/MeninoRaposa.png" alt="O menino e a raposa">
           <div class="book-info">
                <h3>O menino e a raposa</h3>
                <p>4 capitulos</p>
@@ -593,7 +595,7 @@
         </div>
 
         <div class="book-item">
-          <img src="/assets/capas-pi/infantil/monstrovermelho.png" alt="A lenda do monstro vermelho">
+          <img src="/assets/capas-pi/literatura_infantil/monstrovermelho.png" alt="A lenda do monstro vermelho">
           <div class="book-info">
                <h3>A lenda do monstro vermelho</h3>
                <p>4 capitulos</p>
@@ -606,7 +608,7 @@
         </div>
 
         <div class="book-item">
-          <img src="/assets/capas-pi/infantil/omundoleo.png" alt="Leo o bom leão">
+          <img src="/assets/capas-pi/literatura_infantil/omundoleo.png" alt="Leo o bom leão">
           <div class="book-info">
                <h3>Leo o bom leão</h3>
                <p>4 capitulos</p>
@@ -619,7 +621,7 @@
         </div>
 
         <div class="book-item">
-          <img src="/assets/capas-pi/infantil/sandramundo.png" alt="Como Sandra salvou o circo">
+          <img src="/assets/capas-pi/literatura_infantil/sandramundo.png" alt="Como Sandra salvou o circo">
           <div class="book-info">
                <h3>Como Sandra salvou o circo</h3>
                <p>5 capitulos</p>
@@ -632,7 +634,7 @@
         </div>
 
         <div class="book-item">
-          <img src="/assets/capas-pi/infantil/todosjuntos.png" alt="Todos juntos agora">
+          <img src="/assets/capas-pi/literatura_infantil/todosjuntos.png" alt="Todos juntos agora">
           <div class="book-info">
                <h3>Todos juntos agora</h3>
                <p>5 capitulos</p>
@@ -645,7 +647,7 @@
         </div>
 
         <div class="book-item">
-          <img src="/assets/capas-pi/infantil/umatrupedocirco.png" alt="Uma trupe de circo">
+          <img src="/assets/capas-pi/literatura_infantil/umatrupedocirco_.png" alt="Uma trupe de circo">
           <div class="book-info">
                <h3>Uma trupe de circo</h3>
                <p>5 capitulos</p>
@@ -658,7 +660,7 @@
         </div>
 
         <div class="book-item">
-          <img src="/assets/capas-pi/infantil/viagemestrelas.png" alt="Uma trupe de circo">
+          <img src="/assets/capas-pi/literatura_infantil/viagemestrelas.png" alt="Uma trupe de circo">
           <div class="book-info">
                <h3>Viagem pelas estrelas</h3>
                <p>6 capitulos</p>
@@ -671,7 +673,7 @@
         </div>
 
         <div class="book-item">
-          <img src="/assets/capas-pi/infantil/vidasecretacoelhos.png" alt="A vida secreta dos coelhos">
+          <img src="/assets/capas-pi/literatura_infantil/vidasecretacoelhos.png" alt="A vida secreta dos coelhos">
           <div class="book-info">
                <h3>A vida secreta dos coelhos</h3>
                <p>7 capitulos</p>
@@ -879,7 +881,7 @@
         </div>
 
         <div class="book-item">
-          <img src="/assets/capas-pi/romance/coracaopapeç.png" alt="Coração de papel">
+          <img src="/assets/capas-pi/romance/coracaopapel.png" alt="Coração de papel">
           <div class="book-info">
                <h3>Coração de papel</h3>
                <p>13 capitulos</p>
@@ -994,7 +996,7 @@
             <button class="excluir">Excluir</button>
           </div>
         </div>
-
+</main>
 
 
 <?php loadPartial('footer'); ?>    

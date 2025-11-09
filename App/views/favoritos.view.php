@@ -1,6 +1,8 @@
 <?php loadPartial('head', $viewData); ?>
 <?php loadPartial('header'); ?>    
 
+<?php include ("vlibras.html");?>
+
   <main class="favorites-main">
     <h2 class="favorites-title">Favoritos</h2>
 
