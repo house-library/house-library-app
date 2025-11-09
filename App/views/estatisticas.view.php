@@ -2,6 +2,9 @@
 <?php loadPartial('headeradm'); ?>    
 
 
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.0"></script>
+
 <h2>Painel de estatísticas</h2>
 
 <section class="charts">
@@ -87,13 +90,13 @@ new Chart(ctx, {
   </div>
 
   <div class="book-item">
-    <img src="/assets/capas-pi/infantil/eraumavez.png" alt="Era uma vez">
+    <img src="/assets/capas-pi/literatura_infantil/eraumavez.png" alt="Era uma vez">
     <h3>Era uma vez</h3>
     <p>#04 mais vendido</p>
   </div>
 
   <div class="book-item">
-    <img src="/assets/capas-pi/ficcçao cientifica/espacosideral.png" alt="Espaço sideral">
+    <img src="/assets/capas-pi/fic-cientifica/espacosideral.png" alt="Espaço sideral">
     <h3>Espaço sideral</h3>
     <p>#05 mais vendido</p>
   </div>

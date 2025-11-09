@@ -14,7 +14,7 @@ h2{
 .ebook {
   display: flex;
   align-items: flex-start;
-  gap: 8rem;
+  gap: 3rem;
   margin-bottom: 3rem;
   align-items: center;
   justify-content: center;
@@ -78,29 +78,48 @@ h2{
 }
 
 
+.value-summary {
+    margin-top: 1rem;
+    background: transparent;
+    border: 2px solid #8c8c8c;
+    padding: 2rem;
+    width: 20rem;
 
+}
 
+.complete-purchase {
+    all: unset;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #131d4f;
+    background: #131d4f;
+    width: 100%;
+    height: 3.5rem;
+    margin-top: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
 
-/* até 1000px (tablets) */
-@media (max-width: 81.25em) {
-  body {
-    padding: 1.5rem;
-  }
+.complete-purchase span {
+    color: #fff;
+    font-size: 1.1rem;
+    line-height: 1;
+}
 
-  .ebook {
-    gap: 3rem;
-  }
+.complete-purchase:hover {
+    background-color: #0e1536ff;
+}
 
-  .ebook img.book-cover {
-    width: 200px;
-  }
+.ebook-container {
+  display: flex;
+  align-items: flex-start; /* alinha o topo dos dois blocos */
+  justify-content: center; /* centraliza horizontalmente na tela */
+  gap: 1rem; /* espaço entre a seção e o aside */
+  margin-top: 3rem;
+}
 
-  .book-info {
-    max-width: 450px;
-    flex-direction: wrap;
-  }
-
-  .books {
-    gap: 2rem;
-  }
+/* opcional: limite de largura para o aside */
+.cart-summary {
+  flex-shrink: 0; /* impede o aside de encolher */
 }
