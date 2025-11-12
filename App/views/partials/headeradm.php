@@ -35,18 +35,12 @@
             </li>
 
             <li>
-                <a href="/" class="sidebar-link">
+                <a href="/usuarios" class="sidebar-link">
                     <span class="material-symbols-outlined">group</span>
                     <span>Usuarios</span>
                 </a>
             </li>
 
-            <li>
-                <a href="/" class="sidebar-link">
-                    <span class="material-symbols-outlined">manage_accounts</span>                   
-                    <span>Administradores</span>
-                </a>
-            </li>
 
             <li>
                 <a href="/estatisticas" class="sidebar-link">

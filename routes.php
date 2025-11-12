@@ -1,5 +1,4 @@
-<?php
-
+'<?php
 use Framework\Router;
 
 $router = new Router();
@@ -40,6 +39,20 @@ $router->get('/error', 'Error@index');
 $router->get('/estatisticas', 'Estatisticas@index');
 $router->get('/gerenciamento', 'Listings@create');
 $router->get('/publicados', 'Publicados@index');
+$router->get('/administradores', 'administradores@index');
+
+// Rotas para Categorias
 $router->get('/categoriasadm', 'categoriasadm@index');
+$router->post('/categoriasadm', 'categoriasadm@store');
+$router->get('/categoriasadm/create', 'categoriasadm@create'); // Novo
+$router->get('/categoriasadm/edit/{id}', 'categoriasadm@edit'); // Editar
+$router->delete('/categoriasadm/{id}', 'categoriasadm@destroy'); // Excluir
+$router->get('/categoriasadm/{id}/status', 'categoriasadm@toggleStatus');
+
+// Rotas para Usuarios
+$router->get('/clientes', 'Clientes@index');
+$router->delete('/clientes/{id}', 'Clientes@destroy'); // Excluir
+$router->post('/clientes', 'Clientes@handlePost');
 
 return $router;
+
