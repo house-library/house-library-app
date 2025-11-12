@@ -1,6 +1,7 @@
 <?php loadPartial('head', $viewData); ?>
 <?php loadPartial('header'); ?>    
 
+<?php include ("vlibras.html");?>
 
   <main>
       <section id="processo-pagamento">

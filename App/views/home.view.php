@@ -1,6 +1,9 @@
 <?php loadPartial('head', $data); ?>
 <?php loadPartial('header'); ?>
 
+
+<?php include ("vlibras.html");?>
+
 <main class="main">
     <div class="hero-image">
         <img src="/assets/imgs/House_Library_banner.png" 

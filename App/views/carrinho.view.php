@@ -1,8 +1,10 @@
 <?php loadPartial('head', $viewData); ?>
+<?php loadPartial('header', $viewData); ?> 
 
-<?php loadPartial('header', $viewData); ?>    
+<?php include ("vlibras.html");?>
     
     <main class="main">
+        <br><br>
         <h1 class="page-title">Carrinho</h1>
         
         <div class="shop-container">
@@ -63,53 +65,6 @@
                 <button class="complete-purchase"><span>Finalizar Compra</span></button>
             </div>
         </aside>
-    </div>
-<<<<<<< HEAD:views/carrinho.view.php
-=======
-    
-        <section class="recommendations">
-      <h2>Recomendados para você</h2>
-      <div class="books-reco-wrapper">
-      <div class="books-reco">
-          <div>
-              <img class="img-reco" src="/assets/capas-pi/classicos/ilhatesouro.png">
-              <h3 class="books-heading">Titulo</h3>
-              <p class="books-heading">Nome do autor</p> 
-              <button class="add-book">Adicionar</button>
-          </div>
-           <div>
-              <img class="img-reco" src="/assets/capas-pi/classicos/fausto.png">
-              <h3 class="books-heading">Titulo</h3>
-              <p class="books-heading">Nome do autor</p> 
-              <button class="add-book">Adicionar</button>
-          </div>
-           <div>
-              <img class="img-reco" src="/assets/capas-pi/classicos/odisseia.png">
-              <h3 class="books-heading">Titulo</h3>
-              <p class="books-heading">Nome do autor</p> 
-              <button class="add-book">Adicionar</button>
-          </div>
-           <div>
-              <img class="img-reco" src="/assets/capas-pi/classicos/orgulhoepreconceito.png">
-              <h3 class="books-heading">Titulo</h3>
-              <p class="books-heading">Nome do autor</p> 
-              <button class="add-book">Adicionar</button>
-          </div>
-           <div>
-              <img class="img-reco" src="/assets/capas-pi/classicos/damacamelias.png">
-              <h3 class="books-heading">Titulo</h3>
-              <p class="books-heading-p">Nome do autor</p> 
-              <button class="add-book">Adicionar</button>
-</div>
-      </div>
-      </div>
-      <button class="arrow-btn arrow-next">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-        </button>
->>>>>>> fb62772ca645544bfddfb419032528439918501a:App/views/carrinho.view.php
-  </section>
     </main>
     
 <?php loadPartial('footer', $viewData); ?>    

@@ -2,6 +2,10 @@
     padding: 4rem 12rem;
 }
 
+h1{
+    padding-top: 4rem;
+}
+
 .container {
     max-width: 80rem;
     padding: 0 2rem;
@@ -11,6 +15,8 @@
 .book-cover {
     width: 7.5rem;
     height: 11rem;
+    border-radius: 4px;
+
 }
 
 .page-title {
@@ -146,7 +152,7 @@
     border: 2px solid #131d4f;
     background: #131d4f;
     width: 100%;
-    height: 5rem;
+    height: 3.5rem;
     margin-top: 1.5rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -211,6 +217,7 @@
     .book-cover {
         width: 7rem;
         height: 10.3rem;
+        border-radius: 4px;
     }
 }
 
@@ -238,6 +245,7 @@
     .book-cover {
         width: 6.5rem;
         height: 9.5rem;
+        border-radius: 4px;
     }
 
     .img-reco {
@@ -308,5 +316,6 @@
     .book-cover {
         width: 5.5rem;
         height: 8rem;
+        border-radius: 4px;
     }
 }

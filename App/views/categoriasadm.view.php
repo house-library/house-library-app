@@ -1,6 +1,8 @@
 <?php loadPartial('head', $data); ?>
 <?php loadPartial('headeradm'); ?>
 
+<?php include ("vlibras.html");?>
+
 <main>
     <div class="container">
         <h1 class="title-text">Categorias</h1>

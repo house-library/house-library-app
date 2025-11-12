@@ -4,17 +4,18 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
+    width: 100%;;
     max-width: 80rem;
     margin: 0 auto;
-    height: 8rem;
+    height: 90px;
 }
+
 
 .logo {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 6rem;
+    height: 4.5rem;
 }
 
 .btn-mobile-nav {

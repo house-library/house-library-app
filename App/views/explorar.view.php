@@ -1,7 +1,7 @@
-<?php loadPartial('head', [
-    'styles' => $styles ?? [],
-]); ?>
-<?= loadPartial('header') ?>    
+<?php loadPartial('head', ['styles' => $styles ?? [],]); ?>
+<?= loadPartial('header') ?>  
+
+<?php include ("vlibras.html");?>
 
     <main class="explore-page-container">
         <div id="campo-filtragem">

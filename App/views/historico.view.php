@@ -1,6 +1,8 @@
 <?php loadPartial('head', $viewData); ?>
 <?php loadPartial('header'); ?>  
 
+<?php include ("vlibras.html");?>
+
     <main class="history-main">
         <h2 class="history-title">Histórico de compras</h2>
 

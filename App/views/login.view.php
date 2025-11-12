@@ -1,33 +1,33 @@
 <?php loadPartial('head', $viewData); ?>
 
-    <main class="main-login">
-       
-        <figure class="logo-container">
-      <img class="logo-login" src="/assets/imgs/logo.svg" alt="Logo da House Library">
-      <figcaption class="brand-name">House Library</figcaption>
-    </figure>
-        <div class="card-login">
-           
-            <div class="textfield">
-                <label for="usuario">Email</label>
-                <input type="text" id="email" name="email" placeholder="Email">
-            </div>
-            <div class="textfield">
-                <label for="senha">Senha</label>
-                <input type="password" id="password" name="password" placeholder="Senha">
-            </div>
-             <div class="link-register">
-                <a class="link-user" href="/recsenha">Recuperar senha</a>
-            </div>
-            <button class="btn-login">Entrar</button>
-            <div>
-                <a class="link-user" href="/cadastro">Novo por aqui? Cadastre-se</a>
-            </div>
+<?php include ("vlibras.html");?>
+
+    
+<body>
+    <div class="main-login">
+        
+        <div class="left-login">
+            <h1 class="title-login">Bem vindo(a) de volta!</h1>
+            <img src="assets/imgs/login.svg" class="left-login-image" alt="Animação login">
         </div>
-    
-    
-    </main>
-    
-<?php loadPartial('footer'); ?>    
+        <div class="right-login">
+            <div class="card-login">
+                <img src="assets/imgs/logo.svg" alt="House Library">
+          <h1>House Library</h1>
+                <div class="textfield">
+                  <label for="usuario">Usuário</label>
+                  <input type="text" name="usuario" placeholder="Email ou nome de usuário">
+                </div>
+                <div class="textfield">
+                    <label for="senha">Senha</label>
+                    <input type"password" name="senha" placeholder="Senha">
+                </div>
+                <a href="/controllers/recsenha.php" class="senha">Rescuperar senha</a>
+                <button class="btn-login">Entrar</button>
+                <a href="/controllers/cadastro.php" class="cadastro">Novo por aqui? Cadastre-se</a>
+          </div>
+        </div>
+    </div>
+</body>
 
     
