@@ -886,7 +886,7 @@
                <p>Romance</p>
           </div>
           <div class="book-actions">
-            <a href="/controllers/gerenciamento.php" class="editar">Editar</a>
+            <a href="gerenciamento" class="editar">Editar</a>
             <button class="excluir">Excluir</button>
           </div>
         </div>

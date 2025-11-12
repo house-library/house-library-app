@@ -1,189 +1,326 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Controllers;
 
 use Framework\Database;
-use Framework\Validation;
+use App\Models\Dao\LivroDao;
+use App\Models\Dao\CategoriaDao;
+use App\Services\LivroService;
 
 class Listings
 {
-    protected $db;
+    private LivroDao $livroDao;
+    private CategoriaDao $categoriaDao;
+    private LivroService $livroService;
 
     public function __construct()
     {
         $config = require basePath('config/db.php');
-        $this->db = new Database($config);
+        $db = new Database($config);
+
+        $this->livroDao = new LivroDao($db);
+        $this->categoriaDao = new CategoriaDao($db);
+
+        $this->livroService = new LivroService(
+            $this->livroDao,
+            $this->categoriaDao,
+        );
     }
 
     public function index(): void
     {
-        $livros = $this->db->query('SELECT * FROM livros')->fetchAll();
+        try {
+            $livros = $this->livroDao->listAll();
 
-        $data = [
-            'title' => 'Início',
-            'styles' => ['inicio.css'],
-            'livros' => $livros,
-        ];
+            $data = [
+                'title' => 'Início',
+                'styles' => ['inicio.css'],
+                'livros' => $livros,
+            ];
 
-        loadView('home', $data);
+            loadView('home', $data);
+        } catch (\Exception $e) {
+            error_log('Erro ao listar livros: ' . $e->getMessage());
+            redirect('/erro');
+        }
     }
 
     public function create(): void
     {
-        loadView('gerenciamento', [
-            'listing' => [],
-            'styles' => ['gerenciamento.css'],
-        ]);
+        try {
+            $categorias = $this->categoriaDao->listAll();
+
+            loadView('gerenciamento', [
+                'livro' => [],
+                'categorias' => $categorias,
+                'styles' => ['headeradm.css', 'gerenciamento.css'],
+            ]);
+        } catch (\Exception $e) {
+            error_log('Erro ao carregar formulário: ' . $e->getMessage());
+            redirect('/erro');
+        }
     }
 
     public function show($params): void
     {
-        $id = $params['id'] ?? '';
-        $params = ['id' => $id];
+        try {
+            $id = (int) ($params['id'] ?? 0);
+            $livro = $this->livroDao->getById($id);
 
-        $livro = $this->db
-            ->query('SELECT * FROM LIVROS WHERE livros_id = :id', $params)
-            ->fetch();
-
-        if (!$livro) {
-            Error::notFound('404 Não Encontrado');
-            return;
-        }
-
-        $livrosRelacionados = $this->db
-            ->query(
-                'SELECT * FROM LIVROS 
-             WHERE categoria = :categoria 
-             AND livros_id != :id 
-             LIMIT 4',
-                [
-                    'categoria' => $livro['categoria'],
-                    'id' => $id,
-                ],
-            )
-            ->fetchAll();
-
-        $data = [
-            'title' => $livro['titulo'],
-            'styles' => ['detalhes.css'],
-            'livro' => $livro,
-            'livrosRelacionados' => $livrosRelacionados,
-        ];
-
-        loadView('detalhes', $data);
-    }
-
-    public function store()
-    {
-        $allowedFields = [
-            'titulo',
-            'nome_autor',
-            'categoria',
-            'ano_lancamento',
-            'preco',
-            'idioma',
-            'sinopse',
-            'descricao',
-            'faixa_etaria',
-        ];
-
-        $newListingData = array_intersect_key(
-            $_POST,
-            array_flip($allowedFields),
-        );
-        $newListingData = array_map('sanitize', $newListingData);
-
-        $requiredFields = [
-            'titulo',
-            'nome_autor',
-            'categoria',
-            'ano_lancamento',
-            'preco',
-            'idioma',
-            'sinopse',
-            'descricao',
-        ];
-
-        $errors = [];
-
-        foreach ($requiredFields as $field) {
-            if (
-                empty($newListingData[$field]) ||
-                !Validation::string($newListingData[$field])
-            ) {
-                $errors[$field] = ucfirst($field) . ' é obrigatório';
+            if (!$livro) {
+                redirect('/404');
+                return;
             }
-        }
 
-        if (
-            !empty($newListingData['ano_lancamento']) &&
-            !is_numeric($newListingData['ano_lancamento'])
-        ) {
-            $errors['ano_lancamento'] = 'Ano deve ser numérico';
-        }
+            $livrosRelacionados = $this->livroDao->getRelatedByCategory(
+                $livro['categoria_id'],
+                $id,
+                4,
+            );
 
-        if (
-            !empty($newListingData['preco']) &&
-            !is_numeric($newListingData['preco'])
-        ) {
-            $errors['preco'] = 'Preço deve ser numérico';
-        }
+            $data = [
+                'title' => $livro['titulo'],
+                'styles' => ['detalhes.css'],
+                'livro' => $livro,
+                'livrosRelacionados' => $livrosRelacionados,
+            ];
 
-        if (!empty($errors)) {
+            loadView('detalhes', $data);
+        } catch (\Exception $e) {
+            error_log('Erro ao exibir livro: ' . $e->getMessage());
+            redirect('/erro');
+        }
+    }
+
+    public function store(): void
+    {
+        try {
+            $urlCapa = null;
+            if (!empty($_FILES['capa_livro']['name'])) {
+                $categoriaNome = 'default';
+                if (!empty($_POST['categoria_id'])) {
+                    $categoriaObj = $this->categoriaDao->getById(
+                        (int) $_POST['categoria_id'],
+                    );
+
+                    if ($categoriaObj) {
+                        $categoriaNome = $categoriaObj->descricao;
+                    }
+                }
+
+                $upload = $this->uploadCover(
+                    $_FILES['capa_livro'],
+                    $categoriaNome,
+                );
+                if ($upload['success']) {
+                    $urlCapa = $upload['filename'];
+                } else {
+                    throw new \Exception($upload['error']);
+                }
+            } else {
+                throw new \Exception('A capa do livro é obrigatória');
+            }
+
+            $this->livroService->adicionarLivro($_POST, $urlCapa);
+            redirect('/publicados?success=criado');
+        } catch (\Exception $e) {
+            $categorias = $this->categoriaDao->listAll();
+
             loadView('gerenciamento', [
-                'errors' => $errors,
-                'listing' => $newListingData,
-                'styles' => ['gerenciamento.css'],
+                'errors' => [$e->getMessage()],
+                'livro' => $_POST,
+                'categorias' => $categorias,
+                'styles' => ['headeradm.css', 'gerenciamento.css'],
             ]);
-            return;
         }
-
-        $fields = [];
-        $values = [];
-
-        // Insert
-        $fields = implode(', ', array_keys($newListingData));
-        $values = ':' . implode(', :', array_keys($newListingData));
-
-        $query = "INSERT INTO LIVROS ($fields) VALUES ($values)";
-        $this->db->query($query, $newListingData);
-
-        redirect('/listings');
     }
 
-    public function destroy($params)
+    public function edit($params): void
     {
-        $id = $params['id'] ?? '';
-        $params = ['id' => $id];
+        try {
+            $id = (int) ($params['id'] ?? 0);
+            $livro = $this->livroDao->getById($id);
 
-        $livro = $this->db
-            ->query('SELECT * FROM LIVROS WHERE livros_id = :id', $params)
-            ->fetch();
+            if (!$livro) {
+                redirect('/404');
+                return;
+            }
 
-        if (!$livro) {
-            Error::notFound('Não encontrado');
-            return;
+            $categorias = $this->categoriaDao->listAll();
+
+            loadView('gerenciamento', [
+                'livro' => $livro,
+                'categorias' => $categorias,
+                'styles' => ['headeradm.css', 'gerenciamento.css'],
+            ]);
+        } catch (\Exception $e) {
+            error_log('Erro ao carregar edição: ' . $e->getMessage());
+            redirect('/erro');
         }
-
-        $this->db->query('DELETE FROM LIVROS WHERE livros_id = :id', $params);
-
-        redirect('/listings');
     }
 
-    public function edit($params)
+    public function update($params): void
     {
-        $id = $params['id'] ?? '';
-        $params = ['id' => $id];
+        try {
+            $id = (int) ($params['id'] ?? 0);
+            $_POST['livros_id'] = $id;
 
-        $livro = $this->db
-            ->query('SELECT * FROM LIVROS WHERE livros_id = :id', $params)
-            ->fetch();
+            $urlCapa = null;
+            if (!empty($_FILES['capa_livro']['name'])) {
+                $categoriaNome = 'default';
+                if (!empty($_POST['categoria_id'])) {
+                    $categoriaObj = $this->categoriaDao->getById(
+                        (int) $_POST['categoria_id'],
+                    );
+                    if ($categoriaObj) {
+                        $categoriaNome = $categoriaObj->descricao;
+                    }
+                }
 
-        if (!$livro) {
-            Error::notFound('404 Não Encontrado');
-            return;
+                $upload = $this->uploadCover(
+                    $_FILES['capa_livro'],
+                    $categoriaNome,
+                );
+                if ($upload['success']) {
+                    $urlCapa = $upload['filename'];
+
+                    $livroAntigo = $this->livroDao->getById($id);
+                    if ($livroAntigo && !empty($livroAntigo['url_capa'])) {
+                        $caminhoAntigo = basePath(
+                            'public/assets/capas-pi/' .
+                                $livroAntigo['url_capa'],
+                        );
+                        if (file_exists($caminhoAntigo)) {
+                            unlink($caminhoAntigo);
+                        }
+                    }
+                }
+            }
+
+            $this->livroService->alterarLivro($_POST, $urlCapa);
+            redirect('/publicados?success=atualizado');
+        } catch (\Exception $e) {
+            $categorias = $this->categoriaDao->listAll();
+            $livro = $this->livroDao->getById($id);
+
+            loadView('gerenciamento', [
+                'errors' => [$e->getMessage()],
+                'livro' => array_merge($livro, $_POST),
+                'categorias' => $categorias,
+                'styles' => ['headeradm.css', 'gerenciamento.css'],
+            ]);
+        }
+    }
+
+    public function destroy($params): void
+    {
+        try {
+            $id = (int) ($params['id'] ?? 0);
+            $livro = $this->livroDao->getById($id);
+
+            if (!$livro) {
+                redirect('/404');
+                return;
+            }
+
+            if (!empty($livro['url_capa'])) {
+                $caminhoArquivo = basePath(
+                    'public/assets/capas-pi/' . $livro['url_capa'],
+                );
+                if (file_exists($caminhoArquivo)) {
+                    unlink($caminhoArquivo);
+                }
+            }
+
+            $this->livroDao->delete($id);
+            redirect('/publicados?success=excluido');
+        } catch (\Exception $e) {
+            error_log('Erro ao deletar livro: ' . $e->getMessage());
+            redirect('/publicados?error=nao-pode-excluir');
+        }
+    }
+
+    // ... (função uploadCover permanece igual) ...
+    private function uploadCover(array $file, string $categoria = ''): array
+    {
+        $allowedTypes = ['image/jpeg', 'image/png', 'image/webp'];
+        $maxSize = 5 * 1024 * 1024;
+
+        $uploadDirBase = basePath('public/assets/capas-pi/');
+
+        if (!isset($categoria) || empty($categoria)) {
+            $categoria = 'default';
         }
 
-        loadView('gerenciamento', ['listing' => $livro]);
+        // As strings aqui devem bater com o campo 'descricao' da tabela CATEGORIA
+        switch ($categoria) {
+            case 'autoajuda':
+                $uploadDir = $uploadDirBase . 'autoajuda/';
+                break;
+            case 'romance':
+                $uploadDir = $uploadDirBase . 'romance/';
+                break;
+            case 'fic-cientifica':
+                $uploadDir = $uploadDirBase . 'fic-cientifica/';
+                break;
+            case 'classicos':
+                $uploadDir = $uploadDirBase . 'classicos/';
+                break;
+            default:
+                $uploadDir = $uploadDirBase . 'literatura_infantil/';
+                break;
+        }
+
+        if (!is_dir($uploadDir)) {
+            mkdir($uploadDir, 0755, true);
+        }
+
+        if (!isset($file['type']) || !in_array($file['type'], $allowedTypes)) {
+            return [
+                'success' => false,
+                'error' => 'Tipo de arquivo inválido. Use JPG, PNG ou WebP.',
+            ];
+        }
+
+        if (!isset($file['size']) || $file['size'] > $maxSize) {
+            return [
+                'success' => false,
+                'error' => 'Arquivo muito grande. Máximo 5MB.',
+            ];
+        }
+
+        if (!isset($file['error']) || $file['error'] !== UPLOAD_ERR_OK) {
+            return [
+                'success' => false,
+                'error' => 'Erro ao fazer upload do arquivo.',
+            ];
+        }
+
+        if (!isset($file['name'])) {
+            return [
+                'success' => false,
+                'error' => 'Nome do arquivo inválido.',
+            ];
+        }
+        $extension = pathinfo($file['name'], PATHINFO_EXTENSION);
+        $filename = uniqid('capa_', true) . '.' . $extension;
+        $destination = $uploadDir . $filename;
+
+        if (
+            !isset($file['tmp_name']) ||
+            !move_uploaded_file($file['tmp_name'], $destination)
+        ) {
+            return [
+                'success' => false,
+                'error' => 'Falha ao salvar o arquivo.',
+            ];
+        }
+
+        return [
+            'success' => true,
+            'filename' => $filename,
+        ];
     }
 }

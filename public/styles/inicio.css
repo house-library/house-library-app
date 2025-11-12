@@ -42,6 +42,37 @@
     margin-bottom: 8rem;
 }
 
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.book-card img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+    border-radius: 2px;
+    transition: all 0.2s ease-in-out;
+    margin-top: 1.2rem;
+}
+
+.book-card img:hover {
+    transform: scale(1.01);
+}
+
+.book-card h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 1rem;
+}
+
+.book-card h3 a {
+    text-decoration: none;
+    color: #333;
+}
+
 .section-header {
     display: flex;
     justify-content: space-between;

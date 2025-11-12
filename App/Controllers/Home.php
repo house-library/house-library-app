@@ -3,108 +3,57 @@
 namespace App\Controllers;
 
 use Framework\Database;
+use App\Models\Dao\LivroDao;
 
 class Home
 {
-    protected $db;
+    private LivroDao $livroDao;
 
     public function __construct()
     {
         $config = require basePath('config/db.php');
-        $this->db = new Database($config);
+        $db = new Database($config);
+        $this->livroDao = new LivroDao($db);
     }
 
     public function index()
     {
-        $aventuras = $this->db
-            ->query(
-                "
-                SELECT L.* 
-                FROM LIVROS L
-                INNER JOIN CATEGORIA C ON L.categoria_id = C.categoria_id
-                WHERE C.descricao = 'Aventura' 
-                AND C.status = 'A'
-                LIMIT 6
-            ",
-            )
-            ->fetchAll();
+        try {
+            $ficcao = $this->livroDao->getByCategory('Ficção', 4);
+            $infantis = $this->livroDao->getByCategory('Infantil', 4);
+            $classicos = $this->livroDao->getByCategory('classicos', 4);
+            $romance = $this->livroDao->getByCategory('Romance', 4);
+            $misterio = $this->livroDao->getByCategory('misterio', 4);
+            $autoajuda = $this->livroDao->getByCategory('Auto-ajuda', 4);
 
-        $infantis = $this->db
-            ->query(
-                "
-                SELECT L.* 
-                FROM LIVROS L
-                INNER JOIN CATEGORIA C ON L.categoria_id = C.categoria_id
-                WHERE C.descricao = 'Infantil' 
-                AND C.status = 'A'
-                LIMIT 6
-            ",
-            )
-            ->fetchAll();
+            $data = [
+                'title' => 'Início',
+                'styles' => ['inicio.css'],
+                'ficcao' => $ficcao,
+                'infantis' => $infantis,
+                'classicos' => $classicos,
+                'romance' => $romance,
+                'misterio' => $misterio,
+                'autoajuda' => $autoajuda,
+            ];
 
-        $classicos = $this->db
-            ->query(
-                "
-                SELECT L.* 
-                FROM LIVROS L
-                INNER JOIN CATEGORIA C ON L.categoria_id = C.categoria_id
-                WHERE C.descricao IN ('Romance', 'Ficção Científica') 
-                AND C.status = 'A'
-                LIMIT 6
-            ",
-            )
-            ->fetchAll();
+            loadView('home', $data);
+        } catch (\Exception $e) {
+            error_log('Erro ao carregar home: ' . $e->getMessage());
 
-        $biografias = $this->db
-            ->query(
-                "
-                SELECT L.* 
-                FROM LIVROS L
-                INNER JOIN CATEGORIA C ON L.categoria_id = C.categoria_id
-                WHERE C.descricao = 'Biografias' 
-                AND C.status = 'A'
-                LIMIT 6
-            ",
-            )
-            ->fetchAll();
+            // Carregar página com arrays vazios em caso de erro
+            $data = [
+                'title' => 'Início',
+                'styles' => ['inicio.css'],
+                'ficcao' => [],
+                'infantis' => [],
+                'classicos' => [],
+                'romance' => [],
+                'misterio' => [],
+                'autoajuda' => [],
+            ];
 
-        $cultura = $this->db
-            ->query(
-                "
-                SELECT L.* 
-                FROM LIVROS L
-                INNER JOIN CATEGORIA C ON L.categoria_id = C.categoria_id
-                WHERE C.descricao = 'Cultura' 
-                AND C.status = 'A'
-                LIMIT 6
-            ",
-            )
-            ->fetchAll();
-
-        $ciencia = $this->db
-            ->query(
-                "
-                SELECT L.* 
-                FROM LIVROS L
-                INNER JOIN CATEGORIA C ON L.categoria_id = C.categoria_id
-                WHERE C.descricao = 'Ciência' 
-                AND C.status = 'A'
-                LIMIT 6
-            ",
-            )
-            ->fetchAll();
-
-        $data = [
-            'title' => 'Início',
-            'styles' => ['inicio.css'],
-            'aventuras' => $aventuras,
-            'infantis' => $infantis,
-            'classicos' => $classicos,
-            'biografias' => $biografias,
-            'cultura' => $cultura,
-            'ciencia' => $ciencia,
-        ];
-
-        loadView('home', $data);
+            loadView('home', $data);
+        }
     }
 }

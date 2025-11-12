@@ -34,7 +34,7 @@ CREATE TABLE LIVROS
 ano_lancamento INT NOT NULL,  
 preco DECIMAL(5, 2) NOT NULL,  
 idioma VARCHAR(50) NOT NULL,  
-categoria VARCHAR(100) NOT NULL,  
+categoria_id INT NOT NULL,  
 nome_autor VARCHAR(100) NOT NULL,  
 titulo VARCHAR(100) NOT NULL, 
 sinopse TEXT NOT NULL, 
