@@ -1,6 +1,5 @@
 <?php
 
-// Carregar variáveis do arquivo .env
 if (file_exists(__DIR__ . '/../.env')) {
     $lines = file(
         __DIR__ . '/../.env',
@@ -18,7 +17,6 @@ if (file_exists(__DIR__ . '/../.env')) {
     }
 }
 
-// Agora, usar as variáveis de ambiente
 return [
     'host' => $_ENV['DB_HOST'] ?? 'localhost',
     'port' => (int) ($_ENV['DB_PORT'] ?? 3306),

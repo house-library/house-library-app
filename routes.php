@@ -7,7 +7,7 @@ $router = new Router();
 $router->get('/', 'Home@index');
 
 $router->get('/listings', 'Listings@index');
-$router->get('/listings/{id}', 'Listings@show');
+$router->get('/listing', 'Listings@show');
 
 // CRUD routes
 $router->get('/listings/create', 'Listings@create');
@@ -15,6 +15,7 @@ $router->post('/listings', 'Listings@store');
 $router->put('/listings/{id}', 'Listings@update');
 $router->delete('/listings/{id}', 'Listings@destroy');
 $router->get('/listings/edit/{id}', 'Listings@edit');
+
 
 // Páginas do site
 // Páginas do site (usuario)

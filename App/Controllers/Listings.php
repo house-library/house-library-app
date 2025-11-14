@@ -66,7 +66,7 @@ class Listings
     public function show($params): void
     {
         try {
-            $id = (int) ($params['id'] ?? 0);
+            $id = (int) ($_GET['id'] ?? 0);
             $livro = $this->livroDao->getById($id);
 
             if (!$livro) {
@@ -242,7 +242,7 @@ class Listings
         }
     }
 
-    // ... (função uploadCover permanece igual) ...
+   
     private function uploadCover(array $file, string $categoria = ''): array
     {
         $allowedTypes = ['image/jpeg', 'image/png', 'image/webp'];
@@ -254,7 +254,6 @@ class Listings
             $categoria = 'default';
         }
 
-        // As strings aqui devem bater com o campo 'descricao' da tabela CATEGORIA
         switch ($categoria) {
             case 'autoajuda':
                 $uploadDir = $uploadDirBase . 'autoajuda/';

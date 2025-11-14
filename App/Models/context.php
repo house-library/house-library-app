@@ -15,21 +15,6 @@ class context
         $this->conn = $db->conn; //recebe a conexão do Framework
     }
 
-    // confirma que todas as operações estão corretas
-    public function beginTransaction()
-    {
-        $this->conn->beginTransaction();
-    }
-
-    public function confirmTransaction()
-    {
-        $this->conn->commit();
-    }
-
-    public function reverseTransaction()
-    {
-        $this->conn->rollBack();
-    }
 
     // Método genérico para preparar e executar consultas
     protected function executeConsult(string $sql, array $params = [])
@@ -48,7 +33,6 @@ class context
         }
     }
 
-    // Metodos Crud genericos
 
     // metodo de listar todos os produtos
     protected function listSql(string $sql, array $params = []): array
