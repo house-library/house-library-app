@@ -18,6 +18,11 @@ class Login
 }
 
 // Necessita de atualização
+/*
+if(isset($_POST["submit"])){
+    $nome = $_POST['nome'];
+    $senha = $_POST['senha'];
+}*/
 try{
     $nome = $_POST['nome'];
     $senha = $_POST['senha'];
