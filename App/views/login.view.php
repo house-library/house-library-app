@@ -20,7 +20,7 @@
                 </div>
                 <div class="textfield">
                     <label for="senha">Senha</label>
-                    <input type"password" name="senha" placeholder="Senha">
+                    <input type="password" name="senha" placeholder="Senha">
                 </div>
                 <a href="/controllers/recsenha.php" class="senha">Rescuperar senha</a>
                 <button class="btn-login">Entrar</button>
