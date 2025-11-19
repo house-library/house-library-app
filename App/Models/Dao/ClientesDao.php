@@ -22,7 +22,7 @@ class ClientesDao extends ModelsContext
             $clientes[] = new Clientes(
                 (int) $row['cliente_id'],
                 $row['nome_cliente'],
-                $row['senha_cliente'], // ORDEM CORRETA: senha vem antes
+                $row['senha_cliente'], 
                 $row['email_cliente'],
                 $row['cpf_cliente'],
             );

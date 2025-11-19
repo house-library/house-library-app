@@ -1,5 +1,4 @@
 <?php
-// Caminho: App/Controllers/CarrinhoController.php
 
 namespace App\Controllers;
 

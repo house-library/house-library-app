@@ -27,7 +27,6 @@ class LivroDao extends ModelsContext
     // Obter livro por ID
     public function getById(int $id): ?array
     {
-        // Este JOIN é crucial - ele retorna 'categoria_nome'
         $sql = 'SELECT L.*, C.descricao AS categoria_nome
                 FROM LIVROS L
                 LEFT JOIN CATEGORIA C ON L.categoria_id = C.categoria_id
@@ -47,12 +46,11 @@ class LivroDao extends ModelsContext
                 LEFT JOIN CATEGORIA C ON L.categoria_id = C.categoria_id
                 WHERE L.categoria_id = :categoria_id 
                 AND L.livros_id != :exclude_id 
-                LIMIT :limit';
+                LIMIT ' . (int) $limit;
 
         return $this->listSql($sql, [
             ':categoria_id' => $categoriaId,
             ':exclude_id' => $excludeId,
-            ':limit' => $limit,
         ]);
     }
 

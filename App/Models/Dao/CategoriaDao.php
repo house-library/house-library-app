@@ -21,7 +21,7 @@ class CategoriaDao extends ModelsContext
 
         $categorias = [];
         foreach ($results as $row) {
-            $categorias[] = new Categoria( //
+            $categorias[] = new Categoria( 
                 (int) $row['categoria_id'],
                 $row['descricao'],
                 $row['status'],
@@ -54,16 +54,15 @@ class CategoriaDao extends ModelsContext
 
     public function insert($categoria): bool
     {
-        // Corrigido: Parâmetro é Categoria
         $sql =
             'INSERT INTO CATEGORIA (descricao, status) VALUES (:descricao, :status)';
 
         try {
             $stmt = $this->executeConsult($sql, [
-                ':descricao' => $categoria->descricao, // Corrigido: Usa $categoria
-                ':status' => $categoria->status, // Corrigido: Usa $categoria
+                ':descricao' => $categoria->descricao, 
+                ':status' => $categoria->status, 
             ]);
-            return $stmt->rowCount() > 0; // Corrigido: Retorna true se bem-sucedido
+            return $stmt->rowCount() > 0; 
         } catch (\PDOException $e) {
             error_log('Erro ao inserir categoria: ' . $e->getMessage());
             throw $e;
@@ -72,16 +71,15 @@ class CategoriaDao extends ModelsContext
 
     public function update($categoria): bool
     {
-        // Corrigido: Parâmetro é Categoria
         $sql =
             'UPDATE CATEGORIA SET descricao = :descricao, status = :status WHERE categoria_id = :id';
         try {
             $stmt = $this->executeConsult($sql, [
-                ':descricao' => $categoria->descricao, // Corrigido: Usa $categoria
-                ':status' => $categoria->status, // Corrigido: Usa $categoria
+                ':descricao' => $categoria->descricao, 
+                ':status' => $categoria->status,
                 ':id' => $categoria->categoria_id,
             ]);
-            return $stmt->rowCount() > 0; // Corrigido: Retorna true se bem-sucedido
+            return $stmt->rowCount() > 0; 
         } catch (\PDOException $e) {
             error_log('Erro ao atualizar categoria: ' . $e->getMessage());
             throw $e;

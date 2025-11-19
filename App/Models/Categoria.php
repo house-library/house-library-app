@@ -4,7 +4,7 @@ namespace App\Models;
 
 class Categoria
 {
-    public ?int $categoria_id; // Nome da coluna no banco de dados
+    public ?int $categoria_id;
     public string $descricao;
     public string $status;
 
