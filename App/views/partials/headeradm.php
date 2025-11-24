@@ -35,7 +35,7 @@
             </li>
 
             <li>
-                <a href="/usuarios" class="sidebar-link">
+                <a href="/clientes" class="sidebar-link">
                     <span class="material-symbols-outlined">group</span>
                     <span>Usuarios</span>
                 </a>
@@ -49,7 +49,7 @@
                 </a>
             </li>
             <li>
-                <a href="/categorias-adm" class="sidebar-link">
+                <a href="/categoriasadm" class="sidebar-link">
                     <span class="material-symbols-outlined">analytics</span>
                     <span>Criar categorias</span>
                 </a>

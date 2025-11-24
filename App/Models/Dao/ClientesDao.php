@@ -2,46 +2,91 @@
 
 namespace App\Models\Dao;
 
-use App\Models\Context as ModelsContext;
+use App\Models\context;
 use App\Models\Clientes;
 
-class ClientesDao extends ModelsContext
+class ClientesDao extends context
 {
-    // Listar todos os clientes
-    public function listAllClientes(): array
+    // Validação para o JavaScript
+    public function validarDados($campo, $valor)
     {
-        $sql = '
-            SELECT cliente_id, nome_cliente, email_cliente, cpf_cliente, senha_cliente 
-            FROM CLIENTES 
-            ORDER BY nome_cliente ASC
-        ';
-        $results = $this->listSql($sql);
+        // Traduz o campo do front para o banco
+        $mapa = ['email' => 'email_cliente', 'cpf' => 'cpf_cliente'];
 
-        $clientes = [];
-        foreach ($results as $row) {
-            $clientes[] = new Clientes(
-                (int) $row['cliente_id'],
-                $row['nome_cliente'],
-                $row['senha_cliente'], 
-                $row['email_cliente'],
-                $row['cpf_cliente'],
-            );
+        if (!array_key_exists($campo, $mapa)) {
+            return false;
         }
 
-        return $clientes;
+        $coluna = $mapa[$campo] ?? $campo;
+
+        $sql = "SELECT COUNT(*) as total FROM CLIENTES WHERE $coluna = ?";
+        $resultado = $this->getoneWithSQL($sql, [$valor]);
+
+        return $resultado['total'] > 0;
     }
 
-    // Excluir um cliente por ID
-    public function deleteCliente(int $id): bool
+    public function adicionar(Clientes $cliente)
     {
-        $sql = 'DELETE FROM CLIENTES WHERE cliente_id = :id';
+        // Pega os dados limpos do model
+        $dados = $cliente->atributosPreenchidos();
 
-        try {
-            $this->executeConsult($sql, [':id' => $id]);
-            return true;
-        } catch (\PDOException $e) {
-            error_log('Erro ao excluir cliente: ' . $e->getMessage());
-            throw $e;
-        }
+        // Separa chaves e valores
+        $atributos = array_keys($dados);
+        $valores = array_values($dados);
+
+        return $this->inserir('CLIENTES', $atributos, $valores);
+    }
+
+    public function autenticar($login)
+    {
+        $sql =
+            'SELECT * FROM CLIENTES WHERE email_cliente = ? OR cpf_cliente = ?';
+        return $this->getoneWithSQL($sql, [$login, $login]);
+    }
+
+    // Listar Todos para painel administrativo
+    public function listarTodos()
+    {
+        return $this->listSql(
+            'SELECT * FROM CLIENTES ORDER BY nome_cliente ASC',
+        );
+    }
+
+    public function listarClientesAtivos()
+    {
+        return $this->listar("SELECT * FROM CLIENTES WHERE status = 'A'");
+    }
+
+    public function obterPorId($id)
+    {
+        $sql = 'SELECT * FROM CLIENTES WHERE cliente_id = ?';
+        return $this->getoneWithSQL($sql, [$id]);
+    }
+
+    public function alterar(Cliente $cliente)
+    {
+        $dados = $cliente->atributosPreenchidos();
+        $atributos = array_keys($dados);
+        $valores = array_values($dados);
+
+        return $this->atualizar(
+            'CLIENTES',
+            $atributos,
+            $valores,
+            $cliente->getId(),
+        );
+    }
+
+    public function excluir($id)
+    {
+        return $this->deletar('CLIENTES', 'cliente_id', $id);
+    }
+
+    public function atualizarSenhaPorEmail($email, $novaSenhaHash)
+    {
+        $sql = 'UPDATE CLIENTES SET senha_cliente = ? WHERE email_cliente = ?';
+
+        $stmt = $this->executeConsult($sql, [$novaSenhaHash, $email]);
+        return $stmt->rowCount() > 0;
     }
 }

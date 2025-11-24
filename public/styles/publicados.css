@@ -1,188 +1,98 @@
-@import 'reset.css';
-
-body{
-    background-color: white;
-    color: black;
+main {
+    flex: 1;
+    margin-top: 10rem;
 }
 
-.container{
-    display: flex;
-    width: 100%;
+.table-products {
+    max-width: 1400px;
+    margin: 2rem auto;
+    padding: 0 20px;
+    box-sizing: border-box;
 }
 
-.sidebar{
-    width: 220px;
-    background-color: #131d4f;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 20px;
-    height: 100vh;
-}
-
-.sidebar nav ul{
-    list-style: none;
-}
-
-.sidebar nav li{
-    margin: 20px 0;
-    padding: 10px;
-    border-radius: 6px;
-    cursor: pointer;
-}
-
-.sidebar nav li.active{
-    background-color: #131d4f;
-}
-
-.main-content{
-    flex-grow: 1;
-    padding: 30px 40px;
-}
-
-.top-bar{
-    display: flex;
-    justify-content:center;
-    align-items: center;
-    gap: 6px;
-}
-
-.new-ebook{
-    background-color: #229799;
-    color: white;
-    border: none;
-    padding: 10px 16px;
-    border-radius: 6px;
-    cursor: pointer;
-    text-decoration: none;
-}
-
-.painel{
-    background-color: #229799;
-    color: white;
-    border: none;
-    padding: 10px 16px;
-    border-radius: 6px;
-    cursor: pointer;
-    text-decoration: none;
-}
-
-.search-form {
-    display: flex;
-    align-items: center;
-    position: relative;
-    justify-self: center;
-    width: 100%;
-    max-width: 40rem;
-    border-radius: 9999px;
-    border: 1px solid #131d4f;
-    padding: 0.5rem 1.5rem;
+.content-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    min-width: 400px;
+    border-radius: 5px 5px 0 0;
     overflow: hidden;
 }
-
-.search-input {
-    flex-grow: 1;
-    width: 500px;
-    border: 0;
-    outline: none;
-    background: transparent;
-    font-size: 1rem;
-    color: #333;
+.title-text {
+    text-align: center;
 }
 
-.search-submit {
-    border: 0;
-    cursor: pointer;
+.divider {
+    margin: 1rem 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.content-table thead tr {
+    background-color: #131d4fcc;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+}
+
+.content-table th,
+.content-table td {
+    padding: 12px 15px;
+}
+
+#tabela th:nth-child(1),
+#tabela td:nth-child(1) {
+    text-align: center !important;
+}
+
+.content-table tbody {
+    border-bottom: 1px solid #ddd;
+}
+
+.content-table tbody tr:nth-og-type(even) {
+    background-color: #f3f3f3;
+}
+
+.content-table tbody tr:last-of-type {
+    border-bottom: 2px solid #131d4fcc;
+}
+
+.btn-action {
     display: flex;
-    align-items: center;
     justify-content: center;
-    border-radius: 50%;
-    width: 2.5rem;
-    height: 2.5rem;
-    background-color: #cbd5e1;
-    flex-shrink: 0;
-    background-image: url('/public/assets/header-icons/lupa.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 1.25rem;
-}
-
-.book-list{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.book-item{
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgb(160, 160, 160);
-    display: flex;
-    padding: 16px;
+    gap: 8px;
     align-items: center;
+    white-space: nowrap;
 }
 
-.book-item img{
-    width: 25-px;
-    height: 235px;
-    object-fit: cover;
-    border-radius: 4px;
-    margin-right: 20px;
-}
-
-.book-info{
-    flex-grow: 1;
-}
-
-.book-info h3{
-    font-size: 16px;
-    margin-bottom: 4px;
-}
-
-.book-info p{
-    font-size: 14px;
-    color: #666;
-}
-
-.book-actions{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.editar{
+.editar {
+    text-decoration: none;
     background-color: #229799;
     color: white;
     border: none;
-    padding: 8px 70px;
     border-radius: 6px;
+    padding: 10px 16px;
+    font-size: 15px;
     cursor: pointer;
-    text-decoration: none;
+    max-width: 200px;
+    transition: 0.2s ease;
+}
+
+.editar:hover {
+    background-color: #1c7d80;
 }
 
 .excluir {
-  background-color: #e74c3c;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  padding: 10px 16px;
-  font-size: 15px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  cursor: pointer;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 16px;
+    font-size: 15px;
+    cursor: pointer;
+    max-width: 200px;
+    transition: 0.2s ease;
 }
 
-.excluir img {
-  width: 20px;
-  height: 20px;
-  align-items: center;
-  align-content: center;
-  justify-content: center;
-  color: white;
-  gap: 30px;
-  display: flex;
+.excluir:hover {
+    background-color: #c0392b;
 }
-

@@ -1,59 +1,76 @@
-'<?php
+<?php
 use Framework\Router;
 
 $router = new Router();
 
 // Página principal
-$router->get('/', 'Home@index');
+$router->get('/', 'index\Home@index');
 
-$router->get('/listings', 'Listings@index');
-$router->get('/listing', 'Listings@show');
+// paginas de erro
+$router->get('/403', 'error\Error403@index');
+$router->get('/404', 'error\Error404@index');
+$router->get('/error', 'error\Error@index');
 
-// CRUD routes
-$router->get('/listings/create', 'Listings@create');
-$router->post('/listings', 'Listings@store');
-$router->put('/listings/{id}', 'Listings@update');
-$router->delete('/listings/{id}', 'Listings@destroy');
-$router->get('/listings/edit/{id}', 'Listings@edit');
+// Login
+$router->get('/login', 'registro\Login@index');
+$router->post('/login', 'registro\Login@store');
+$router->get('/logout', 'registro\Login@destroy');
 
+// cadastro
+$router->get('/cadastro', 'registro\Cadastro@index');
+$router->get('/cadastro', 'registro\Cadastro@index');
+$router->post('/cadastro/store', 'registro\Cadastro@store');
+$router->post('/cadastro/validar', 'registro\Cadastro@validar');
 
-// Páginas do site
+// recuperar senha
+$router->get('/recsenha', 'registro\Recsenha@index');
+$router->post('/recsenha', 'registro\Recsenha@update');
+
 // Páginas do site (usuario)
-$router->get('/carrinho', 'Carrinho@index');
-$router->get('/cadastro', 'Cadastro@index');
-$router->get('/conta', 'Conta@index');
-$router->get('/detalhes', 'Detalhes@index');
-$router->get('/estatisticas', 'Estatisticas@index');
-$router->get('/explorar', 'Explorar@index');
-$router->get('/favoritos', 'Favoritos@index');
-$router->get('/gerenciamento', 'Listings@create');
-$router->get('/historico', 'Historico@index');
-$router->get('/login', 'Login@index');
-$router->get('/pagamento', 'Pagamento@index');
-$router->get('/publicados', 'Publicados@index');
-$router->get('/recsenha', 'Recsenha@index');
-$router->get('/favoritos', 'Favoritos@index');
-$router->get('/historico', 'Historico@index');
-$router->get('/error', 'Error@index');
+$router->get('/conta', 'index\Conta@index');
+$router->get('/detalhes', 'index\Detalhes@index');
+$router->get('/explorar', 'index\Explorar@index');
+$router->get('/historico', 'index\Historico@index');
+$router->get('/buscar', 'index\Buscar@index');
+
+// pagamento
+$router->get('/pagamento', 'compra\Pagamento@index');
+$router->post('/pagamento/finalizar', 'compra\Pagamento@finalizar');
+$router->get('/boleto/visualizar', 'compra\Boleto@visualizar');
+
+// crud de favoritos
+$router->get('/favoritos', 'index\Favoritos@index');
+$router->get('/favoritos/add', 'index\Favoritos@add');
+$router->get('/favoritos/remover', 'index\Favoritos@remove');
+
+// crud de carrinho
+$router->get('/carrinho', 'compra\Carrinho@index');
+$router->get('/carrinho/add', 'compra\Carrinho@add');
+$router->get('/carrinho/remover', 'compra\Carrinho@remove');
+$router->get('/carrinho/limpar', 'compra\Carrinho@clear');
 
 // Páginas do site (adm)
-$router->get('/estatisticas', 'Estatisticas@index');
-$router->get('/gerenciamento', 'Listings@create');
-$router->get('/publicados', 'Publicados@index');
-$router->get('/administradores', 'administradores@index');
+$router->get('/estatisticas', 'adm\Estatisticas@index');
+$router->get('/gerenciamento', 'adm\Listings@create');
+$router->get('/publicados', 'adm\Publicados@index');
 
-// Rotas para Categorias
-$router->get('/categoriasadm', 'categoriasadm@index');
-$router->post('/categoriasadm', 'categoriasadm@store');
-$router->get('/categoriasadm/create', 'categoriasadm@create'); // Novo
-$router->get('/categoriasadm/edit/{id}', 'categoriasadm@edit'); // Editar
-$router->delete('/categoriasadm/{id}', 'categoriasadm@destroy'); // Excluir
-$router->get('/categoriasadm/{id}/status', 'categoriasadm@toggleStatus');
+// CRUD dos livros
+$router->get('/listings/create', 'adm\Listings@create');
+$router->post('/listings', 'adm\Listings@store');
+$router->put('/listings/{id}', 'adm\Listings@update');
+$router->delete('/listings/{id}', 'adm\Listings@destroy');
+$router->get('/listings/edit/{id}', 'adm\Listings@edit');
 
-// Rotas para Usuarios
-$router->get('/clientes', 'Clientes@index');
-$router->delete('/clientes/{id}', 'Clientes@destroy'); // Excluir
-$router->post('/clientes', 'Clientes@handlePost');
+// crud de Categorias
+$router->get('/categoriasadm', 'adm\categoriasadm@index');
+$router->post('/categoriasadm', 'adm\categoriasadm@store');
+$router->get('/categoriasadm/create', 'adm\categoriasadm@create'); // Novo
+$router->get('/categoriasadm/edit/{id}', 'adm\categoriasadm@edit'); // Editar
+$router->delete('/categoriasadm/{id}', 'adm\categoriasadm@destroy'); // Excluir
+$router->get('/categoriasadm/{id}/status', 'adm\categoriasadm@toggleStatus');
+
+// crud de usuarios
+$router->get('/clientes', 'adm\Clientes@index');
+$router->delete('/clientes/{id}', 'adm\Clientes@destroy');
 
 return $router;
-
