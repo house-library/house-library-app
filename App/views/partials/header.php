@@ -1,3 +1,37 @@
+<?php
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+} ?>
+
+<div class="header-login">
+    <nav>
+        <ul class="nav-list">
+            <li><a href="/" class="nav-link">Início</a></li>
+
+            <?php if (
+                isset($_SESSION['cliente']) &&
+                $_SESSION['cliente'] === true
+            ): ?>
+                    <li>
+                        <a href="/logout" class="nav-link">Sair</a>
+                    </li>
+                    
+                    <li class="user-menu">
+                    <div class="user-info">
+                        <img src="/assets/imgs/account_circle.svg" alt="Usuario">
+                        <span>Olá, <?= htmlspecialchars(
+                            $_SESSION['nome'],
+                        ) ?></span>
+                    </div>
+                    </li>
+                    <?php else: ?>
+                        <li><a href="/login" class="nav-link">Login</a></li>
+                        <li><a href="/cadastro" class="nav-link btn-destaque">Cadastrar</a></li>
+            <?php endif; ?>
+        </ul>
+    </nav>
+</div>
+             
 <header class="header">
     <div class="overlay"></div>
 

@@ -2,7 +2,7 @@
 
 namespace App\Models\Dao;
 
-use App\Models\Context as ModelsContext;
+use App\Models\context as ModelsContext;
 use App\Models\Livro;
 use Framework\Database;
 
@@ -19,7 +19,66 @@ class LivroDao extends ModelsContext
         $sql = 'SELECT L.*, C.descricao AS categoria_nome
                 FROM LIVROS L
                 LEFT JOIN CATEGORIA C ON L.categoria_id = C.categoria_id
-                ORDER BY L.data_cadastro DESC';
+                ORDER BY L.livros_id DESC';
+
+        return $this->listSql($sql);
+    }
+
+    public function listAllPaginated($limit, $offset): array
+    {
+        $sql = 'SELECT L.*, C.descricao AS categoria_nome
+                FROM LIVROS L
+                LEFT JOIN CATEGORIA C ON L.categoria_id = C.categoria_id
+                ORDER BY L.livros_id ASC
+                LIMIT :limit OFFSET :offset';
+
+        $stmt = $this->conn->prepare($sql);
+        $stmt->bindValue(':limit', $limit, \PDO::PARAM_INT);
+        $stmt->bindValue(':offset', $offset, \PDO::PARAM_INT);
+        $stmt->execute();
+
+        return $stmt->fetchAll(\PDO::FETCH_ASSOC);
+    }
+
+    public function countAll(): int
+    {
+        $sql = 'SELECT COUNT(*) as total FROM LIVROS';
+        $result = $this->getoneWithSQL($sql);
+        return (int) $result['total'];
+    }
+
+    public function listDistinctAuthors(): array
+    {
+        $sql = 'SELECT DISTINCT nome_autor 
+                FROM LIVROS 
+                ORDER BY nome_autor ASC';
+
+        return $this->listSql($sql);
+    }
+
+    public function listDistinctCategory(): array
+    {
+        $sql = 'SELECT DISTINCT categoria_id, descricao
+                FROM CATEGORIA
+                ORDER BY descricao ASC';
+
+        return $this->listSql($sql);
+    }
+
+    public function listDistinctLanguage(): array
+    {
+        $sql = 'SELECT DISTINCT idioma
+                FROM LIVROS
+                ORDER BY idioma ASC';
+
+        return $this->listSql($sql);
+    }
+
+    public function listDistinctYear(): array
+    {
+        $sql = 'SELECT DISTINCT ano_lancamento
+                FROM LIVROS
+                ORDER BY ano_lancamento ASC';
 
         return $this->listSql($sql);
     }
@@ -35,13 +94,32 @@ class LivroDao extends ModelsContext
         return $this->getoneWithSQL($sql, [':id' => $id]);
     }
 
+    // busca os livros com base no id q está na sessao
+    public function getByIds(array $ids): array
+    {
+        if (empty($ids)) {
+            return [];
+        }
+
+        $idsSanitizados = array_map('intval', $ids);
+        $idsString = implode(',', $idsSanitizados);
+
+        $sql = "SELECT L.*, C.descricao AS categoria_nome
+                FROM LIVROS L
+                LEFT JOIN CATEGORIA C ON L.categoria_id = C.categoria_id
+                WHERE L.livros_id IN ($idsString)";
+
+        return $this->listSql($sql);
+    }
+
     // Listar livros relacionados por categoria
     public function getRelatedByCategory(
         int $categoriaId,
         int $excludeId,
         int $limit = 4,
     ): array {
-        $sql = 'SELECT L.*, C.descricao AS categoria_nome
+        $sql =
+            'SELECT L.*, C.descricao AS categoria_nome
                 FROM LIVROS L
                 LEFT JOIN CATEGORIA C ON L.categoria_id = C.categoria_id
                 WHERE L.categoria_id = :categoria_id 
@@ -151,5 +229,92 @@ class LivroDao extends ModelsContext
             error_log('Erro ao deletar livro: ' . $e->getMessage());
             throw $e;
         }
+    }
+
+    // filtros
+
+    public function listFiltered(array $filtros, int $limit, int $offset): array
+    {
+        $sql = 'SELECT L.*, C.descricao AS categoria_nome
+                FROM LIVROS L
+                LEFT JOIN CATEGORIA C ON L.categoria_id = C.categoria_id
+                WHERE 1=1';
+
+        $params = [];
+
+        // cláusulas WHERE dinamicas
+        if (!empty($filtros['autor'])) {
+            $sql .= ' AND L.nome_autor = :autor';
+            $params[':autor'] = $filtros['autor'];
+        }
+
+        if (!empty($filtros['categoria'])) {
+            $sql .= ' AND L.categoria_id = :categoria';
+            $params[':categoria'] = $filtros['categoria'];
+        }
+
+        if (!empty($filtros['ano'])) {
+            $sql .= ' AND L.ano_lancamento = :ano';
+            $params[':ano'] = $filtros['ano'];
+        }
+
+        if (!empty($filtros['idioma'])) {
+            $sql .= ' AND L.idioma = :idioma';
+            $params[':idioma'] = $filtros['idioma'];
+        }
+
+        // ordenação e paginação
+        $sql .= ' ORDER BY L.livros_id ASC LIMIT :limit OFFSET :offset';
+
+        $stmt = $this->conn->prepare($sql);
+
+        foreach ($params as $key => $value) {
+            $stmt->bindValue($key, $value);
+        }
+        $stmt->bindValue(':limit', $limit, \PDO::PARAM_INT);
+        $stmt->bindValue(':offset', $offset, \PDO::PARAM_INT);
+
+        $stmt->execute();
+        return $stmt->fetchAll(\PDO::FETCH_ASSOC);
+    }
+
+    // total de resultados
+    public function countFiltered(array $filtros): int
+    {
+        $sql = 'SELECT COUNT(*) as total FROM LIVROS L WHERE 1=1';
+        $params = [];
+
+        if (!empty($filtros['autor'])) {
+            $sql .= ' AND L.nome_autor = :autor';
+            $params[':autor'] = $filtros['autor'];
+        }
+        if (!empty($filtros['categoria'])) {
+            $sql .= ' AND L.categoria_id = :categoria';
+            $params[':categoria'] = $filtros['categoria'];
+        }
+        if (!empty($filtros['ano'])) {
+            $sql .= ' AND L.ano_lancamento = :ano';
+            $params[':ano'] = $filtros['ano'];
+        }
+        if (!empty($filtros['idioma'])) {
+            $sql .= ' AND L.idioma = :idioma';
+            $params[':idioma'] = $filtros['idioma'];
+        }
+
+        $result = $this->getoneWithSQL($sql, $params);
+        return (int) $result['total'];
+    }
+
+    // barra de busca
+    public function buscaPorTermo(string $termo): array
+    {
+        $sql = 'SELECT L.*, C.descricao AS categoria_nome
+                FROM LIVROS L
+                LEFT JOIN CATEGORIA C ON L.categoria_id = C.categoria_id
+                WHERE L.titulo LIKE :termo 
+                OR L.nome_autor LIKE :termo
+                ORDER BY L.titulo ASC';
+
+        return $this->listSql($sql, [':termo' => "%{$termo}%"]);
     }
 }

@@ -1,0 +1,62 @@
+/* Container principal */
+.sucesso-main {
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px;
+}
+
+/* Caixa */
+.sucesso-container {
+    max-width: 600px;
+}
+
+/* Ícone verde */
+.sucesso-icone {
+    font-size: 80px;
+    color: #27ae60;
+    margin-bottom: 20px;
+}
+
+/* Título */
+.sucesso-titulo {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+/* Texto */
+.sucesso-texto {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+/* Botões alinhados */
+.sucesso-botoes {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Botão azul */
+.btn-ver-pedidos {
+    background-color: #243a5a;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Botão contorno */
+.btn-continuar {
+    padding: 12px 25px;
+    color: #243a5a;
+    border: 1px solid #243a5a;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+}

@@ -73,6 +73,5 @@
     <p>© 2025 House Library. Todos os direitos reservados.</p>
 </div>
 <script src="/js/header.js"></script>
-<script src="/js/imgupload.js"></script>
 </body>
 </html>

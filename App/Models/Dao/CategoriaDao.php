@@ -15,21 +15,19 @@ class CategoriaDao extends ModelsContext
 
     public function listAll(): array
     {
-        $sql =
-            'SELECT categoria_id, descricao, status, data_cadastro FROM CATEGORIA ORDER BY descricao ASC';
+        $sql = "
+        SELECT 
+            c.categoria_id, 
+            c.descricao, 
+            c.status,
+            COUNT(l.livros_id) as total_livros
+        FROM CATEGORIA c
+        LEFT JOIN LIVROS l ON c.categoria_id = l.categoria_id
+        GROUP BY c.categoria_id, c.descricao, c.status
+        ORDER BY c.descricao ASC
+    ";
         $results = $this->listSql($sql);
-
-        $categorias = [];
-        foreach ($results as $row) {
-            $categorias[] = new Categoria( 
-                (int) $row['categoria_id'],
-                $row['descricao'],
-                $row['status'],
-                $row['data_cadastro'],
-            );
-        }
-
-        return $categorias;
+        return $results;
     }
 
     public function getById(int $id): ?Categoria
@@ -59,10 +57,10 @@ class CategoriaDao extends ModelsContext
 
         try {
             $stmt = $this->executeConsult($sql, [
-                ':descricao' => $categoria->descricao, 
-                ':status' => $categoria->status, 
+                ':descricao' => $categoria->descricao,
+                ':status' => $categoria->status,
             ]);
-            return $stmt->rowCount() > 0; 
+            return $stmt->rowCount() > 0;
         } catch (\PDOException $e) {
             error_log('Erro ao inserir categoria: ' . $e->getMessage());
             throw $e;
@@ -75,11 +73,11 @@ class CategoriaDao extends ModelsContext
             'UPDATE CATEGORIA SET descricao = :descricao, status = :status WHERE categoria_id = :id';
         try {
             $stmt = $this->executeConsult($sql, [
-                ':descricao' => $categoria->descricao, 
+                ':descricao' => $categoria->descricao,
                 ':status' => $categoria->status,
                 ':id' => $categoria->categoria_id,
             ]);
-            return $stmt->rowCount() > 0; 
+            return $stmt->rowCount() > 0;
         } catch (\PDOException $e) {
             error_log('Erro ao atualizar categoria: ' . $e->getMessage());
             throw $e;
