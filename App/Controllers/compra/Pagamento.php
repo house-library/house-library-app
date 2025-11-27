@@ -62,6 +62,18 @@ class Pagamento
         loadView('compra/pagamento', $data);
     }
 
+    public function add()
+    {
+        $id = filter_input(INPUT_GET, 'id', FILTER_VALIDATE_INT);
+
+        if ($id) {
+            $this->carrinhoDao->add($id);
+        }
+
+        header('Location: /pagamento');
+        exit();
+    }
+
     public function finalizar()
     {
         // Define que a resposta será JSON

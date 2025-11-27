@@ -33,7 +33,7 @@ class Explorar
                 'categoria',
                 FILTER_VALIDATE_INT,
             ),
-            'ano' => filter_input(INPUT_GET, 'ano_lancamento', FILTER_DEFAULT), // Mapeia 'ano_lancamento' do HTML para 'ano' do DAO
+            'ano' => filter_input(INPUT_GET, 'ano_lancamento', FILTER_DEFAULT),
             'idioma' => filter_input(INPUT_GET, 'idioma', FILTER_DEFAULT),
         ];
 

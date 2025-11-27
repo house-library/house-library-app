@@ -37,7 +37,7 @@ if (session_status() === PHP_SESSION_NONE) {
 
     <div class="container desktop-header">
         <div class="logo">
-            <a href="./index.php">
+            <a href="/">
                 <img src="/assets/imgs/logo.svg" alt="House Library">
             </a>
         </div>
@@ -51,10 +51,10 @@ if (session_status() === PHP_SESSION_NONE) {
 
         <nav class="main-nav">
             <ul class="nav-list">
-                <li><a href="./views/favoritos.view.php" class="nav-link"><span>Favoritos</span></a></li>
-                <li><a href="./views/carrinho.view.php" class="nav-link"><span>Carrinho</span></a></li>
-                <li><a href="/controllers/explorar.php" class="nav-link"><span>Explorar</span></a></li>
-                <li><a href="/controllers/conta.php" class="nav-link"><span>Conta</span></a></li>
+                <li><a href="/favoritos" class="nav-link"><span>Favoritos</span></a></li>
+                <li><a href="/carrinho" class="nav-link"><span>Carrinho</span></a></li>
+                <li><a href="/explorar" class="nav-link"><span>Explorar</span></a></li>
+                <li><a href="/conta" class="nav-link"><span>Conta</span></a></li>
             </ul>
         </nav>
     </div>
@@ -66,12 +66,12 @@ if (session_status() === PHP_SESSION_NONE) {
             </button>
 
             <div class="logo-mobile">
-                <a href="./index.php">
+                <a href="/">
                     <img src="/assets/imgs/logo.svg" alt="House Library">
                 </a>
             </div>
 
-            <a href="./views/carrinho.view.php" class="cart-btn">
+            <a href="carrinho" class="cart-btn">
                 <i class="fas fa-shopping-cart"></i>
                 <span class="cart-count">0</span>
             </a>
@@ -97,21 +97,21 @@ if (session_status() === PHP_SESSION_NONE) {
 
         <ul class="sidebar-list">
             <li>
-                <a href="./index.php" class="sidebar-link">
+                <a href="/" class="sidebar-link">
                     <span class="material-symbols-outlined">home</span>
                     <span>Início</span>
                 </a>
             </li>
 
             <li>
-                <a href="./views/favoritos.view.php" class="sidebar-link">
+                <a href="favoritos" class="sidebar-link">
                     <span class="material-symbols-outlined">favorite</span>
                     <span>Favoritos</span>
                 </a>
             </li>
 
             <li>
-                <a href="./views/carrinho.view.php" class="sidebar-link">
+                <a href="/carrinho" class="sidebar-link">
                     <span class="material-symbols-outlined">shopping_cart</span>
                     <span>Carrinho</span>
                 </a>
@@ -137,14 +137,14 @@ if (session_status() === PHP_SESSION_NONE) {
             </li>
 
             <li>
-                <a href="/controllers/explorar.php" class="sidebar-link">
+                <a href="/explorar" class="sidebar-link">
                     <span class="material-symbols-outlined">explore</span>
                     <span>Explorar</span>
                 </a>
             </li>
 
             <li>
-                <a href="/controllers/conta.php" class="sidebar-link">
+                <a href="/conta" class="sidebar-link">
                     <span class="material-symbols-outlined">settings</span>
                     <span>Conta</span>
                 </a>
