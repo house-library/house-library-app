@@ -1,0 +1,161 @@
+.careers-container,
+.about-container,
+.reembolso-container {
+    max-width: 900px;
+    margin: 0 auto;
+    margin-top: 200px;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+.content-box {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    font-size: 2em;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    text-align: center;
+    border-bottom: 3px solid #3498db;
+    padding-bottom: 15px;
+}
+
+.section-title {
+    font-size: 1.5em;
+    color: #34495e;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    border-left: 4px solid #3498db;
+    padding-left: 15px;
+}
+
+.intro-text {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.call-to-action {
+    font-size: 1.05em;
+    font-weight: 500;
+    color: #2c3e50;
+    margin: 25px 0;
+}
+
+/* Listas */
+.list-numbered {
+    margin: 20px 0;
+    padding-left: 30px;
+}
+
+.list-numbered li {
+    margin-bottom: 10px;
+    font-size: 1em;
+    color: #444;
+}
+
+.list-dots {
+    list-style-type: disc;
+    margin: 20px 0;
+    padding-left: 30px;
+}
+
+.list-dots li {
+    margin-bottom: 12px;
+    color: #444;
+}
+
+/* Caixa de contato */
+.contact-box {
+    background-color: #f8f9fa;
+    border: 2px solid #3498db;
+    border-radius: 8px;
+    padding: 25px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.contact-title {
+    font-size: 1.3em;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.email-link {
+    margin: 20px 0;
+}
+
+.email-link a {
+    color: #3498db;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+.email-link a:hover {
+    color: #2980b9;
+    text-decoration: underline;
+}
+
+.note {
+    font-style: italic;
+    color: #666;
+    margin-top: 15px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .careers-container,
+    .about-container,
+    .reembolso-container {
+        margin: 20px auto;
+        padding: 15px;
+    }
+
+    .content-box {
+        padding: 20px;
+    }
+
+    .title {
+        font-size: 1.6em;
+    }
+
+    .section-title {
+        font-size: 1.3em;
+    }
+
+    .intro-text {
+        font-size: 1em;
+    }
+
+    .list-numbered,
+    .list-dots {
+        padding-left: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .content-box {
+        padding: 15px;
+    }
+
+    .title {
+        font-size: 1.4em;
+    }
+
+    .section-title {
+        font-size: 1.2em;
+    }
+}

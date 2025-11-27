@@ -59,7 +59,9 @@ $row = array_slice($livrosRelacionados, 0, 5);
                         '.',
                     ) ?></h3>
                 </div>
-                <button class="buy-btn"><a href="/pagamento">Finalizar Compra</a></button>
+                <a class="buy-btn" href="/pagamento/add?id=<?= $livro[
+                    'livros_id'
+                ] ?>">Finalizar compra</a>    
                 <a class="summary-btn" href="/carrinho/add?id=<?= $livro[
                     'livros_id'
                 ] ?>">Adicionar ao carrinho</a>                

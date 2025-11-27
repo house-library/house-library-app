@@ -35,8 +35,15 @@ $router->get('/buscar', 'index\Buscar@index');
 
 // pagamento
 $router->get('/pagamento', 'compra\Pagamento@index');
+$router->get('/pagamento/add', 'compra\Pagamento@add');
 $router->post('/pagamento/finalizar', 'compra\Pagamento@finalizar');
 $router->get('/boleto/visualizar', 'compra\Boleto@visualizar');
+
+// institucional
+
+$router->get('/devolucoes', 'index\Paginas@devolucoes');
+$router->get('/trabalhe-conosco', 'index\Paginas@trabalheConosco');
+$router->get('/sobre-nos', 'index\Paginas@sobreNos');
 
 // crud de favoritos
 $router->get('/favoritos', 'index\Favoritos@index');
