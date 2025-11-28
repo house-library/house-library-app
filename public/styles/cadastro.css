@@ -104,7 +104,7 @@ h1{
 }
 
 .btn-login{
-    width: 220px;
+    width: 265px;
     padding: 10px 0px;
     margin: 8px;
     border: none;
@@ -114,6 +114,9 @@ h1{
     background: #131D4F;
     color: white;
     cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 @media only screen and (max-width: 950px){

@@ -1,5 +1,10 @@
 .main {
-    padding: 4rem 12rem;
+    padding: 4rem 9rem;
+}
+
+body {
+    margin-top: 120px;
+    
 }
 
 h1{
@@ -13,9 +18,9 @@ h1{
 }
 
 .book-cover {
-    width: 7.5rem;
-    height: 11rem;
-    border-radius: 4px;
+    width: 12rem;
+    height: 18rem;
+    
 
 }
 
@@ -54,15 +59,19 @@ h1{
     font-size: 1.125rem;
     font-weight: 400;
     margin: 0;
+    text-decoration: none;
 }
 
 .remove-all {
     padding: 0.5rem;
-    background: transparent;
-    border: 1px solid #9c9c9cff;
+    background: #131d4f;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    text-decoration: none;
+    color:#fff;
+    border-radius: 4px;
 }
+
 
 .remove-all:hover {
     background-color: #919191ff;
@@ -156,6 +165,7 @@ h1{
     margin-top: 1.5rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    border-radius: 4px;
 }
 
 .complete-purchase span {
@@ -208,6 +218,7 @@ h1{
     color: #fff;
 }
 
+
 /* 1.229px*/
 @media (max-width: 81.25em) {
     .main {
@@ -217,7 +228,6 @@ h1{
     .book-cover {
         width: 7rem;
         height: 10.3rem;
-        border-radius: 4px;
     }
 }
 
@@ -240,6 +250,7 @@ h1{
 
     .complete-purchase span {
         font-size: 1.25rem;
+        border-radius: 4px;
     }
 
     .book-cover {
@@ -290,6 +301,7 @@ h1{
 
     .complete-purchase {
         height: 3rem;
+        
     }
 
     .complete-purchase span {

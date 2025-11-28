@@ -10,10 +10,6 @@
     background-color: wihte;
 }
 
-body*{
-    box-sizing: border-box;
-}
-
 img{
     height: 6rem;
     align-items: center;
@@ -32,7 +28,7 @@ img{
 
 .card-login{
     width: 850px;
-    display: flex;
+    display:flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -40,7 +36,7 @@ img{
     background: rgb(255, 255, 255);
     border-radius: 20px;
     box-shadow: 0px 10px 40px rgb(173, 173, 173);
-    margin-left: 30px;
+    margin-left: 60px;
 }
 
 .textfield{
@@ -64,7 +60,20 @@ img{
 }
 
 .btn-login{
-    width: 220px;
+    width: 280px;
+    padding: 10px 0px;
+    margin: 8px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    text-transform: uppercase;
+    background: #131D4F;
+    color: white;
+    cursor: pointer;
+}
+
+a{
+    width: 280px;
     padding: 10px 0px;
     margin: 8px;
     border: none;

@@ -1,5 +1,9 @@
 @import 'reset.css';
 
+body {
+    padding-top: 2rem;
+}
+
 h2{
     text-align: center;
 }
@@ -21,19 +25,20 @@ h2{
 .book-info a {
   text-decoration: none;
   color: #333;
+  text-decoration: none;
 }
 
 .book-author {
   margin-top: 0.2rem;
+  text-decoration: none;
 }
-
-
 
 .book-info p {
   max-width: 500px;
   margin-bottom: 1.5rem;
   color: #333;
   font-size: 0.95rem;
+  text-decoration: none;
 }
 
 .cart-summary {
@@ -50,6 +55,8 @@ h2{
     border: 2px solid #8c8c8c;
     padding: 2rem;
     width: 20rem;
+    text-decoration: none;
+    text-align: center;
 }
 
 .total-value {
@@ -73,6 +80,8 @@ h2{
   box-sizing: border-box;
   cursor: pointer;
   text-decoration: none;
+  background: #131D4F;
+  color: #fff;
 }
 
 .buy-btn {
@@ -84,12 +93,15 @@ h2{
   width: 100%;
   box-sizing: border-box;
   cursor: pointer;
+  text-decoration: none;
+  color: #fff;
 }
 
 .summary-btn a, 
 .buy-btn a {
   text-decoration: none;
   color: #fff;
+  background: #131D4F;
 }
 
 .summary-btn:hover {
@@ -112,7 +124,6 @@ h2{
     height: 350px;
     aspect-ratio: 2 / 3;
     object-fit: contain;
-    border-radius: 2px;
 }
 
 .ebook-container {
@@ -123,4 +134,11 @@ h2{
   margin-top: 3rem;
 }
 
+a{
+  text-decoration: none;
+  color:#000
+}
 
+h2{
+  margin: 5rem;
+}

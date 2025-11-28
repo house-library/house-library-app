@@ -2,6 +2,7 @@ body {
     font-family: 'Poppins', sans-serif;
     background-color: #f7f8fa; 
     color: #1e1e1e;
+     padding-top: 10rem;
 }
 
 .history-main {
@@ -35,10 +36,9 @@ body {
 }
 
 .book-cover-container img {
-    width: 100px; 
-    height: 140px; 
+    width: 135px; 
+    height: 195px; 
     object-fit: cover;
-    border-radius: 3px;
 }
 
 .book-details {
