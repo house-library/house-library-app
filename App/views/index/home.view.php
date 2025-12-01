@@ -1,7 +1,7 @@
 <?php loadPartial('head', $data); ?>
 <?php loadPartial('header'); ?>
 
-<?php include (__DIR__ . "/../vlibras.html");?>
+<?php include __DIR__ . '/../vlibras.html'; ?>
 
 <main class="main">
     <div class="hero-image">
@@ -43,15 +43,26 @@
                         <div class="book-card">
                             <a href="/detalhes?id=<?= $livro['livros_id'] ?>">
                                 <img src="<?= htmlspecialchars($imagePath) ?>" 
-                                     alt="<?= htmlspecialchars($livro['titulo']) ?>">
+                                     alt="<?= htmlspecialchars(
+                                         $livro['titulo'],
+                                     ) ?>">
                             </a>
                             <h3>
-                                <a href="/detalhes?id=<?= $livro['livros_id'] ?>">
+                                <a href="/detalhes?id=<?= $livro[
+                                    'livros_id'
+                                ] ?>">
                                     <?= htmlspecialchars($livro['titulo']) ?>
                                 </a>
                             </h3>
-                            <p class="book-author"><?= htmlspecialchars($livro['nome_autor']) ?></p>
-                            <p class="book-price">R$ <?= number_format($livro['preco'], 2, ',', '.') ?></p>
+                            <p class="book-author"><?= htmlspecialchars(
+                                $livro['nome_autor'],
+                            ) ?></p>
+                            <p class="book-price">R$ <?= number_format(
+                                $livro['preco'],
+                                2,
+                                ',',
+                                '.',
+                            ) ?></p>
                         </div>
                     <?php endforeach; ?>
                 <?php endif; ?>
@@ -68,21 +79,32 @@
                     <?php foreach ($viewData['infantis'] as $livro): ?>
                         <?php
                         $basePath = '/assets/capas-pi/';
-                        $folder = 'literatura_infantil/'; 
+                        $folder = 'literatura_infantil/';
                         $imagePath = $basePath . $folder . $livro['url_capa'];
                         ?>
                         <div class="book-card">
                             <a href="/detalhes?id=<?= $livro['livros_id'] ?>">
                                 <img src="<?= htmlspecialchars($imagePath) ?>" 
-                                     alt="<?= htmlspecialchars($livro['titulo']) ?>">
+                                     alt="<?= htmlspecialchars(
+                                         $livro['titulo'],
+                                     ) ?>">
                             </a>
                             <h3>
-                                <a href="/detalhes?id=<?= $livro['livros_id'] ?>">
+                                <a href="/detalhes?id=<?= $livro[
+                                    'livros_id'
+                                ] ?>">
                                     <?= htmlspecialchars($livro['titulo']) ?>
                                 </a>
                             </h3>
-                            <p class="book-author"><?= htmlspecialchars($livro['nome_autor']) ?></p>
-                            <p class="book-price">R$ <?= number_format($livro['preco'], 2, ',', '.') ?></p>
+                            <p class="book-author"><?= htmlspecialchars(
+                                $livro['nome_autor'],
+                            ) ?></p>
+                            <p class="book-price">R$ <?= number_format(
+                                $livro['preco'],
+                                2,
+                                ',',
+                                '.',
+                            ) ?></p>
                         </div>
                     <?php endforeach; ?>
                 <?php endif; ?>
@@ -109,15 +131,26 @@
                         <div class="book-card">
                             <a href="/detalhes?id=<?= $livro['livros_id'] ?>">
                                 <img src="<?= htmlspecialchars($imagePath) ?>" 
-                                     alt="<?= htmlspecialchars($livro['titulo']) ?>">
+                                     alt="<?= htmlspecialchars(
+                                         $livro['titulo'],
+                                     ) ?>">
                             </a>
                             <h3>
-                                <a href="/detalhes?id=<?= $livro['livros_id'] ?>">
+                                <a href="/detalhes?id=<?= $livro[
+                                    'livros_id'
+                                ] ?>">
                                     <?= htmlspecialchars($livro['titulo']) ?>
                                 </a>
                             </h3>
-                            <p class="book-author"><?= htmlspecialchars($livro['nome_autor']) ?></p>
-                            <p class="book-price">R$ <?= number_format($livro['preco'], 2, ',', '.') ?></p>
+                            <p class="book-author"><?= htmlspecialchars(
+                                $livro['nome_autor'],
+                            ) ?></p>
+                            <p class="book-price">R$ <?= number_format(
+                                $livro['preco'],
+                                2,
+                                ',',
+                                '.',
+                            ) ?></p>
                         </div>
                     <?php endforeach; ?>
                 <?php endif; ?>
@@ -140,15 +173,26 @@
                         <div class="book-card">
                             <a href="/detalhes?id=<?= $livro['livros_id'] ?>">
                                 <img src="<?= htmlspecialchars($imagePath) ?>" 
-                                     alt="<?= htmlspecialchars($livro['titulo']) ?>">
+                                     alt="<?= htmlspecialchars(
+                                         $livro['titulo'],
+                                     ) ?>">
                             </a>
                             <h3>
-                                <a href="/detalhes?id=<?= $livro['livros_id'] ?>">
+                                <a href="/detalhes?id=<?= $livro[
+                                    'livros_id'
+                                ] ?>">
                                     <?= htmlspecialchars($livro['titulo']) ?>
                                 </a>
                             </h3>
-                            <p class="book-author"><?= htmlspecialchars($livro['nome_autor']) ?></p>
-                            <p class="book-price">R$ <?= number_format($livro['preco'], 2, ',', '.') ?></p>
+                            <p class="book-author"><?= htmlspecialchars(
+                                $livro['nome_autor'],
+                            ) ?></p>
+                            <p class="book-price">R$ <?= number_format(
+                                $livro['preco'],
+                                2,
+                                ',',
+                                '.',
+                            ) ?></p>
                         </div>
                     <?php endforeach; ?>
                 <?php endif; ?>
@@ -169,21 +213,32 @@
                     <?php foreach ($viewData['misterio'] as $livro): ?>
                          <?php
                          $basePath = '/assets/capas-pi/';
-                         $folder = 'misterio/'; 
+                         $folder = 'misterio/';
                          $imagePath = $basePath . $folder . $livro['url_capa'];
                          ?>
                         <div class="book-card">
                             <a href="/detalhes?id=<?= $livro['livros_id'] ?>">
                                 <img src="<?= htmlspecialchars($imagePath) ?>" 
-                                     alt="<?= htmlspecialchars($livro['titulo']) ?>">
+                                     alt="<?= htmlspecialchars(
+                                         $livro['titulo'],
+                                     ) ?>">
                             </a>
                             <h3>
-                                <a href="/detalhes?id=<?= $livro['livros_id'] ?>">
+                                <a href="/detalhes?id=<?= $livro[
+                                    'livros_id'
+                                ] ?>">
                                     <?= htmlspecialchars($livro['titulo']) ?>
                                 </a>
                             </h3>
-                            <p class="book-author"><?= htmlspecialchars($livro['nome_autor']) ?></p>
-                            <p class="book-price">R$ <?= number_format($livro['preco'], 2, ',', '.') ?></p>
+                            <p class="book-author"><?= htmlspecialchars(
+                                $livro['nome_autor'],
+                            ) ?></p>
+                            <p class="book-price">R$ <?= number_format(
+                                $livro['preco'],
+                                2,
+                                ',',
+                                '.',
+                            ) ?></p>
                         </div>
                     <?php endforeach; ?>
                 <?php endif; ?>
@@ -206,15 +261,26 @@
                         <div class="book-card">
                             <a href="/detalhes?id=<?= $livro['livros_id'] ?>">
                                 <img src="<?= htmlspecialchars($imagePath) ?>" 
-                                     alt="<?= htmlspecialchars($livro['titulo']) ?>">
+                                     alt="<?= htmlspecialchars(
+                                         $livro['titulo'],
+                                     ) ?>">
                             </a>
                             <h3>
-                                <a href="/detalhes?id=<?= $livro['livros_id'] ?>">
+                                <a href="/detalhes?id=<?= $livro[
+                                    'livros_id'
+                                ] ?>">
                                     <?= htmlspecialchars($livro['titulo']) ?>
                                 </a>
                             </h3>
-                            <p class="book-author"><?= htmlspecialchars($livro['nome_autor']) ?></p>
-                            <p class="book-price">R$ <?= number_format($livro['preco'], 2, ',', '.') ?></p>
+                            <p class="book-author"><?= htmlspecialchars(
+                                $livro['nome_autor'],
+                            ) ?></p>
+                            <p class="book-price">R$ <?= number_format(
+                                $livro['preco'],
+                                2,
+                                ',',
+                                '.',
+                            ) ?></p>
                         </div>
                     <?php endforeach; ?>
                 <?php endif; ?>
