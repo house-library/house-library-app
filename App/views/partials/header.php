@@ -54,7 +54,7 @@ if (session_status() === PHP_SESSION_NONE) {
                 <li><a href="/favoritos" class="nav-link"><span>Favoritos</span></a></li>
                 <li><a href="/carrinho" class="nav-link"><span>Carrinho</span></a></li>
                 <li><a href="/explorar" class="nav-link"><span>Explorar</span></a></li>
-                <li><a href="/conta" class="nav-link"><span>Conta</span></a></li>
+                <li><a href="/historico" class="nav-link"><span>Historico</span></a></li>
             </ul>
         </nav>
     </div>

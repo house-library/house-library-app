@@ -136,6 +136,7 @@ class Pagamento
             $this->carrinhoDao->clear();
 
             $qrCodeLink = null;
+            $urlBoleto = null;
 
             if ($metodoId == 1) {
                 $textoPix =

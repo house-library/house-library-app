@@ -38,6 +38,19 @@ class PedidoDao extends context
         }
     }
 
+    public function getLivrosComprados(int $clienteId): array
+    {
+        $sql = "SELECT L.*, P.data_pedido, P.status_pedido, C.descricao as categoria_nome
+                FROM PEDIDOS P
+                JOIN DETALHES_PEDIDOS DP ON P.pedidos_id = DP.pedidos_id
+                JOIN LIVROS L ON DP.livros_id = L.livros_id
+                LEFT JOIN CATEGORIA C ON L.categoria_id = C.categoria_id
+                WHERE P.cliente_id = :cliente_id
+                ORDER BY P.data_pedido DESC";
+
+        return $this->listSql($sql, [':cliente_id' => $clienteId]);
+    }
+
     public function getById($idPedido)
     {
         $sql = 'SELECT * FROM PEDIDOS WHERE pedidos_id = ?';

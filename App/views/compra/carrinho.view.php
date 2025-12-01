@@ -28,34 +28,45 @@
                     <?php
                     $livro = $item['livro'];
                     $basePath = '/assets/capas-pi/';
-                    $catNome = mb_strtolower(
-                        $livro['categoria_nome'] ?? '',
-                        'UTF-8',
-                    );
+                    $catNome = mb_strtolower($livro['categoria_nome'] ?? '');
                     $folder = '';
                     if (strpos($catNome, 'fic') !== false) {
                         $folder = 'fic-cientifica/';
                     } elseif (strpos($catNome, 'infan') !== false) {
                         $folder = 'literatura_infantil/';
-                    } elseif (strpos($catNome, 'cláss') !== false) {
+                    } elseif (
+                        strpos($catNome, 'cláss') !== false ||
+                        strpos($catNome, 'class') !== false
+                    ) {
                         $folder = 'classicos/';
                     } elseif (strpos($catNome, 'roman') !== false) {
                         $folder = 'romance/';
-                    } elseif (strpos($catNome, 'mistér') !== false) {
+                    } elseif (
+                        strpos($catNome, 'mistér') !== false ||
+                        strpos($catNome, 'mister') !== false
+                    ) {
                         $folder = 'misterio/';
                     } elseif (strpos($catNome, 'ajuda') !== false) {
                         $folder = 'autoajuda/';
                     }
-                    $imagemSrc = $basePath . $folder . $livro['url_capa'];
-                    if (preg_match('/^http/', $livro['url_capa'])) {
+                    if (
+                        isset($livro['url_capa']) &&
+                        preg_match('/^https?:\/\//', $livro['url_capa'])
+                    ) {
                         $imagemSrc = $livro['url_capa'];
+                    } else {
+                        $nomeArquivo = $livro['url_capa'] ?? 'capadefault.svg';
+                        $imagemSrc = $basePath . $folder . $nomeArquivo;
                     }
                     ?>
 
                     <div class="item-list">
-                        <img class="book-cover" src="<?= htmlspecialchars(
-                            $imagemSrc,
-                        ) ?>" alt="Capa">
+                        <img class="book-cover" 
+                             src="<?= htmlspecialchars($imagemSrc) ?>" 
+                             alt="Capa do livro <?= htmlspecialchars(
+                                 $livro['titulo'],
+                             ) ?>"
+                             onerror="this.src='/assets/capas-pi/capadefault.svg'">
                         
                         <div class="item-info">
                             <h3><?= htmlspecialchars($livro['titulo']) ?></h3>
@@ -66,7 +77,9 @@
                         <div class="items-action">
                             <a href="/carrinho/remover?id=<?= $livro[
                                 'livros_id'
-                            ] ?>" class="remove-item" title="Remover livro">
+                            ] ?>" 
+                               class="remove-item" 
+                               title="Remover livro">
                                 <img src="/assets/buttons/remove.svg" alt="Remover">
                             </a>
                             <p class="item-price">

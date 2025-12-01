@@ -121,7 +121,7 @@
                 ?>
 
                 <div class="book-item">
-                    <a href="/livro?id=<?= $livro['livros_id'] ?>">
+                        <a href="/detalhes?id=<?= $livro['livros_id'] ?>">
                         <img src="<?= htmlspecialchars($imagemSrc) ?>" 
                              alt="<?= htmlspecialchars($livro['titulo']) ?>"
                              >
@@ -129,7 +129,7 @@
                     
                     <div class="book-info">
                         <h3>
-                            <a href="/livro?id=<?= $livro['livros_id'] ?>">
+                            <a href="/detalhes?id=<?= $livro['livros_id'] ?>">
                                 <?= htmlspecialchars($livro['titulo']) ?>
                             </a>
                         </h3>
@@ -156,7 +156,6 @@
 
     <?php if (isset($totalPaginas) && $totalPaginas > 1): ?>
         <div class="pagination-container">
-            // captura os valores do filtro
             <?php $queryParams = $_GET; ?>
             <?php if ($paginaAtual > 1): ?>
             <?php
