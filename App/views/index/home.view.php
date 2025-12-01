@@ -12,20 +12,19 @@
     <div class="container">
         <section class="section-category">
             <ul class="ul-category">
-                <li class="li-category"><a class="category-link" href="/ficcao">Ficção</a></li>
-                <li class="li-category"><a class="category-link" href="/infantis">Infantis</a></li>
-                <li class="li-category"><a class="category-link" href="/classicos">Clássicos</a></li>
-                <li class="li-category"><a class="category-link" href="/romance">Romance</a></li>
-                <li class="li-category"><a class="category-link" href="/misterio">Mistério</a></li>
-                <li class="li-category"><a class="category-link" href="/autoajuda">Auto Ajuda</a></li>
-                <li class="li-category"><a class="category-link" href="/autoajuda">Romance</a></li>
+                <li class="li-category"><a class="category-link" href="/explorar?categoria=1">Ficção</a></li>
+                <li class="li-category"><a class="category-link" href="/explorar?categoria=5">Infantis</a></li>
+                <li class="li-category"><a class="category-link" href="/explorar?categoria=12">Clássicos</a></li>
+                <li class="li-category"><a class="category-link" href="/explorar?categoria=2">Romance</a></li>
+                <li class="li-category"><a class="category-link" href="/explorar?categoria=13">Mistério</a></li>
+                <li class="li-category"><a class="category-link" href="/explorar?categoria=10">Auto Ajuda</a></li>
             </ul>
         </section>
 
         <section class="section-ebooks">
             <div class="section-header">
                 <h2>Ficção</h2>
-                <a href="/ficcao" class="more-btn">Ver mais</a>
+                <a href="/explorar?categoria=1" class="more-btn">Ver mais</a>
             </div>
             <div class="book-grid">
                 <?php if (!empty($viewData['ficcao'])): ?>
@@ -62,7 +61,7 @@
         <section class="section-ebooks">
             <div class="section-header">
                 <h2>Infantis</h2>
-                <a href="/infantis" class="more-btn">Ver mais</a>
+                <a href="/explorar?categoria=5" class="more-btn">Ver mais</a>
             </div>
             <div class="book-grid">
                 <?php if (!empty($viewData['infantis'])): ?>
@@ -97,7 +96,7 @@
         <section class="section-ebooks">
             <div class="section-header">
                 <h2>Literatura Clássica</h2>
-                <a href="/classicos" class="more-btn">Ver mais</a>
+                <a href="/explorar?categoria=12" class="more-btn">Ver mais</a>
             </div>
             <div class="book-grid">
                 <?php if (!empty($viewData['classicos'])): ?>
@@ -128,7 +127,7 @@
         <section class="section-ebooks">
             <div class="section-header">
                 <h2>Romance</h2>
-                <a href="/romance" class="more-btn">Ver mais</a>
+                <a href="/explorar?categoria=2" class="more-btn">Ver mais</a>
             </div>
             <div class="book-grid">
                 <?php if (!empty($viewData['romance'])): ?>
@@ -163,7 +162,7 @@
         <section class="section-ebooks">
             <div class="section-header">
                 <h2>Mistério</h2>
-                <a href="/misterio" class="more-btn">Ver mais</a>
+                <a href="/explorar?categoria=13" class="more-btn">Ver mais</a>
             </div>
             <div class="book-grid">
                 <?php if (!empty($viewData['misterio'])): ?>
@@ -194,7 +193,7 @@
         <section class="section-ebooks">
             <div class="section-header">
                 <h2>Auto-Ajuda</h2>
-                <a href="/autoajuda" class="more-btn">Ver mais</a>
+                <a href="/explorar?categoria=10" class="more-btn">Ver mais</a>
             </div>
             <div class="book-grid">
                 <?php if (!empty($viewData['autoajuda'])): ?>

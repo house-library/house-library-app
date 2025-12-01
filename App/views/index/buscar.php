@@ -67,7 +67,7 @@
 
             <?php endforeach; ?>
         <?php else: ?>
-            <div class="no-results" style="width: 100%; text-align: center; padding: 50px;">
+            <div class="no-results"">
                 <h3>Poxa, não encontramos nada com esse nome</h3>
                 <a href="/controllers/explorar.php" class="btn-destaque">Ver todos os livros</a>
             </div>
