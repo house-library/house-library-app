@@ -8,17 +8,15 @@ $livro = $livro ?? [];
 $livrosRelacionados = $livrosRelacionados ?? [];
 $basePath = '/assets/capas-pi/';
 $categoryName = $livro['categoria_nome'] ?? '';
-if ($categoryName === 'Ficção') {
-    $folder = 'fic-cientifica/';
-} elseif ($categoryName === 'classicos') {
-    $folder = 'classicos/';
-} elseif ($categoryName === 'Romance') {
-    $folder = 'romance/';
-} elseif ($categoryName === 'misterio') {
-    $folder = 'misterio/';
-} elseif ($categoryName === 'Auto-ajuda') {
-    $folder = 'autoajuda/';
-}
+$folder = match ($categoryName) {
+    'Ficção' => 'fic-cientifica/',
+    'classicos' => 'classicos/',
+    'Romance' => 'romance/',
+    'misterio' => 'misterio/',
+    'Auto-ajuda' => 'autoajuda/',
+    'Infantil' => 'literatura_infantil/',
+    default => '',
+};
 $mainImagePath =
     $basePath . $folder . ($livro['url_capa'] ?? 'capadefault.svg');
 $row = array_slice($livrosRelacionados, 0, 5);
@@ -91,6 +89,8 @@ $row = array_slice($livrosRelacionados, 0, 5);
                 $relFolder = 'misterio/';
             } elseif ($relCatName === 'Auto-ajuda') {
                 $relFolder = 'autoajuda/';
+            } elseif ($relCatName === 'Infantil') {
+                $relFolder = 'literatura_infantil/';
             } else {
                 $relFolder = '';
             }
@@ -101,10 +101,11 @@ $row = array_slice($livrosRelacionados, 0, 5);
             ?>
             
             <div class="books-grid">
-                <a href="/detalhes?id<?= $relatedBook['livros_id'] ?>">
-                    <img class="img-grid" src="<?= htmlspecialchars(
-                        $relImgPath,
-                    ) ?>" 
+<a href="/detalhes?id=<?= $relatedBook[
+    'livros_id'
+] ?>">                    <img class="img-grid" src="<?= htmlspecialchars(
+    $relImgPath,
+) ?>" 
                          alt="<?= htmlspecialchars($relatedBook['titulo']) ?>">
                     <p><?= htmlspecialchars($relatedBook['titulo']) ?></p>
                     <p class="book-author"><?= htmlspecialchars(

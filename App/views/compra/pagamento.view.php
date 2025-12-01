@@ -47,7 +47,6 @@
                 id="numero-cartao"
                 type="text"
                 name="numero-cartao"
-                required
                 placeholder="0000 0000 0000 0000"
                 maxlength="19" 
                 onkeypress="formata_mascara(this, '#### #### #### ####')"
@@ -62,7 +61,6 @@
                   name="mes-validade"
                   aria-label="Mês de validade"
                   maxlength="2"
-                  required
                 />
                 <span>/</span>
                 <input
@@ -70,14 +68,13 @@
                   name="ano-validade"
                   aria-label="Ano de validade"
                   maxlength="2"
-                  required
                 />
               </div>
             </div>
 
             <div class="cvv">
               <label for="cvv">CVV</label>
-              <input type="number" id="cvv" name="cvv" maxlength="3" required />
+              <input type="number" id="cvv" name="cvv" maxlength="3"/>
               <button type="button" aria-label="O que é CVV?">
                 <img
                   src="/assets/pagamento-icons/requirido.svg"

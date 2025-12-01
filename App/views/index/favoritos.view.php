@@ -17,32 +17,41 @@
 
         <div class="books-grid">
 
-        <?php foreach ($itens as $item): ?>
-            <?php
-            $livro = $item['livro'];
-            $basePath = '/assets/capas-pi/';
-            $catNome = mb_strtolower($livro['categoria_nome'] ?? '');
-            $folder = '';
-            if (strpos($catNome, 'fic') !== false) {
-                $folder = 'fic-cientifica/';
-            } elseif (strpos($catNome, 'infan') !== false) {
-                $folder = 'literatura_infantil/';
-            } elseif (strpos($catNome, 'cláss') !== false) {
-                $folder = 'classicos/';
-            } elseif (strpos($catNome, 'roman') !== false) {
-                $folder = 'romance/';
-            } elseif (
-                strpos($catNome, 'mistér') !== false ||
-                strpos($catNome, 'mister') !== false
-            ) {
-                $folder = 'misterio/';
-            } elseif (strpos($catNome, 'ajuda') !== false) {
-                $folder = 'autoajuda/';
-            }
-            $imagemSrc = preg_match('/^http/', $livro['url_capa'])
-                ? $livro['url_capa']
-                : $basePath . $folder . $livro['url_capa'];
-            ?>
+         <?php foreach ($itens as $item): ?>
+                    <?php
+                    $livro = $item['livro'];
+                    $basePath = '/assets/capas-pi/';
+                    $catNome = mb_strtolower($livro['categoria_nome'] ?? '');
+                    $folder = '';
+                    if (strpos($catNome, 'fic') !== false) {
+                        $folder = 'fic-cientifica/';
+                    } elseif (strpos($catNome, 'infan') !== false) {
+                        $folder = 'literatura_infantil/';
+                    } elseif (
+                        strpos($catNome, 'cláss') !== false ||
+                        strpos($catNome, 'class') !== false
+                    ) {
+                        $folder = 'classicos/';
+                    } elseif (strpos($catNome, 'roman') !== false) {
+                        $folder = 'romance/';
+                    } elseif (
+                        strpos($catNome, 'mistér') !== false ||
+                        strpos($catNome, 'mister') !== false
+                    ) {
+                        $folder = 'misterio/';
+                    } elseif (strpos($catNome, 'ajuda') !== false) {
+                        $folder = 'autoajuda/';
+                    }
+                    if (
+                        isset($livro['url_capa']) &&
+                        preg_match('/^https?:\/\//', $livro['url_capa'])
+                    ) {
+                        $imagemSrc = $livro['url_capa'];
+                    } else {
+                        $nomeArquivo = $livro['url_capa'] ?? 'capadefault.svg';
+                        $imagemSrc = $basePath . $folder . $nomeArquivo;
+                    }
+                    ?>
 
             <section class="item-list">
                 <img 

@@ -30,7 +30,7 @@ $router->post('/recsenha', 'registro\Recsenha@update');
 $router->get('/conta', 'index\Conta@index');
 $router->get('/detalhes', 'index\Detalhes@index');
 $router->get('/explorar', 'index\Explorar@index');
-$router->get('/historico', 'index\Historico@index');
+$router->get('/historico', 'compra\Historico@index');
 $router->get('/buscar', 'index\Buscar@index');
 
 // pagamento
