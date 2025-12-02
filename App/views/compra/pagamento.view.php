@@ -61,6 +61,10 @@
                   name="mes-validade"
                   aria-label="Mês de validade"
                   maxlength="2"
+<<<<<<< HEAD
+                
+=======
+>>>>>>> 964a7a1cdca4652538124e1fd7b25e6757b9b359
                 />
                 <span>/</span>
                 <input
@@ -68,6 +72,10 @@
                   name="ano-validade"
                   aria-label="Ano de validade"
                   maxlength="2"
+<<<<<<< HEAD
+                  
+=======
+>>>>>>> 964a7a1cdca4652538124e1fd7b25e6757b9b359
                 />
               </div>
             </div>
