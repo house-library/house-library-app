@@ -317,4 +317,34 @@ class LivroDao extends ModelsContext
 
         return $this->listSql($sql, [':termo' => "%{$termo}%"]);
     }
+
+    public function buscaPorTermoPaginada(string $termo, int $limit, int $offset): array
+    {
+        $sql = 'SELECT L.*, C.descricao AS categoria_nome
+                FROM LIVROS L
+                LEFT JOIN CATEGORIA C ON L.categoria_id = C.categoria_id
+                WHERE L.titulo LIKE :termo 
+                OR L.nome_autor LIKE :termo
+                ORDER BY L.titulo ASC
+                LIMIT :limit OFFSET :offset';
+
+        $stmt = $this->conn->prepare($sql);
+        $stmt->bindValue(':termo', "%{$termo}%");
+        $stmt->bindValue(':limit', $limit, \PDO::PARAM_INT);
+        $stmt->bindValue(':offset', $offset, \PDO::PARAM_INT);
+        $stmt->execute();
+
+        return $stmt->fetchAll(\PDO::FETCH_ASSOC);
+    }
+
+    public function contarBuscaPorTermo(string $termo): int
+    {
+        $sql = 'SELECT COUNT(*) as total 
+                FROM LIVROS L
+                WHERE L.titulo LIKE :termo 
+                OR L.nome_autor LIKE :termo';
+
+        $result = $this->getoneWithSQL($sql, [':termo' => "%{$termo}%"]);
+        return (int) $result['total'];
+    }
 }

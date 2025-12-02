@@ -154,28 +154,10 @@
         <?php endif; ?>
     </div>
 
-    <?php if (isset($totalPaginas) && $totalPaginas > 1): ?>
-        <div class="pagination-container">
-            <?php $queryParams = $_GET; ?>
-            <?php if ($paginaAtual > 1): ?>
-            <?php
-            $queryParams['pg'] = $paginaAtual - 1;
-            $linkAnterior = http_build_query($queryParams);
-            ?>
-            <a href="?<?= $linkAnterior ?>">&laquo; Anterior</a>
-        <?php endif; ?>
-            
-            <span>Página <?= $paginaAtual ?> de <?= $totalPaginas ?></span>
-            
-            <?php if ($paginaAtual < $totalPaginas): ?>
-                <?php
-                $queryParams['pg'] = $paginaAtual + 1;
-                $linkProxima = http_build_query($queryParams);
-                ?>
-                <a href="?pg=<?= $paginaAtual + 1 ?>">Próxima &raquo;</a>
-            <?php endif; ?>
-        </div>
-    <?php endif; ?>
+   <?php loadPartial('pagination', [
+        'paginaAtual' => $paginaAtual,
+        'totalPaginas' => $totalPaginas
+    ]); ?>
 
 </main>
 

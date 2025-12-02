@@ -63,7 +63,7 @@ class Historico
 
         loadView('compra/historico', [
             'title' => 'Historico',
-            'styles' => ['historico.css'],
+            'styles' => ['historico.css', 'pagination.css'],
             'usuario' => $dadosUsuario,
             'paginaAtual' => $paginaAtual,
             'totalPaginas' => $totalPaginas,

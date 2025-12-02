@@ -9,17 +9,19 @@
 }
 
 .section {
-    min-height: 80vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding: 2rem 1rem; 
 }
 
 .error-title {
     text-align: center;
     font-size: 1.875rem;
-    margin-bottom: 1rem;
+    margin-top: 3rem;
+    margin-bottom: 2rem; 
     font-weight: bold;
     border: 1px solid #d1d5db;
     padding: 0.75rem;
@@ -29,4 +31,30 @@
     text-align: center;
     font-size: 1.5rem;
     margin-bottom: 1rem;
+}
+
+.error-image {
+    display: block; 
+    max-width: 300px; 
+    width: 100%; 
+    height: auto; 
+    margin: 0 auto 2rem auto; 
+}
+
+.btn-destaque {
+    display: inline-block; 
+    text-align: center;
+    text-decoration: none;
+    padding: 0.75rem 2rem; 
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 3rem;
+    transition: 0.2s ease;
+}
+
+.btn-destaque:hover {
+    background-color: #0056b3;
 }

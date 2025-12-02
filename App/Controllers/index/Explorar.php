@@ -67,7 +67,7 @@ class Explorar
             'ano_lancamento' => $ano_lancamento,
             'paginaAtual' => $paginaAtual,
             'totalPaginas' => $totalPaginas,
-            'styles' => ['explorar.css'],
+            'styles' => ['explorar.css', 'pagination.css'],
         ]);
     }
 }

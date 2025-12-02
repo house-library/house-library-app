@@ -37,7 +37,7 @@ class Favoritos
 
         $data = [
             'title' => 'Favoritos',
-            'styles' => ['favoritos.css'],
+            'styles' => ['favoritos.css', 'pagination.css'],
             'itens' => $itens,
             'paginaAtual' => 1,
             'totalPaginas' => 1,
