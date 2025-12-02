@@ -2,16 +2,12 @@
 <?php loadPartial('header'); ?>  
 
 <main class="explore-page-container">
-<div class="books">
+ <div class="books">
         <?php if (!empty($livros)): ?>
             <?php foreach ($livros as $livro): ?>
                 <?php
                 $basePath = '/assets/capas-pi/';
-                $catNome = mb_strtolower(
-                    $livro['categoria_nome'] ?? '',
-                    'UTF-8',
-                );
-                $folder = '';
+                $catNome = mb_strtolower($livro['categoria_nome'] ?? '');
                 if (strpos($catNome, 'fic') !== false) {
                     $folder = 'fic-cientifica/';
                 } elseif (strpos($catNome, 'infan') !== false) {
@@ -38,14 +34,15 @@
                 ?>
 
                 <div class="book-item">
-                    <a href="/livro?id=<?= $livro['livros_id'] ?>">
+                        <a href="/detalhes?id=<?= $livro['livros_id'] ?>">
                         <img src="<?= htmlspecialchars($imagemSrc) ?>" 
-                             alt="<?= htmlspecialchars($livro['titulo']) ?>">
+                             alt="<?= htmlspecialchars($livro['titulo']) ?>"
+                             >
                     </a>
                     
                     <div class="book-info">
                         <h3>
-                            <a href="/livro?id=<?= $livro['livros_id'] ?>">
+                            <a href="/detalhes?id=<?= $livro['livros_id'] ?>">
                                 <?= htmlspecialchars($livro['titulo']) ?>
                             </a>
                         </h3>
@@ -65,6 +62,7 @@
                     </div>
                 </div>
 
+
             <?php endforeach; ?>
         <?php else: ?>
             <div class="no-results" style="width: 100%; text-align: center; padding: 50px;">
@@ -73,6 +71,16 @@
             </div>
         <?php endif; ?>
     </div>
-        </main>
+
+   </div> 
+   
+   <?php if (isset($totalPaginas) && $totalPaginas > 1): ?>
+        <?php loadPartial('pagination', [
+            'paginaAtual' => $paginaAtual,
+            'totalPaginas' => $totalPaginas
+        ]); ?>
+    <?php endif; ?>
+
+</main>
 
         <?= loadPartial('footer') ?>
