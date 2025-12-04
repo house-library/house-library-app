@@ -19,7 +19,7 @@ img{
 }
 
 .right-login{
-    width: 50vh;
+    width: 500vh;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -70,6 +70,8 @@ img{
     background: #131D4F;
     color: white;
     cursor: pointer;
+    justify-content: center;
+    align-items: center;
 }
 
 a{
@@ -85,36 +87,107 @@ a{
     cursor: pointer;
 }
 
-@media only screen and (max-width: 950px){
-    .card-login{
-        width: 85%;
+
+@media (max-width: 1024px) {
+    .main-login {
+        width: 100vw;
+        height: auto;
+        flex-direction: column;
+        padding: 20px 0;
+    }
+
+    .left-login {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .left-login-image {
+        width: 60vw;
+        height: auto;
+    }
+
+    .right-login {
+        width: 100%;
+        height: auto;
+        margin-top: 20px;
+    }
+
+    .card-login {
+        width: 90%;
+        max-width: 450px;
+        margin: 0 auto;
+    }
+
+    .textfield > input {
+        width: 100%;
     }
 }
 
-@media only screen and (max-width: 600px){
-    .main-login{
-        flex-direction: column;
-    }
-    .left-login > h1{
-        display:none;
+/* Telas até 768px (celulares grandes) */
+@media (max-width: 768px) {
+    .left-login > h1 {
+        font-size: 22px;
+        white-space: normal;
+        text-align: center;
     }
 
-    .left-login{
+    .left-login-image {
+        width: 70%;
+    }
+
+    .card-login img {
+        height: 4rem;
+    }
+
+    .card-login h1 {
+        font-size: 18px;
+    }
+
+    .textfield > input {
+        padding: 18px;
+        font-size: 14px;
+    }
+
+    .btn-login {
         width: 100%;
-        height: auto;
+    }
+}
+
+/* Telas até 480px (celulares pequenos) */
+@media (max-width: 480px) {
+    .main-login {
+        padding: 20px;
     }
 
-    .right-login{
-        width: 100%;
-        height: auto;
+    .left-login {
+        padding: 10px;
     }
 
-    .left-login-image{
-        width: 100%;
-        height: auto;
-    }
-
-    .card-login{
+    .left-login-image {
         width: 90%;
+    }
+
+    .right-login {
+        margin: 0;
+    }
+
+    .card-login {
+        width: 100%;
+        padding: 25px 20px;
+        box-shadow: none;
+    }
+
+    .textfield > input {
+        padding: 16px;
+    }
+
+    .btn-login {
+        margin-top: 12px;
+    }
+
+    .senha,
+    .cadastro {
+        font-size: 12px;
     }
 }

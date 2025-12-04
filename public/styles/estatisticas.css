@@ -6,12 +6,12 @@ body {
   color: #222;
   margin: 0;
   padding: 0;
-  height: 200px;
   padding-top: 10rem;
+  height: 50px;
 }
 
-.main{
-      padding-top: 3.5rem;
+.main {
+  padding-top: 3.5rem;
 }
 
 h2 {
@@ -21,50 +21,130 @@ h2 {
   font-weight: 600;
 }
 
+
 .charts {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  gap: 50px;         
+  flex-wrap: wrap;          
+  gap: 40px;
   margin-top: 40px;
   margin-bottom: 60px;
 }
 
-#myPlot, #myChart {
-  width: 500px !important;
+#myPlot, 
+#myChart {
+  width: 100% !important;
+  max-width: 500px;
   height: 300px !important;
   border-radius: 8px;
   padding: 15px;
 }
 
-.books{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 5rem;
-    margin-bottom: 60px;
+.books {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+  margin-bottom: 60px;
 }
 
-.book-item{
-    background-color: #fff;
-    border-radius: 10px;
-    text-align: center;
-    width: 160px;
+.book-item {
+  background-color: #fff;
+  border-radius: 10px;
+  text-align: center;
+  width: 150px;
 }
 
-.book-item img{
-    width: 175px;
-    height: 265px;
-    
+.book-item img {
+  width: 150px;
+  height: 230px;
+  object-fit: cover;
 }
 
-.book-item h3{
-    font-family: 16px;
-    margin: 10px -30 5px;
+.book-item h3 {
+  font-size: 16px;
+  margin: 10px 0 5px;
 }
 
-.book-item p{
-    font-size: 14px;
-    color:#666;
-    margin-bottom: 10px;
+.book-item p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 900px) {
+  h2 {
+    font-size: 24px;
+  }
+
+  .charts {
+    gap: 20px;
+  }
+
+  #myPlot, #myChart {
+    max-width: 400px;
+    height: 260px !important;
+  }
+
+  .books {
+    gap: 2rem;
+  }
+
+  .book-item {
+    width: 140px;
+  }
+
+  .book-item img {
+    width: 140px;
+    height: 210px;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    padding-top: 7rem;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  #myPlot, #myChart {
+    max-width: 90%;
+    height: 240px !important;
+  }
+
+  .charts {
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+
+  .book-item {
+    width: 130px;
+  }
+
+  .book-item img {
+    width: 130px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 420px) {
+  h2 {
+    font-size: 20px;
+  }
+
+  #myPlot, #myChart {
+    height: 220px !important;
+  }
+
+  .book-item {
+    width: 120px;
+  }
+
+  .book-item img {
+    width: 120px;
+    height: 180px;
+  }
 }

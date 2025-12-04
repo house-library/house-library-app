@@ -142,3 +142,106 @@ a{
 h2{
   margin: 5rem;
 }
+
+@media (max-width: 1024px) {
+    .ebook {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .ebook-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .cart-summary {
+        padding-top: 1rem;
+    }
+
+    .value-summary {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .book-info p {
+        max-width: 100%;
+        padding: 0 1rem;
+    }
+
+    .img-grid {
+        height: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .ebook {
+        gap: 1.5rem;
+    }
+
+    .img-grid {
+        width: 70%;
+        height: auto;
+    }
+
+    h2 {
+        margin: 2rem 1rem;
+        font-size: 1.6rem;
+    }
+
+    .value-summary {
+        padding: 1.5rem;
+    }
+
+    .summary-btn, 
+    .buy-btn {
+        padding: 0.8rem;
+        font-size: 0.9rem;
+    }
+
+    .books{
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding-top: 1rem;
+    }
+
+    h2 {
+        margin: 1.5rem 0;
+        font-size: 1.4rem;
+    }
+
+    .img-grid {
+        width: 85%;
+    }
+
+    .book-info p {
+        font-size: 0.9rem;
+        padding: 0 0.5rem;
+        
+    }
+
+    .value-summary {
+        width: 90%;
+        padding: 1rem;
+    }
+
+    .summary-btn, 
+    .buy-btn {
+        padding: 0.8rem;
+        font-size: 0.9rem;
+    }
+
+    .books{
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+}
