@@ -1,9 +1,15 @@
-<?php loadPartial('head', $data); ?>
-<?php loadPartial('headeradm'); ?>
+<?php
+$is_admin_page = true;
+
+loadPartial('head', $data);
+
+include __DIR__ . '/../vlibras.html';
+
+loadPartial('headeradm'); 
+?>
 
 <link rel="stylesheet" href="//cdn.datatables.net/2.0.0/css/dataTables.dataTables.min.css">
 
-<?php include __DIR__ . '/../vlibras.html'; ?>
 
 <main>
     <div class="container">
@@ -87,7 +93,7 @@
                                 <a href="/categoriasadm/edit/<?= (int) $cat[
                                     'categoria_id'
                                 ] ?>" class="editar">Editar</a>
-                                <form method="post" action="/categorias-adm/<?= (int) $cat[
+                                <form method="post" action="/categoriasadm/<?= (int) $cat[
                                     'categoria_id'
                                 ] ?>" style="display:inline;" onsubmit="return confirm('Tem certeza?');">
                                     <input type="hidden" name="_method" value="DELETE">

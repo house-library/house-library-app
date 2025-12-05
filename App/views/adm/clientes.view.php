@@ -1,7 +1,10 @@
-<?php loadPartial('head', $data); ?>
-<?php loadPartial('headeradm'); ?>
-<?php include __DIR__ . '/../vlibras.html'; ?>
+<?php
+$is_admin_page = true;
 
+loadPartial('head', $data);
+include __DIR__ . '/../vlibras.html';
+loadPartial('headeradm'); 
+?>
 <link rel="stylesheet" href="//cdn.datatables.net/2.0.0/css/dataTables.dataTables.min.css">
 <style>
     .dataTables_wrapper { padding: 20px; }
@@ -33,25 +36,16 @@
                     <?php foreach ($clientes as $cli): ?>
                         <tr class="info-table">
                             <td><?= (int) $cli['cliente_id'] ?></td>
-                            <td><?= htmlspecialchars(
-                                $cli['nome_cliente'],
-                            ) ?></td>
-                            <td><?= htmlspecialchars(
-                                $cli['email_cliente'],
-                            ) ?></td>
-                            <td><?= htmlspecialchars(
-                                $cli['cpf_cliente'],
-                            ) ?></td>
-                            <td><?= htmlspecialchars(
-                                $cli['status'] ?? 'Desconhecido',
-                            ) ?></td>
+                            <td><?= htmlspecialchars($cli['nome_cliente']) ?></td>
+                            <td><?= htmlspecialchars($cli['email_cliente']) ?></td>
+                            <td><?= htmlspecialchars($cli['cpf_cliente']) ?></td>
+                            <td><?= htmlspecialchars($cli['status'] ?? 'Desconhecido') ?></td>
                             <td class="btn-action">
-                                <form method="post" action="/clientes/<?= (int) $cli[
-                                    'cliente_id'
-                                ] ?>" style="display:inline;" onsubmit="return confirm('Tem certeza que deseja excluir este cliente?');">
+                                <form method="post" action="/clientes/<?= (int) $cli['cliente_id'] ?>" style="display:inline;" onsubmit="return confirm('Tem certeza que deseja excluir este cliente?');">
                                     <input type="hidden" name="_method" value="DELETE">
                                     <button type="submit" class="excluir">Excluir</button>
                                 </form>
+                                <a href="/compras/cliente/<?= (int) $cli['cliente_id'] ?>" class="btn-ver">Ver Histórico</a>
                             </td>
                         </tr>
                     <?php endforeach; ?>

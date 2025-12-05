@@ -54,7 +54,7 @@ class Buscar
             'livros' => $resultados,
             'termoBuscado' => $termo,
             'categorias' => $categorias,
-            'styles' => ['explorar.css', 'pagination.css'],
+            'styles' => ['buscar.css', 'pagination.css'],
             'paginaAtual' => $paginaAtual,
             'totalPaginas' => $totalPaginas,
 

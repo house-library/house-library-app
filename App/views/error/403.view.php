@@ -7,7 +7,7 @@
         
         <img src="/assets/imgs/403error.svg" alt="Erro 403" class="error-image">
         
-        <a href="/" class="btn-destaque">Inicio</a>
+        <a href="/" class="btn-inicio">Inicio</a>
     </section>
 </main>
 

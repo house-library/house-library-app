@@ -15,6 +15,7 @@ class Clientes
     private $status;
     private $token_recuperação;
     private $data_expiração;
+    private $perfil;
 
     public function __construct(
         $cliente_id = null,
@@ -25,6 +26,7 @@ class Clientes
         $data_nascimento = null,
         $status = null,
         $token_recuperacao = null,
+        $perfil = null
     ) {
         date_default_timezone_set('America/Sao_Paulo');
         $this->cliente_id = $cliente_id;
@@ -34,13 +36,20 @@ class Clientes
         $this->cpf_cliente = $cpf_cliente;
         $this->data_nascimento = $data_nascimento;
         $this->status = $status ?? 1;
+        $this->perfil = $perfil ?? 2;
     }
+
+
 
     public function __set($chave, $valor)
     {
         if (property_exists($this, $chave)) {
             $this->$chave = $valor;
         }
+    }
+
+    public function getPerfil() {
+        return $this->perfil;
     }
 
     public function toArray()
@@ -53,6 +62,7 @@ class Clientes
             'cpf_cliente' => $this->cpf_cliente,
             'data_nascimento' => $this->data_nascimento,
             'status' => $this->status,
+            'perfil' => $this->perfil,
             'token_recuperacao' => $this->token_recuperacao,
         ];
     }

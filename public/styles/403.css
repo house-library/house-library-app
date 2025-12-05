@@ -6,6 +6,7 @@
 
 .main {
     flex-grow: 1;
+    margin-top: 4rem
 }
 
 .section {
@@ -20,11 +21,9 @@
 .error-title {
     text-align: center;
     font-size: 1.875rem;
-    margin-top: 6rem;
+    margin-top: 3rem;
     margin-bottom: 2rem; 
     font-weight: bold;
-    border: 1px solid #d1d5db;
-    padding: 0.75rem;
 }
 
 .error-text {
@@ -41,7 +40,7 @@
     margin: 0 auto 2rem auto; 
 }
 
-.btn-destaque {
+.btn-inicio {
     display: inline-block; 
     text-align: center;
     text-decoration: none;
@@ -55,6 +54,6 @@
     transition: 0.2s ease;
 }
 
-.btn-destaque:hover {
+.btn-inicio:hover {
     background-color: #0056b3;
 }

@@ -20,7 +20,8 @@
             <?php if (empty($itens)): ?>
                 <div class="empty-cart-msg">
                     <h3>Seu carrinho está vazio.</h3>
-                    <a href="/explorar">Clique aqui e explore mais e-books!</a>
+
+                    <a href="/explorar" class="btn-destaque">Explorar</a>
                 </div>
             <?php else: ?>
 

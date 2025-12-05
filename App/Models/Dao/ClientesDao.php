@@ -63,17 +63,21 @@ class ClientesDao extends context
         return $this->getoneWithSQL($sql, [$id]);
     }
 
-    public function alterar(Cliente $cliente)
+   public function alterar(Clientes $cliente) 
     {
         $dados = $cliente->atributosPreenchidos();
         $atributos = array_keys($dados);
         $valores = array_values($dados);
 
+        
+        $dadosArray = $cliente->toArray();
+        $id = $dadosArray['cliente_id']; 
+
         return $this->atualizar(
             'CLIENTES',
             $atributos,
             $valores,
-            $cliente->getId(),
+            $id 
         );
     }
 

@@ -8,7 +8,7 @@ class Error404
     {
         $data = [
             'title' => '404 error',
-            'styles' => ['404.css'],
+            'styles' => ['404.css', 'header.css'],
         ];
 
         loadView('error/404',$data);

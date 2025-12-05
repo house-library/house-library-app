@@ -64,6 +64,22 @@ class Login
             ]);
         }
 
+        // verifica se é admin
+        if (isset($cliente['perfil']) && $cliente['perfil'] == 1) {
+            header('Location: /categoriasadm'); 
+            exit();
+        } else {
+            header('Location: /');
+            exit();
+        }
+
+
+        // expulsa um possivel invasor 
+        if (!isset($_SESSION['perfil']) || $_SESSION['perfil'] != 1) {
+        redirect('/'); 
+        return;
+        }   
+
         // Sucesso: Criar Sessão
         $this->login($cliente);
 
@@ -80,6 +96,7 @@ class Login
         $_SESSION['cliente_id'] = $cliente['cliente_id'];
         $_SESSION['email'] = $cliente['email_cliente'];
         $_SESSION['nome'] = $cliente['nome_cliente'];
+        $_SESSION['perfil'] = $cliente['perfil'];
         $_SESSION['ultimo_acesso'] = time();
     }
 

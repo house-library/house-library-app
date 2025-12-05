@@ -1,6 +1,6 @@
 main {
     flex: 1;
-    margin-top: 10rem;
+    margin-top: 5rem;
 }
 
 .table-products {
@@ -58,6 +58,19 @@ main {
 
 .excluir {
     background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 16px;
+    font-size: 15px;
+    cursor: pointer;
+    max-width: 200px;
+    transition: 0.2s ease;
+}
+
+.btn-ver {
+    text-decoration: none;
+    background-color: #007bff;
     color: white;
     border: none;
     border-radius: 6px;

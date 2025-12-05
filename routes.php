@@ -60,6 +60,12 @@ $router->get('/carrinho/limpar', 'compra\Carrinho@clear');
 $router->get('/estatisticas', 'adm\Estatisticas@index');
 $router->get('/gerenciamento', 'adm\Listings@create');
 $router->get('/publicados', 'adm\Publicados@index');
+$router->get('/compras/cliente/{id}', 'adm\Compras@listarPorCliente');
+
+// Rotas da Conta
+$router->get('/conta', 'index\Conta@index');          
+$router->get('/conta/editar', 'index\Conta@edit');    
+$router->post('/conta/atualizar', 'index\Conta@update'); 
 
 // CRUD dos livros
 $router->get('/listings/create', 'adm\Listings@create');

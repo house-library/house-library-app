@@ -8,7 +8,7 @@ class Error403
     {
         $data = [
             'title' => '403 error',
-            'styles' => ['403.css'],
+            'styles' => ['403.css', 'header.css'],
         ];
 
         loadView('error/403',$data);

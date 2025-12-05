@@ -1,5 +1,7 @@
 <?php loadPartial('head', $viewData); ?>
-<?php loadPartial('header'); ?>  
+<?php loadPartial('header'); ?>    
+
+<?php include __DIR__ . '/../vlibras.html'; ?>
 
 <main class="main">
     <section class="section">
@@ -7,7 +9,7 @@
         
         <img src="/assets/imgs/404error.svg" alt="Erro 404" class="error-image">
         
-        <a href="/explorar" class="btn-destaque">Ver todos os livros</a>
+        <a href="/explorar" class="btn-explorar">Ver todos os livros</a>
     </section>
 </main>
 

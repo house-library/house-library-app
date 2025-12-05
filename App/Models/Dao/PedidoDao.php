@@ -67,4 +67,26 @@ class PedidoDao extends context
 
         $this->executeConsult($sql, [$pedidoId, $metodoId, 'Aprovado']);
     }
+
+    public function listarPorCliente($clienteId)
+    {
+        $sql = "SELECT P.*, 
+                       GROUP_CONCAT(L.titulo SEPARATOR ', ') as livros_nomes
+                FROM PEDIDOS P
+                JOIN DETALHES_PEDIDOS DP ON P.pedidos_id = DP.pedidos_id
+                JOIN LIVROS L ON DP.livros_id = L.livros_id
+                WHERE P.cliente_id = ?
+                GROUP BY P.pedidos_id
+                ORDER BY P.data_pedido DESC";
+                
+        return $this->listSql($sql, [$clienteId]);
+    }
+
+    public function obterNomeCliente($clienteId)
+    {
+        $sql = "SELECT nome_cliente FROM CLIENTES WHERE cliente_id = ?";
+        $resultado = $this->getoneWithSQL($sql, [$clienteId]);
+        return $resultado['nome_cliente'] ?? 'Cliente';
+    }
+
 }

@@ -3,6 +3,7 @@
     flex: 1;
 }
 
+
 .explore-page-container {
     margin: 200px auto 1rem;
     padding: 1.5rem;
@@ -10,15 +11,16 @@
 }
 
 .books {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 250px));
+    display: flex;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 4rem;
     justify-content: center;
-    flex-wrap: wrap;
+    width: 100%;
 }
 
 .book-item {
     transition: transform 0.2s ease;
+    width: 100%;
 }
 
 .book-item a {

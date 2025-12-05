@@ -78,6 +78,21 @@ h1{
     color: #fff;
 }
 
+.btn-destaque {
+    display: inline-block; 
+    text-align: center;
+    text-decoration: none;
+    padding: 0.75rem 2rem; 
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: 0.2s ease;
+}
+
+
 .item-list {
     display: flex;
     justify-content: space-between;

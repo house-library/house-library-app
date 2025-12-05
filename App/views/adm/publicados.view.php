@@ -1,7 +1,13 @@
-<?php loadPartial('head', $viewData); ?>
-<?php loadPartial('headeradm'); ?>    
+<?php
+$is_admin_page = true;
 
-<?php include __DIR__ . '/../vlibras.html'; ?>
+loadPartial('head', $data);
+
+include __DIR__ . '/../vlibras.html';
+
+loadPartial('headeradm'); 
+?>
+
 <link rel="stylesheet" href="//cdn.datatables.net/2.0.0/css/dataTables.dataTables.min.css">
 
 <main>

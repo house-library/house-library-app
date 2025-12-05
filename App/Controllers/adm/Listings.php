@@ -101,14 +101,12 @@ class Listings
             if (!empty($_FILES['capa_livro']['name'])) {
                 $categoriaNome = 'default';
                 if (!empty($_POST['categoria_id'])) {
-                    $categoriaObj = $this->categoriaDao->getById(
-                        (int) $_POST['categoria_id'],
-                    );
+                $categoriaObj = $this->categoriaDao->getById((int) $_POST['categoria_id']);
 
-                    if ($categoriaObj) {
-                        $categoriaNome = $categoriaObj->descricao;
-                    }
+                if ($categoriaObj) {
+                 $categoriaNome = is_array($categoriaObj) ? $categoriaObj['descricao'] : $categoriaObj->descricao;
                 }
+    }
 
                 $upload = $this->uploadCover(
                     $_FILES['capa_livro'],
@@ -159,12 +157,12 @@ class Listings
             error_log('Erro ao carregar edição: ' . $e->getMessage());
             redirect('/erro');
         }
-    }
-
-    public function update($params): void
+    }public function update($params): void
     {
+        
+        $id = (int) ($params['id'] ?? $_POST['id'] ?? 0);
+
         try {
-            $id = (int) ($params['id'] ?? 0);
             $_POST['livros_id'] = $id;
 
             $urlCapa = null;
@@ -175,9 +173,12 @@ class Listings
                         (int) $_POST['categoria_id'],
                     );
                     if ($categoriaObj) {
-                        $categoriaNome = $categoriaObj->descricao;
+                        $categoriaNome = is_array($categoriaObj) ? $categoriaObj['descricao'] : $categoriaObj->descricao;
                     }
                 }
+
+                $this->livroService->alterarLivro($_POST, $urlCapa);
+                redirect('/publicados?success=atualizado');
 
                 $upload = $this->uploadCover(
                     $_FILES['capa_livro'],
@@ -196,24 +197,31 @@ class Listings
                             unlink($caminhoAntigo);
                         }
                     }
+                } else {
+                     throw new \Exception($upload['error']);
                 }
             }
 
             $this->livroService->alterarLivro($_POST, $urlCapa);
             redirect('/publicados?success=atualizado');
+
         } catch (\Exception $e) {
+            
             $categorias = $this->categoriaDao->listAll();
-            $livro = $this->livroDao->getById($id);
+            
+            $livroBanco = $this->livroDao->getById($id);
+
+           
+            $dadosParaView = array_merge($livroBanco ?? [], $_POST);
 
             loadView('adm\gerenciamento', [
                 'errors' => [$e->getMessage()],
-                'livro' => array_merge($livro, $_POST),
+                'livro' => $dadosParaView, 
                 'categorias' => $categorias,
                 'styles' => ['headeradm.css', 'gerenciamento.css'],
             ]);
         }
     }
-
     public function destroy($params): void
     {
         try {
@@ -254,28 +262,33 @@ class Listings
             $categoria = 'default';
         }
 
-        switch ($categoria) {
-            case 'autoajuda':
-                $uploadDir = $uploadDirBase . 'autoajuda/';
-                break;
-            case 'romance':
-                $uploadDir = $uploadDirBase . 'romance/';
-                break;
-            case 'fic-cientifica':
-                $uploadDir = $uploadDirBase . 'fic-cientifica/';
-                break;
-            case 'classicos':
-                $uploadDir = $uploadDirBase . 'classicos/';
-                break;
-            default:
-                $uploadDir = $uploadDirBase . 'literatura_infantil/';
-                break;
+        // 1. Converte para minúsculo para evitar erros de Case Sensitive
+        $catLower = mb_strtolower($categoria, 'UTF-8');
+
+        // 2. Lógica de mapeamento mais robusta
+        if (strpos($catLower, 'autoajuda') !== false || strpos($catLower, 'auto ajuda') !== false) {
+            $folder = 'autoajuda/';
+        } elseif (strpos($catLower, 'roman') !== false) { // Pega "Romance"
+            $folder = 'romance/';
+        } elseif (strpos($catLower, 'fic') !== false || strpos($catLower, 'cient') !== false) { // Pega "Ficção Científica"
+            $folder = 'fic-cientifica/';
+        } elseif (strpos($catLower, 'cláss') !== false || strpos($catLower, 'class') !== false) { // Pega "Clássicos"
+            $folder = 'classicos/';
+        } elseif (strpos($catLower, 'mist') !== false) { // Pega "Mistério"
+            $folder = 'misterio/';
+        } else {
+            // Se for "infantil" ou qualquer outra coisa não mapeada
+            $folder = 'literatura_infantil/';
         }
 
+        $uploadDir = $uploadDirBase . $folder;
+
+        // Cria a pasta se não existir
         if (!is_dir($uploadDir)) {
             mkdir($uploadDir, 0755, true);
         }
 
+        // --- Restante do código de validação continua igual ---
         if (!isset($file['type']) || !in_array($file['type'], $allowedTypes)) {
             return [
                 'success' => false,
@@ -303,6 +316,7 @@ class Listings
                 'error' => 'Nome do arquivo inválido.',
             ];
         }
+
         $extension = pathinfo($file['name'], PATHINFO_EXTENSION);
         $filename = uniqid('capa_', true) . '.' . $extension;
         $destination = $uploadDir . $filename;
