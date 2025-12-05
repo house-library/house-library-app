@@ -1,0 +1,148 @@
+.main {
+    flex: 1;
+}
+
+
+.account-page {
+    margin: 10rem 0 5rem 0;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.account-container {
+    width: 100%;
+    max-width: 500px;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.page-header h1 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.card-section {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    padding: 2.5rem;
+}
+
+.section-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.section-title h3 {
+    font-size: 1.2rem;
+    color: #34495e;
+}
+
+.btn-edit {
+    background: transparent;
+    border: 1px solid #bdc3c7;
+    color: #7f8c8d;
+    padding: 5px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.btn-edit:hover {
+    background-color: #ecf0f1;
+    color: #2c3e50;
+    border-color: #95a5a6;
+}
+
+.info-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.info-item label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.info-item input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #dfe6e9;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.info-item input:disabled {
+    background-color: #f8f9fa;
+    color: #7f8c8d;
+    cursor: not-allowed;
+    border-color: #eee;
+}
+
+.info-item input:not(:disabled) {
+    background-color: #fff;
+    border-color: #3498db;
+    color: #2c3e50;
+}
+
+.form-actions {
+    margin-top: 1.5rem;
+}
+
+.btn-save {
+    width: 100%;
+    padding: 12px;
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+
+.btn-save:hover {
+    background-color: #219150;
+}
+
+.btn-cancel {
+    width: 30%;
+    background-color: #666;
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+}
+
+.btn-cancel:hover {
+    background-color: #858585;
+
+}
